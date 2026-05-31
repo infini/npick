@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="NPICK(Number Pick)은 역대 로또 6/45 1등 당첨번호 통계를 기반으로 조합을 추천하는 브라우저 앱입니다."
+    />
+    <title>NPICK - Number Pick</title>
+    <link rel="icon" href="assets/npick-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="NPICK">
+          <img class="brand-icon" src="assets/npick-mark.svg" alt="" />
+          <div>
+            <strong>NPICK</strong>
+            <span>Number Pick · 6/45 번호 추천</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button id="refreshSeedButton" class="icon-button" type="button" title="추천 시드 변경" aria-label="추천 시드 변경">
+            ↻
+          </button>
+          <button id="generateTopButton" class="primary-button" type="button">추천 생성</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="generator-layout" aria-label="로또 번호 추천 생성기">
+          <aside class="control-panel">
+            <div class="panel-heading">
+              <p>추천 조건</p>
+              <strong id="seedLabel">seed</strong>
+            </div>
+
+            <div class="control-group">
+              <label for="strategySelect">전략</label>
+              <select id="strategySelect">
+                <option value="balanced">균형형</option>
+                <option value="hot">빈도형</option>
+                <option value="cold">역발상형</option>
+                <option value="mixed">혼합형</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <div class="control-label-row">
+                <label for="windowRange">분석 회차</label>
+                <output id="windowLabel" for="windowRange">최근 260회</output>
+              </div>
+              <input id="windowRange" type="range" min="52" max="1226" value="260" step="1" />
+            </div>
+
+            <div class="control-group">
+              <span class="label-text">추천 세트</span>
+              <div class="segmented" role="group" aria-label="추천 세트 수">
+                <button class="segment is-active" type="button" data-count="3">3</button>
+                <button class="segment" type="button" data-count="5">5</button>
+                <button class="segment" type="button" data-count="10">10</button>
+              </div>
+            </div>
+
+            <div class="toggle-list">
+              <label class="switch-row">
+                <input id="avoidRecentInput" type="checkbox" checked />
+                <span>최근 당첨번호 가중치 낮추기</span>
+              </label>
+              <label class="switch-row">
+                <input id="strictBalanceInput" type="checkbox" checked />
+                <span>홀짝·저고 균형 유지</span>
+              </label>
+              <label class="switch-row">
+                <input id="excludePastInput" type="checkbox" checked />
+                <span>과거 1등 조합 제외</span>
+              </label>
+            </div>
+          </aside>
+
+          <section class="recommend-panel">
+            <div class="recommend-header">
+              <div>
+                <p>추천 결과</p>
+                <h1>역대 당첨번호의 빈도와 간격을 조합합니다</h1>
+              </div>
+              <button id="generateButton" class="primary-button" type="button">추천 생성</button>
+            </div>
+
+            <div id="recommendations" class="recommendations" aria-live="polite"></div>
+            <p class="notice">
+              추천 결과는 통계적 참고용입니다. 로또는 독립 시행이며 어떤 조합도 당첨을 보장하지 않습니다.
+            </p>
+          </section>
+        </section>
+
+        <section class="insight-grid" aria-label="당첨번호 통계">
+          <div class="metric-strip">
+            <div>
+              <span>최신 회차</span>
+              <strong id="latestDrawMetric">-</strong>
+            </div>
+            <div>
+              <span>데이터 수</span>
+              <strong id="drawCountMetric">-</strong>
+            </div>
+            <div>
+              <span>최다 출현</span>
+              <strong id="hotMetric">-</strong>
+            </div>
+            <div>
+              <span>최장 미출현</span>
+              <strong id="overdueMetric">-</strong>
+            </div>
+          </div>
+
+          <section class="analysis-panel">
+            <div class="section-title">
+              <h2>번호별 출현 빈도</h2>
+              <span id="chartCaption">최근 260회 기준</span>
+            </div>
+            <div id="frequencyChart" class="frequency-chart"></div>
+          </section>
+
+          <section class="history-panel">
+            <div class="section-title">
+              <h2>당첨 이력</h2>
+              <input id="historySearch" type="search" inputmode="numeric" placeholder="회차 또는 번호 검색" aria-label="회차 또는 번호 검색" />
+            </div>
+            <div id="historyList" class="history-list"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="data/lotto-data.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
