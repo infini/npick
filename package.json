@@ -1,0 +1,17 @@
+{
+  "name": "npick",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "NPICK, short for Number Pick, is a static lotto number recommendation app.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/infini/npick.git"
+  },
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "update:data": "node scripts/update-lotto-data.mjs",
+    "watch:push": "node scripts/watch-and-push.mjs",
+    "check": "find src scripts -type f \\( -name '*.js' -o -name '*.mjs' \\) | xargs -n 1 node --check && node --check service-worker.js && node --check data/lotto-data.js && node scripts/smoke-test.mjs"
+  }
+}
