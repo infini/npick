@@ -1,14 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #f7f8fb;
-  --surface: #ffffff;
-  --surface-muted: #eef2f6;
-  --text: #17202a;
-  --muted: #657286;
-  --border: #dbe2ea;
-  --accent: #de3f53;
-  --accent-dark: #bb283c;
-  --ink: #111827;
+  --bg: #f5f5f7;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-solid: #ffffff;
+  --surface-muted: #f1f2f5;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --border: rgba(60, 60, 67, 0.16);
+  --accent: #007aff;
+  --accent-dark: #0064d2;
+  --ink: #1d1d1f;
   --yellow: #f2b634;
   --blue: #3d76d4;
   --red: #df4f55;
@@ -27,7 +28,8 @@ body {
   min-width: 0;
   margin: 0;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 248, 251, 0.35) 18rem),
+    radial-gradient(circle at top left, rgba(0, 122, 255, 0.08), transparent 24rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(245, 245, 247, 0.35) 18rem),
     var(--bg);
   color: var(--text);
 }
@@ -62,7 +64,8 @@ button {
   justify-content: space-between;
   gap: 16px;
   min-height: 64px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  padding: 8px 0;
 }
 
 .brand {
@@ -102,6 +105,7 @@ button {
 }
 
 .primary-button,
+.secondary-button,
 .icon-button,
 .segment {
   border: 1px solid transparent;
@@ -124,6 +128,22 @@ button {
   background: var(--accent-dark);
 }
 
+.secondary-button {
+  min-height: 42px;
+  padding: 0 16px;
+  border-color: var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  font-weight: 800;
+  backdrop-filter: blur(18px);
+}
+
+.secondary-button:hover {
+  border-color: rgba(0, 122, 255, 0.32);
+  background: #fff;
+}
+
 .icon-button {
   display: inline-grid;
   width: 42px;
@@ -131,10 +151,11 @@ button {
   place-items: center;
   border-color: var(--border);
   border-radius: 8px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--ink);
   font-size: 22px;
   line-height: 1;
+  backdrop-filter: blur(18px);
 }
 
 .workspace {
@@ -157,7 +178,8 @@ button {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: 0 8px 28px rgba(31, 42, 55, 0.06);
+  box-shadow: 0 14px 42px rgba(29, 29, 31, 0.07);
+  backdrop-filter: blur(22px);
 }
 
 .control-panel {
@@ -218,7 +240,7 @@ input[type="search"] {
   min-height: 42px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.76);
   color: var(--text);
 }
 
@@ -247,14 +269,14 @@ input[type="range"] {
   min-height: 38px;
   border-color: var(--border);
   border-radius: 8px;
-  background: var(--surface-muted);
+  background: rgba(255, 255, 255, 0.62);
   color: var(--text);
   font-weight: 800;
 }
 
 .segment.is-active {
   border-color: var(--accent);
-  background: #fff2f4;
+  background: rgba(0, 122, 255, 0.1);
   color: var(--accent-dark);
 }
 
@@ -310,7 +332,7 @@ input[type="range"] {
   padding: 14px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: linear-gradient(180deg, #fff, #fbfcfe);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 249, 252, 0.9));
 }
 
 .recommendation-header {
@@ -370,7 +392,7 @@ input[type="range"] {
   min-height: 26px;
   padding: 5px 8px;
   border-radius: 999px;
-  background: var(--surface-muted);
+  background: rgba(118, 118, 128, 0.12);
   color: var(--muted);
   font-size: 12px;
   font-weight: 750;
@@ -495,7 +517,7 @@ input[type="range"] {
   padding: 10px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .draw-meta strong,
