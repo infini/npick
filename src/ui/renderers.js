@@ -25,7 +25,8 @@ export function renderRecommendations(container, recommendations) {
 }
 
 export function renderFrequencyChart(container, stats) {
-  container.innerHTML = stats.numberStats
+  container.innerHTML = [...stats.numberStats]
+    .sort((a, b) => b.count - a.count || a.number - b.number)
     .map((item) => {
       const height = Math.max(4, Math.round((item.count / stats.maxCount) * 100));
       return `
