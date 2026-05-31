@@ -12,6 +12,7 @@ import {
 } from "./ui/renderers.js";
 
 const draws = Array.isArray(LOTTO_WINNING_NUMBERS) ? [...LOTTO_WINNING_NUMBERS] : [];
+const SUMMARY_NUMBER_LIMIT = 6;
 
 const state = {
   seed: makeSeed(),
@@ -98,11 +99,11 @@ function renderAll() {
   elements.latestDrawMetric.textContent = latest ? `${latest.draw}회` : "-";
   elements.drawCountMetric.textContent = `${draws.length.toLocaleString("ko-KR")}회`;
   elements.hotMetric.textContent = stats.hotNumbers
-    .slice(0, 3)
+    .slice(0, SUMMARY_NUMBER_LIMIT)
     .map((item) => `${item.number}번`)
     .join(", ");
   elements.overdueMetric.textContent = stats.overdueNumbers
-    .slice(0, 3)
+    .slice(0, SUMMARY_NUMBER_LIMIT)
     .map((item) => `${item.number}번`)
     .join(", ");
 
