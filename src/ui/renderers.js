@@ -1,5 +1,8 @@
 import { renderBall } from "./lotto-balls.js";
 
+const DEFAULT_HISTORY_LIMIT = 5;
+const SEARCH_HISTORY_LIMIT = 24;
+
 export function renderRecommendations(container, recommendations) {
   container.innerHTML = recommendations
     .map(
@@ -28,7 +31,8 @@ export function renderFrequencyChart(container, stats) {
       return `
         <div class="frequency-cell" title="${item.number}번: ${item.count}회">
           <div class="bar-shell"><div class="bar" style="height: ${height}%"></div></div>
-          <span>${item.number}</span>
+          <span class="frequency-number">${item.number}</span>
+          <span class="frequency-count">${item.count}회</span>
         </div>
       `;
     })
@@ -36,16 +40,17 @@ export function renderFrequencyChart(container, stats) {
 }
 
 export function renderHistory(container, draws, query) {
+  const normalizedQuery = query.trim();
   const filtered = draws
     .filter((draw) => {
-      if (!query) {
+      if (!normalizedQuery) {
         return true;
       }
 
-      const number = Number(query);
+      const number = Number(normalizedQuery);
       return draw.draw === number || draw.numbers.includes(number) || draw.bonus === number;
     })
-    .slice(0, 24);
+    .slice(0, normalizedQuery ? SEARCH_HISTORY_LIMIT : DEFAULT_HISTORY_LIMIT);
 
   container.innerHTML = filtered
     .map(

@@ -472,8 +472,8 @@ input[type="range"] {
 
 .frequency-cell {
   display: grid;
-  grid-template-rows: 74px 20px;
-  gap: 6px;
+  grid-template-rows: 74px 18px 16px;
+  gap: 4px;
   align-items: end;
   justify-items: center;
 }
@@ -496,9 +496,15 @@ input[type="range"] {
   background: var(--accent);
 }
 
-.frequency-cell span {
+.frequency-number {
   font-size: 12px;
   font-weight: 800;
+}
+
+.frequency-count {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
 }
 
 .history-list {
@@ -623,6 +629,10 @@ input[type="range"] {
 
   .bar-shell {
     max-width: 22px;
+  }
+
+  .frequency-count {
+    font-size: 10px;
   }
 
   .history-item {
