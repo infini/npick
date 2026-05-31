@@ -28,12 +28,10 @@ export function renderFrequencyChart(container, stats) {
   container.innerHTML = [...stats.numberStats]
     .sort((a, b) => b.count - a.count || a.number - b.number)
     .map((item) => {
-      const height = Math.max(4, Math.round((item.count / stats.maxCount) * 100));
       return `
         <div class="frequency-cell" title="${item.number}번: ${item.count}회">
-          <div class="bar-shell"><div class="bar" style="height: ${height}%"></div></div>
-          <span class="frequency-number">${item.number}</span>
-          <span class="frequency-count">${item.count}회</span>
+          <span class="frequency-number">${item.number}번</span>
+          <strong class="frequency-count">${item.count}회</strong>
         </div>
       `;
     })

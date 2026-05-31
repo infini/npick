@@ -466,45 +466,32 @@ input[type="range"] {
 
 .frequency-chart {
   display: grid;
-  grid-template-columns: repeat(15, minmax(28px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
   gap: 8px;
 }
 
 .frequency-cell {
-  display: grid;
-  grid-template-rows: 74px 18px 16px;
-  gap: 4px;
-  align-items: end;
-  justify-items: center;
-}
-
-.bar-shell {
   display: flex;
-  width: 100%;
-  max-width: 26px;
-  height: 74px;
-  align-items: end;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--surface-muted);
-  overflow: hidden;
-}
-
-.bar {
-  width: 100%;
-  min-height: 3px;
-  border-radius: 8px 8px 0 0;
-  background: var(--accent);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .frequency-number {
-  font-size: 12px;
+  color: var(--muted);
+  font-size: 13px;
   font-weight: 800;
 }
 
 .frequency-count {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 750;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 900;
 }
 
 .history-list {
@@ -623,16 +610,17 @@ input[type="range"] {
   }
 
   .frequency-chart {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px;
   }
 
-  .bar-shell {
-    max-width: 22px;
+  .frequency-cell {
+    min-height: 48px;
+    padding: 9px 10px;
   }
 
   .frequency-count {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .history-item {
