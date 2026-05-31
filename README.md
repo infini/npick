@@ -26,6 +26,8 @@ https://infini.github.io/npick/
 
 상단의 `설치` 버튼이 보이면 버튼을 누릅니다. 버튼이 보이지 않으면 브라우저 메뉴에서 `앱 설치` 또는 `홈 화면에 추가`를 선택합니다.
 
+GitHub Pages가 404를 반환하면 저장소 설정에서 Pages source를 `Deploy from a branch`, branch를 `gh-pages`, folder를 `/root`로 지정합니다.
+
 ## 데이터 갱신
 
 당첨번호 데이터는 `data/lotto-data.js`에 들어 있습니다. 최신 데이터로 갱신할 때만 아래 스크립트를 실행합니다.
