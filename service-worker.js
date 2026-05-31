@@ -1,4 +1,4 @@
-const CACHE_NAME = "npick-v6";
+const CACHE_NAME = "npick-v7";
 const APP_SHELL = [
   "./",
   "./index.html",

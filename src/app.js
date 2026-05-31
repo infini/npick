@@ -8,6 +8,7 @@ import {
   renderFrequencyChart,
   renderHistory,
   renderMissingData,
+  renderNumberSummary,
   renderRecommendations,
 } from "./ui/renderers.js";
 
@@ -102,14 +103,8 @@ function renderAll() {
   elements.chartCaption.textContent = `${windowLabel} 기준`;
   elements.latestDrawMetric.textContent = latest ? `${latest.draw}회` : "-";
   elements.drawCountMetric.textContent = `${draws.length.toLocaleString("ko-KR")}회`;
-  elements.hotMetric.textContent = stats.hotNumbers
-    .slice(0, SUMMARY_NUMBER_LIMIT)
-    .map((item) => `${item.number}번`)
-    .join(", ");
-  elements.overdueMetric.textContent = stats.overdueNumbers
-    .slice(0, SUMMARY_NUMBER_LIMIT)
-    .map((item) => `${item.number}번`)
-    .join(", ");
+  renderNumberSummary(elements.hotMetric, stats.hotNumbers, { limit: SUMMARY_NUMBER_LIMIT });
+  renderNumberSummary(elements.overdueMetric, stats.overdueNumbers, { limit: SUMMARY_NUMBER_LIMIT });
 
   renderFrequencyChart(elements.frequencyChart, stats);
   renderDrawHistory();

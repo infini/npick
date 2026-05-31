@@ -2,6 +2,7 @@ import { renderBall } from "./lotto-balls.js";
 
 const DEFAULT_HISTORY_LIMIT = 5;
 const SEARCH_HISTORY_LIMIT = 24;
+const DEFAULT_SUMMARY_ROW_SIZE = 3;
 
 export function renderRecommendations(container, recommendations) {
   container.innerHTML = recommendations
@@ -36,6 +37,18 @@ export function renderFrequencyChart(container, stats) {
       `;
     })
     .join("");
+}
+
+export function renderNumberSummary(container, items, { limit, rowSize = DEFAULT_SUMMARY_ROW_SIZE }) {
+  const numbers = items.slice(0, limit).map((item) => item.number);
+  const rows = chunk(numbers, rowSize).map((row) => {
+    const rowElement = document.createElement("span");
+    rowElement.className = "summary-number-row";
+    rowElement.textContent = row.join(", ");
+    return rowElement;
+  });
+
+  container.replaceChildren(...rows);
 }
 
 export function renderHistory(container, draws, query) {
@@ -77,6 +90,16 @@ export function renderMissingData(container) {
       <p class="notice">data/lotto-data.js 파일을 생성해야 합니다. 터미널에서 node scripts/update-lotto-data.mjs 를 실행하세요.</p>
     </article>
   `;
+}
+
+function chunk(items, size) {
+  const chunks = [];
+
+  for (let index = 0; index < items.length; index += size) {
+    chunks.push(items.slice(index, index + size));
+  }
+
+  return chunks;
 }
 
 function strategyLabel(strategy) {

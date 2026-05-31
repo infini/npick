@@ -447,10 +447,21 @@ input[type="range"] {
 #hotMetric,
 #overdueMetric {
   overflow: visible;
-  font-size: clamp(15px, 2.2vw, 20px);
-  line-height: 1.35;
+  font-size: clamp(18px, 2.7vw, 24px);
+  line-height: 1.18;
   text-overflow: clip;
   white-space: normal;
+}
+
+.metric-strip strong .summary-number-row {
+  display: block;
+  margin-bottom: 0;
+  color: var(--text);
+  font: inherit;
+}
+
+.metric-strip strong .summary-number-row + .summary-number-row {
+  margin-top: 2px;
 }
 
 .analysis-panel,
