@@ -1,4 +1,4 @@
-const CACHE_NAME = "npick-v7";
+const CACHE_NAME = "npick-v8";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -11,6 +11,7 @@ const APP_SHELL = [
   "./src/styles.css",
   "./src/core/number-utils.js",
   "./src/core/random.js",
+  "./src/core/recommendation-learning.js",
   "./src/core/recommendation-engine.js",
   "./src/core/statistics.js",
   "./src/pwa/install-prompt.js",

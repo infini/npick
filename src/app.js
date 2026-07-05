@@ -1,4 +1,11 @@
 import { LOTTO_WINNING_NUMBERS } from "../data/lotto-data.js";
+import {
+  createFeedbackProfile,
+  evaluateRecommendationRecords,
+  getLatestEvaluatedRecord,
+  getLatestPendingRecord,
+  pruneRecommendationRecords,
+} from "./core/recommendation-learning.js";
 import { generateRecommendationSets } from "./core/recommendation-engine.js";
 import { makeSeed } from "./core/random.js";
 import { computeStats } from "./core/statistics.js";
@@ -7,7 +14,9 @@ import { registerServiceWorker } from "./pwa/service-worker-registration.js";
 import {
   renderFrequencyChart,
   renderHistory,
+  renderLearningStatus,
   renderMissingData,
+  renderRecommendationPlaceholder,
   renderNumberSummary,
   renderRecommendations,
 } from "./ui/renderers.js";
@@ -15,18 +24,21 @@ import {
 const draws = Array.isArray(LOTTO_WINNING_NUMBERS) ? [...LOTTO_WINNING_NUMBERS] : [];
 const DEFAULT_HISTORY_WINDOW = 260;
 const HISTORY_WINDOW_STORAGE_KEY = "npick.historyWindow";
+const RECOMMENDATION_RECORDS_STORAGE_KEY = "npick.recommendationRecords";
+const STORED_RECORD_LIMIT = 12;
 const SUMMARY_NUMBER_LIMIT = 6;
 
 const state = {
-  seed: makeSeed(),
+  records: [],
+  feedbackProfile: createFeedbackProfile([]),
   count: 3,
 };
 
 const elements = {
   recommendations: document.querySelector("#recommendations"),
+  learningStatus: document.querySelector("#learningStatus"),
   generateButton: document.querySelector("#generateButton"),
   generateTopButton: document.querySelector("#generateTopButton"),
-  refreshSeedButton: document.querySelector("#refreshSeedButton"),
   installButton: document.querySelector("#installButton"),
   strategySelect: document.querySelector("#strategySelect"),
   windowRange: document.querySelector("#windowRange"),
@@ -60,34 +72,31 @@ function init() {
   draws.sort((a, b) => b.draw - a.draw);
   elements.windowRange.max = String(draws.length);
   elements.windowRange.value = String(loadHistoryWindowValue());
+  syncRecommendationRecords();
 
   bindEvents();
   renderAll();
-  generateRecommendations();
+  renderRecommendationState();
 }
 
 function bindEvents() {
-  elements.generateButton.addEventListener("click", generateRecommendations);
-  elements.generateTopButton.addEventListener("click", generateRecommendations);
-  elements.refreshSeedButton.addEventListener("click", () => {
-    state.seed = makeSeed();
-    generateRecommendations();
-  });
-  elements.strategySelect.addEventListener("change", generateRecommendations);
+  elements.generateButton.addEventListener("click", createNextDrawRecommendation);
+  elements.generateTopButton.addEventListener("click", createNextDrawRecommendation);
+  elements.strategySelect.addEventListener("change", renderRecommendationState);
   elements.windowRange.addEventListener("input", () => {
     saveHistoryWindowValue();
     renderAll();
-    generateRecommendations();
+    renderRecommendationState();
   });
-  elements.avoidRecentInput.addEventListener("change", generateRecommendations);
-  elements.strictBalanceInput.addEventListener("change", generateRecommendations);
-  elements.excludePastInput.addEventListener("change", generateRecommendations);
+  elements.avoidRecentInput.addEventListener("change", renderRecommendationState);
+  elements.strictBalanceInput.addEventListener("change", renderRecommendationState);
+  elements.excludePastInput.addEventListener("change", renderRecommendationState);
   elements.historySearch.addEventListener("input", renderDrawHistory);
   elements.countButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.count = Number(button.dataset.count);
       elements.countButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-      generateRecommendations();
+      renderRecommendationState();
     });
   });
 }
@@ -98,7 +107,6 @@ function renderAll() {
   const latest = draws[0];
   const windowLabel = getHistoryWindowLabel(history.length);
 
-  elements.seedLabel.textContent = state.seed;
   elements.windowLabel.textContent = windowLabel;
   elements.chartCaption.textContent = `${windowLabel} 기준`;
   elements.latestDrawMetric.textContent = latest ? `${latest.draw}회` : "-";
@@ -110,21 +118,40 @@ function renderAll() {
   renderDrawHistory();
 }
 
-function generateRecommendations() {
+function createNextDrawRecommendation() {
+  const latest = draws[0];
+  const pendingRecord = getLatestPendingRecord(state.records, latest);
+
+  if (pendingRecord) {
+    renderRecommendationState();
+    return;
+  }
+
   const history = getHistory();
   const stats = computeStats(history);
+  const seed = makeSeed();
+  const options = readOptions();
   const recommendations = generateRecommendationSets({
     history,
     stats,
     count: state.count,
     strategy: elements.strategySelect.value,
-    options: readOptions(),
-    seed: state.seed,
+    options,
+    seed,
+    feedbackProfile: state.feedbackProfile,
+  });
+  const record = createRecommendationRecord({
+    latest,
+    historyLength: history.length,
+    recommendations,
+    seed,
+    strategy: elements.strategySelect.value,
+    options,
   });
 
-  state.seed = makeSeed();
-  elements.seedLabel.textContent = state.seed;
-  renderRecommendations(elements.recommendations, recommendations);
+  state.records = pruneRecommendationRecords([record, ...state.records], STORED_RECORD_LIMIT);
+  saveRecommendationRecords();
+  renderRecommendationState();
 }
 
 function readOptions() {
@@ -137,6 +164,60 @@ function readOptions() {
 
 function getHistory() {
   return draws.slice(0, Number(elements.windowRange.value));
+}
+
+function renderRecommendationState() {
+  const latest = draws[0];
+  const pendingRecord = getLatestPendingRecord(state.records, latest);
+  const latestEvaluatedRecord = getLatestEvaluatedRecord(state.records);
+
+  if (pendingRecord) {
+    elements.seedLabel.textContent = `${pendingRecord.targetDraw}회 대기`;
+    renderRecommendations(elements.recommendations, pendingRecord.recommendations);
+  } else {
+    elements.seedLabel.textContent = latestEvaluatedRecord ? `${latest.draw + 1}회 준비` : "대기 중";
+    renderRecommendationPlaceholder(elements.recommendations, {
+      title: `${latest.draw + 1}회 추천을 생성하세요`,
+      description: latestEvaluatedRecord
+        ? "지난 추천 평가를 반영해 다음 회차 추천을 생성합니다."
+        : "추천을 생성하면 다음 회차 당첨번호가 데이터에 들어온 뒤 자동으로 평가됩니다.",
+    });
+  }
+
+  updateGenerateButtons(Boolean(pendingRecord), latest.draw + 1);
+  renderLearningStatus(elements.learningStatus, {
+    pendingRecord,
+    latestEvaluatedRecord,
+    feedbackProfile: state.feedbackProfile,
+  });
+}
+
+function createRecommendationRecord({ latest, historyLength, recommendations, seed, strategy, options }) {
+  return {
+    id: `${latest.draw + 1}-${Date.now().toString(36)}`,
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    baseDraw: latest.draw,
+    baseDate: latest.date,
+    targetDraw: latest.draw + 1,
+    historyLength,
+    seed,
+    settings: {
+      count: recommendations.length,
+      strategy,
+      options,
+    },
+    recommendations,
+  };
+}
+
+function updateGenerateButtons(hasPendingRecord, targetDraw) {
+  const label = hasPendingRecord ? `${targetDraw}회 추천 보관 중` : `${targetDraw}회 추천 생성`;
+
+  [elements.generateButton, elements.generateTopButton].forEach((button) => {
+    button.textContent = label;
+    button.disabled = hasPendingRecord;
+  });
 }
 
 function getHistoryWindowLabel(count) {
@@ -188,6 +269,50 @@ function readStoredHistoryWindow() {
   } catch {
     return null;
   }
+}
+
+function syncRecommendationRecords() {
+  const loadedRecords = loadRecommendationRecords();
+  const evaluatedRecords = evaluateRecommendationRecords(loadedRecords, draws);
+
+  state.records = pruneRecommendationRecords(evaluatedRecords, STORED_RECORD_LIMIT);
+  state.feedbackProfile = createFeedbackProfile(state.records);
+
+  if (JSON.stringify(loadedRecords) !== JSON.stringify(state.records)) {
+    saveRecommendationRecords();
+  }
+}
+
+function loadRecommendationRecords() {
+  try {
+    const records = JSON.parse(localStorage.getItem(RECOMMENDATION_RECORDS_STORAGE_KEY));
+
+    if (!Array.isArray(records)) {
+      return [];
+    }
+
+    return records.filter(isRecommendationRecord);
+  } catch {
+    return [];
+  }
+}
+
+function saveRecommendationRecords() {
+  try {
+    localStorage.setItem(RECOMMENDATION_RECORDS_STORAGE_KEY, JSON.stringify(state.records));
+  } catch {
+    // The app can still recommend without saved evaluation history.
+  }
+}
+
+function isRecommendationRecord(record) {
+  return (
+    record &&
+    typeof record === "object" &&
+    Number.isInteger(record.targetDraw) &&
+    Array.isArray(record.recommendations) &&
+    record.recommendations.every((item) => Array.isArray(item.numbers))
+  );
 }
 
 function clampHistoryWindowValue(value) {

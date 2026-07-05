@@ -13,7 +13,7 @@ import {
 const RECENT_DRAWS_TO_DAMPEN = 5;
 const MAX_ATTEMPTS_PER_SET = 900;
 
-export function generateRecommendationSets({ history, stats, count, strategy, options, seed, salt = Date.now() }) {
+export function generateRecommendationSets({ history, stats, count, strategy, options, seed, salt = Date.now(), feedbackProfile = null }) {
   const rng = createRng(`${seed}:${salt}:${strategy}:${history.length}`);
   const recommendations = [];
   const used = new Set();
@@ -22,7 +22,7 @@ export function generateRecommendationSets({ history, stats, count, strategy, op
   while (recommendations.length < count && attempts < count * MAX_ATTEMPTS_PER_SET) {
     attempts += 1;
     const activeStrategy = strategy === "mixed" ? pickMixedStrategy(recommendations.length) : strategy;
-    const numbers = buildCandidate(stats, history, activeStrategy, options, rng);
+    const numbers = buildCandidate(stats, history, activeStrategy, options, rng, feedbackProfile);
     const key = numbers.join("-");
 
     if (!used.has(key) && validateCandidate(numbers, stats, options)) {
@@ -44,7 +44,7 @@ export function generateRecommendationSets({ history, stats, count, strategy, op
   return recommendations;
 }
 
-function buildCandidate(stats, history, strategy, options, rng) {
+function buildCandidate(stats, history, strategy, options, rng, feedbackProfile) {
   const selected = [];
   const recentNumbers = new Set(history.slice(0, RECENT_DRAWS_TO_DAMPEN).flatMap((draw) => draw.numbers));
 
@@ -53,7 +53,7 @@ function buildCandidate(stats, history, strategy, options, rng) {
       .filter((item) => !selected.includes(item.number))
       .map((item) => ({
         number: item.number,
-        weight: getWeight(item, stats, strategy, recentNumbers, options, rng),
+        weight: getWeight(item, stats, strategy, recentNumbers, options, rng, feedbackProfile),
       }));
 
     selected.push(weightedPick(candidates, rng).number);
@@ -62,7 +62,7 @@ function buildCandidate(stats, history, strategy, options, rng) {
   return selected.sort((a, b) => a - b);
 }
 
-function getWeight(item, stats, strategy, recentNumbers, options, rng) {
+function getWeight(item, stats, strategy, recentNumbers, options, rng, feedbackProfile) {
   const frequencyScore = normalize(item.count, stats.minCount, stats.maxCount);
   const coldScore = 1 - frequencyScore;
   const overdueScore = normalize(item.gap, 0, stats.maxGap);
@@ -81,7 +81,13 @@ function getWeight(item, stats, strategy, recentNumbers, options, rng) {
     weight *= 0.42;
   }
 
+  weight *= getFeedbackMultiplier(feedbackProfile, item.number);
+
   return Math.max(0.001, weight);
+}
+
+function getFeedbackMultiplier(feedbackProfile, number) {
+  return feedbackProfile?.numberMultipliers?.[number] || 1;
 }
 
 function validateCandidate(numbers, stats, options) {

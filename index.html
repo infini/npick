@@ -31,10 +31,7 @@
         </div>
         <div class="topbar-actions">
           <button id="installButton" class="secondary-button install-button" type="button" hidden>설치</button>
-          <button id="refreshSeedButton" class="icon-button" type="button" title="추천 시드 변경" aria-label="추천 시드 변경">
-            ↻
-          </button>
-          <button id="generateTopButton" class="primary-button" type="button">추천 생성</button>
+          <button id="generateTopButton" class="primary-button" type="button">다음 회차 추천 생성</button>
         </div>
       </header>
 
@@ -43,7 +40,7 @@
           <aside class="control-panel">
             <div class="panel-heading">
               <p>추천 조건</p>
-              <strong id="seedLabel">seed</strong>
+              <strong id="seedLabel">대기 중</strong>
             </div>
 
             <div class="control-group">
@@ -95,10 +92,11 @@
                 <p>추천 결과</p>
                 <h1>역대 당첨번호의 빈도와 간격을 조합합니다</h1>
               </div>
-              <button id="generateButton" class="primary-button" type="button">추천 생성</button>
+              <button id="generateButton" class="primary-button" type="button">다음 회차 추천 생성</button>
             </div>
 
             <div id="recommendations" class="recommendations" aria-live="polite"></div>
+            <div id="learningStatus" class="learning-status" aria-live="polite"></div>
             <p class="notice">
               추천 결과는 통계적 참고용입니다. 로또는 독립 시행이며 어떤 조합도 당첨을 보장하지 않습니다.
             </p>
