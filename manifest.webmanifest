@@ -3,7 +3,7 @@
   "short_name": "NPICK",
   "description": "역대 로또 6/45 1등 당첨번호 기반 번호 추천 앱",
   "id": "./index.html",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=10",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "browser"],

@@ -1,8 +1,8 @@
-const CACHE_NAME = "npick-v10";
+const CACHE_NAME = "npick-v11";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./manifest.webmanifest",
+  "./manifest.webmanifest?v=10",
   "./assets/npick-mark.svg",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
