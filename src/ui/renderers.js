@@ -36,19 +36,20 @@ export function renderRecommendationPlaceholder(container, { title, description 
 }
 
 export function renderLearningStatus(container, { pendingRecord, latestEvaluatedRecord, feedbackProfile }) {
+  const sourceLabel = getRecommendationSourceLabel(pendingRecord);
   const pendingHtml = pendingRecord
     ? `
       <article class="learning-card">
-        <span>보관 중인 추천</span>
-        <strong>${pendingRecord.targetDraw}회 당첨번호 발표 후 자동 평가</strong>
-        <p>${pendingRecord.baseDraw}회까지의 데이터와 ${pendingRecord.historyLength.toLocaleString("ko-KR")}회 분석 범위로 만든 추천입니다.</p>
+        <span>추천 완료</span>
+        <strong>${pendingRecord.targetDraw}회 추천 보관 완료</strong>
+        <p>${sourceLabel} ${pendingRecord.targetDraw}회 당첨번호가 데이터에 들어오면 자동으로 정확도를 평가합니다.</p>
       </article>
     `
     : `
       <article class="learning-card">
-        <span>추천 생성 가능</span>
-        <strong>다음 회차 추천을 만들 수 있습니다</strong>
-        <p>추천을 만들면 같은 회차가 발표될 때까지 새 번호를 다시 뽑지 않습니다.</p>
+        <span>추천 준비</span>
+        <strong>앱 실행 시 다음 회차 추천을 자동 생성합니다</strong>
+        <p>같은 회차가 발표될 때까지 새 번호를 다시 뽑지 않습니다.</p>
       </article>
     `;
   const result = latestEvaluatedRecord?.result;
@@ -136,6 +137,18 @@ export function renderMissingData(container) {
       <p class="notice">data/lotto-data.js 파일을 생성해야 합니다. 터미널에서 node scripts/update-lotto-data.mjs 를 실행하세요.</p>
     </article>
   `;
+}
+
+function getRecommendationSourceLabel(record) {
+  if (record?.source === "auto") {
+    return "앱 실행 시 자동 생성된 추천입니다.";
+  }
+
+  if (record?.source === "manual") {
+    return "직접 생성한 추천입니다.";
+  }
+
+  return "이전에 생성해 보관한 추천입니다.";
 }
 
 function chunk(items, size) {

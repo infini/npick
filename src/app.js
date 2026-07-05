@@ -73,6 +73,7 @@ function init() {
   elements.windowRange.max = String(draws.length);
   elements.windowRange.value = String(loadHistoryWindowValue());
   syncRecommendationRecords();
+  ensureCurrentRecommendation();
 
   bindEvents();
   renderAll();
@@ -80,8 +81,8 @@ function init() {
 }
 
 function bindEvents() {
-  elements.generateButton.addEventListener("click", createNextDrawRecommendation);
-  elements.generateTopButton.addEventListener("click", createNextDrawRecommendation);
+  elements.generateButton.addEventListener("click", handleGenerateRecommendation);
+  elements.generateTopButton.addEventListener("click", handleGenerateRecommendation);
   elements.strategySelect.addEventListener("change", renderRecommendationState);
   elements.windowRange.addEventListener("input", () => {
     saveHistoryWindowValue();
@@ -118,42 +119,6 @@ function renderAll() {
   renderDrawHistory();
 }
 
-function createNextDrawRecommendation() {
-  const latest = draws[0];
-  const pendingRecord = getLatestPendingRecord(state.records, latest);
-
-  if (pendingRecord) {
-    renderRecommendationState();
-    return;
-  }
-
-  const history = getHistory();
-  const stats = computeStats(history);
-  const seed = makeSeed();
-  const options = readOptions();
-  const recommendations = generateRecommendationSets({
-    history,
-    stats,
-    count: state.count,
-    strategy: elements.strategySelect.value,
-    options,
-    seed,
-    feedbackProfile: state.feedbackProfile,
-  });
-  const record = createRecommendationRecord({
-    latest,
-    historyLength: history.length,
-    recommendations,
-    seed,
-    strategy: elements.strategySelect.value,
-    options,
-  });
-
-  state.records = pruneRecommendationRecords([record, ...state.records], STORED_RECORD_LIMIT);
-  saveRecommendationRecords();
-  renderRecommendationState();
-}
-
 function readOptions() {
   return {
     avoidRecent: elements.avoidRecentInput.checked,
@@ -179,8 +144,8 @@ function renderRecommendationState() {
     renderRecommendationPlaceholder(elements.recommendations, {
       title: `${latest.draw + 1}회 추천을 생성하세요`,
       description: latestEvaluatedRecord
-        ? "지난 추천 평가를 반영해 다음 회차 추천을 생성합니다."
-        : "추천을 생성하면 다음 회차 당첨번호가 데이터에 들어온 뒤 자동으로 평가됩니다.",
+        ? "지난 추천 평가를 반영해 다음 회차 추천을 자동으로 생성합니다."
+        : "앱을 열면 다음 회차 추천을 자동으로 한 번 생성하고, 당첨번호 갱신 후 평가합니다.",
     });
   }
 
@@ -192,7 +157,52 @@ function renderRecommendationState() {
   });
 }
 
-function createRecommendationRecord({ latest, historyLength, recommendations, seed, strategy, options }) {
+function handleGenerateRecommendation() {
+  storeNextDrawRecommendation({ source: "manual" });
+  renderRecommendationState();
+}
+
+function ensureCurrentRecommendation() {
+  storeNextDrawRecommendation({ source: "auto" });
+}
+
+function storeNextDrawRecommendation({ source }) {
+  const latest = draws[0];
+  const pendingRecord = getLatestPendingRecord(state.records, latest);
+
+  if (pendingRecord) {
+    return null;
+  }
+
+  const history = getHistory();
+  const stats = computeStats(history);
+  const seed = makeSeed();
+  const options = readOptions();
+  const recommendations = generateRecommendationSets({
+    history,
+    stats,
+    count: state.count,
+    strategy: elements.strategySelect.value,
+    options,
+    seed,
+    feedbackProfile: state.feedbackProfile,
+  });
+  const record = createRecommendationRecord({
+    latest,
+    historyLength: history.length,
+    recommendations,
+    seed,
+    strategy: elements.strategySelect.value,
+    options,
+    source,
+  });
+
+  state.records = pruneRecommendationRecords([record, ...state.records], STORED_RECORD_LIMIT);
+  saveRecommendationRecords();
+  return record;
+}
+
+function createRecommendationRecord({ latest, historyLength, recommendations, seed, strategy, options, source }) {
   return {
     id: `${latest.draw + 1}-${Date.now().toString(36)}`,
     status: "pending",
@@ -202,6 +212,7 @@ function createRecommendationRecord({ latest, historyLength, recommendations, se
     targetDraw: latest.draw + 1,
     historyLength,
     seed,
+    source,
     settings: {
       count: recommendations.length,
       strategy,
@@ -212,11 +223,10 @@ function createRecommendationRecord({ latest, historyLength, recommendations, se
 }
 
 function updateGenerateButtons(hasPendingRecord, targetDraw) {
-  const label = hasPendingRecord ? `${targetDraw}회 추천 보관 중` : `${targetDraw}회 추천 생성`;
-
   [elements.generateButton, elements.generateTopButton].forEach((button) => {
-    button.textContent = label;
-    button.disabled = hasPendingRecord;
+    button.textContent = `${targetDraw}회 추천 생성`;
+    button.hidden = hasPendingRecord;
+    button.disabled = false;
   });
 }
 
