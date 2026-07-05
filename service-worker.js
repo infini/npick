@@ -1,4 +1,4 @@
-const CACHE_NAME = "npick-v9";
+const CACHE_NAME = "npick-v10";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -7,8 +7,8 @@ const APP_SHELL = [
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./data/lotto-data.js",
-  "./src/app.js",
-  "./src/styles.css",
+  "./src/app.js?v=10",
+  "./src/styles.css?v=10",
   "./src/core/number-utils.js",
   "./src/core/random.js",
   "./src/core/recommendation-learning.js",
@@ -17,7 +17,7 @@ const APP_SHELL = [
   "./src/pwa/install-prompt.js",
   "./src/pwa/service-worker-registration.js",
   "./src/ui/lotto-balls.js",
-  "./src/ui/renderers.js",
+  "./src/ui/renderers.js?v=10",
 ];
 
 self.addEventListener("install", (event) => {

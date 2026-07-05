@@ -19,7 +19,7 @@ import {
   renderRecommendationPlaceholder,
   renderNumberSummary,
   renderRecommendations,
-} from "./ui/renderers.js";
+} from "./ui/renderers.js?v=10";
 
 const draws = Array.isArray(LOTTO_WINNING_NUMBERS) ? [...LOTTO_WINNING_NUMBERS] : [];
 const DEFAULT_HISTORY_WINDOW = 260;
