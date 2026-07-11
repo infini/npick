@@ -1,12 +1,27 @@
 {
   "meta": {
     "source": "https://lotto-view.com/lotto/numbers",
-    "generatedAt": "2026-07-05T04:51:46.004Z",
-    "latestDraw": 1231,
-    "latestDate": "2026-07-04",
-    "count": 1231
+    "generatedAt": "2026-07-11T18:43:25.562Z",
+    "latestDraw": 1232,
+    "latestDate": "2026-07-11",
+    "count": 1232
   },
   "draws": [
+    {
+      "draw": 1232,
+      "date": "2026-07-11",
+      "numbers": [
+        12,
+        15,
+        19,
+        22,
+        24,
+        36
+      ],
+      "bonus": 3,
+      "firstPrize": "2,533,260,819원",
+      "firstWinners": 11
+    },
     {
       "draw": 1231,
       "date": "2026-07-04",
