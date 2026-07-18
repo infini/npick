@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-18T12:28:57.746Z",
+    "engineVersion": "weekly-disjoint-random-v1",
+    "latestBaseDraw": 1233,
+    "currentTargetDraw": 1234,
+    "latestEvaluatedDraw": null,
+    "summary": {
+      "evaluatedWeeks": 0,
+      "evaluatedSets": 0,
+      "averageHitsPerSet": 0,
+      "prizeSetCount": 0,
+      "prizeWeekCount": 0,
+      "bestHits": 0
+    }
+  },
+  "records": [
+    {
+      "id": "1234-weekly-disjoint-random-v1",
+      "status": "pending",
+      "createdAt": "2026-07-18T12:28:57.746Z",
+      "salesCutoffAt": "2026-07-25T11:00:00.000Z",
+      "baseDraw": 1233,
+      "baseDate": "2026-07-18",
+      "targetDraw": 1234,
+      "targetDate": "2026-07-25",
+      "engineVersion": "weekly-disjoint-random-v1",
+      "seed": "weekly-disjoint-random-v1:1233:2026-07-18:2-7-20-25-37-40:29",
+      "source": "scheduled-data-update",
+      "dataVersion": {
+        "latestDraw": 1233,
+        "generatedAt": "2026-07-18T12:28:57.744Z"
+      },
+      "settings": {
+        "count": 3,
+        "portfolio": "disjoint-uniform"
+      },
+      "recommendations": [
+        {
+          "numbers": [
+            5,
+            11,
+            16,
+            18,
+            24,
+            31
+          ],
+          "strategy": "weekly-disjoint-random",
+          "tags": [
+            "합계 105",
+            "홀짝 3:3",
+            "저고 4:2",
+            "세트 간 중복 0"
+          ]
+        },
+        {
+          "numbers": [
+            1,
+            15,
+            20,
+            22,
+            32,
+            41
+          ],
+          "strategy": "weekly-disjoint-random",
+          "tags": [
+            "합계 131",
+            "홀짝 3:3",
+            "저고 4:2",
+            "세트 간 중복 0"
+          ]
+        },
+        {
+          "numbers": [
+            2,
+            3,
+            8,
+            19,
+            42,
+            45
+          ],
+          "strategy": "weekly-disjoint-random",
+          "tags": [
+            "합계 119",
+            "홀짝 3:3",
+            "저고 4:2",
+            "세트 간 중복 0"
+          ]
+        }
+      ]
+    }
+  ]
+}

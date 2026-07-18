@@ -1,12 +1,27 @@
 {
   "meta": {
-    "source": "https://lotto-view.com/lotto/numbers",
-    "generatedAt": "2026-07-11T18:43:25.562Z",
-    "latestDraw": 1232,
-    "latestDate": "2026-07-11",
-    "count": 1232
+    "source": "https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do",
+    "generatedAt": "2026-07-18T12:28:57.744Z",
+    "latestDraw": 1233,
+    "latestDate": "2026-07-18",
+    "count": 1233
   },
   "draws": [
+    {
+      "draw": 1233,
+      "date": "2026-07-18",
+      "numbers": [
+        2,
+        7,
+        20,
+        25,
+        37,
+        40
+      ],
+      "bonus": 29,
+      "firstPrize": "837,965,396원",
+      "firstWinners": 31
+    },
     {
       "draw": 1232,
       "date": "2026-07-11",
