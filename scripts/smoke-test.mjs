@@ -17,16 +17,16 @@ const advancedRecords = advanceWeeklyCycle({
 const evaluated = getLatestEvaluatedWeeklyRecord(advancedRecords);
 const current = getCurrentWeeklyRecord(advancedRecords, target);
 
-if (!evaluated || evaluated.targetDraw !== target.draw || evaluated.result.setResults.length !== 3) {
-  throw new Error("Expected the previous weekly three-set recommendation to be evaluated.");
+if (!evaluated || evaluated.targetDraw !== target.draw || evaluated.result.setResults.length !== 1) {
+  throw new Error("Expected the previous weekly single-set recommendation to be evaluated.");
 }
 
-if (!current || current.targetDraw !== target.draw + 1 || current.recommendations.length !== 3) {
-  throw new Error("Expected exactly three recommendations for the next draw.");
+if (!current || current.targetDraw !== target.draw + 1 || current.recommendations.length !== 1) {
+  throw new Error("Expected exactly one recommendation for the next draw.");
 }
 
-if (new Set(current.recommendations.flatMap((item) => item.numbers)).size !== 18) {
-  throw new Error("Expected all three weekly sets to use distinct numbers.");
+if (new Set(current.recommendations[0].numbers).size !== 6) {
+  throw new Error("Expected the weekly set to contain six distinct numbers.");
 }
 
 console.log("Weekly cycle smoke test passed.");

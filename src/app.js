@@ -1,9 +1,9 @@
-import { LOTTO_DATA_META, LOTTO_WINNING_NUMBERS } from "../data/lotto-data.js?v=13";
+import { LOTTO_DATA_META, LOTTO_WINNING_NUMBERS } from "../data/lotto-data.js?v=14";
 import {
   WEEKLY_RECOMMENDATION_RECORDS,
   WEEKLY_RECOMMENDATIONS_META,
-} from "../data/weekly-recommendations.js?v=13";
-import { computeStats } from "./core/statistics.js?v=13";
+} from "../data/weekly-recommendations.js?v=14";
+import { computeStats } from "./core/statistics.js?v=14";
 import {
   addDaysToIsoDate,
   evaluateWeeklyRecommendationRecords,
@@ -12,9 +12,9 @@ import {
   getSalesCutoffAt,
   pruneWeeklyRecommendationRecords,
   summarizeWeeklyResults,
-} from "./core/weekly-cycle.js?v=13";
-import { initInstallPrompt } from "./pwa/install-prompt.js?v=13";
-import { registerServiceWorker } from "./pwa/service-worker-registration.js?v=13";
+} from "./core/weekly-cycle.js?v=14";
+import { initInstallPrompt } from "./pwa/install-prompt.js?v=14";
+import { registerServiceWorker } from "./pwa/service-worker-registration.js?v=14";
 import {
   renderFrequencyChart,
   renderHistory,
@@ -23,7 +23,7 @@ import {
   renderRecommendationPlaceholder,
   renderRecommendations,
   renderWeeklyCycleStatus,
-} from "./ui/renderers.js?v=13";
+} from "./ui/renderers.js?v=14";
 
 const draws = Array.isArray(LOTTO_WINNING_NUMBERS) ? [...LOTTO_WINNING_NUMBERS] : [];
 const DEFAULT_HISTORY_WINDOW = 260;
@@ -110,7 +110,7 @@ function renderRecommendationState() {
   const cycleStatus = getCycleStatus(latest, currentRecord);
 
   elements.weeklyTargetLabel.textContent = currentRecord
-    ? `${currentRecord.targetDraw}회 · 3세트 고정`
+    ? `${currentRecord.targetDraw}회 · 1세트 고정`
     : `${latest.draw + 1}회 · 생성 대기`;
   elements.dataStatusLabel.textContent = cycleStatus.label;
 
@@ -147,10 +147,10 @@ function getCycleStatus(latest, currentRecord) {
     return {
       code: afterCutoff ? "awaiting-result-data" : "ready",
       label: afterCutoff ? "당첨 데이터 갱신 대기" : `${targetDate} 추첨 예정`,
-      title: `${currentRecord.targetDraw}회 추천 3세트`,
+      title: `${currentRecord.targetDraw}회 추천 1세트`,
       description: afterCutoff
-        ? "추천은 추첨 전에 확정됐습니다. 당첨 데이터가 갱신되면 세트별 결과를 평가합니다."
-        : "세 세트는 추첨일까지 고정되며 다시 생성하지 않습니다.",
+        ? "추천은 추첨 전에 확정됐습니다. 당첨 데이터가 갱신되면 결과를 평가합니다."
+        : "이 한 세트는 추첨일까지 고정되며 다시 생성하지 않습니다.",
     };
   }
 
@@ -159,7 +159,7 @@ function getCycleStatus(latest, currentRecord) {
       code: "stale-winning-data",
       label: "최신 당첨 데이터 필요",
       title: "당첨 데이터 갱신 대기",
-      description: "추첨 마감 시각이 지나 새 추천을 만들지 않았습니다. 최신 당첨 데이터가 배포되면 다음 주 3세트가 생성됩니다.",
+      description: "추첨 마감 시각이 지나 새 추천을 만들지 않았습니다. 최신 당첨 데이터가 배포되면 다음 주 1세트가 생성됩니다.",
     };
   }
 
@@ -167,7 +167,7 @@ function getCycleStatus(latest, currentRecord) {
     code: "weekly-data-missing",
     label: "주간 추천 동기화 필요",
     title: "주간 추천 데이터 준비 중",
-    description: "최신 당첨 데이터와 주간 추천 파일이 일치하면 정확히 3세트가 표시됩니다.",
+    description: "최신 당첨 데이터와 주간 추천 파일이 일치하면 정확히 1세트가 표시됩니다.",
   };
 }
 

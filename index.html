@@ -11,13 +11,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta
       name="description"
-      content="NPICK(Number Pick)은 공식 로또 6/45 당첨 이력을 확인하고, 매주 서로 겹치지 않는 3세트를 고정 제공하며 다음 추첨 후 적중 결과를 기록하는 브라우저 앱입니다."
+      content="NPICK(Number Pick)은 공식 로또 6/45 당첨 이력을 확인하고, 매주 1세트만 고정 제공하며 다음 추첨 후 적중 결과를 기록하는 브라우저 앱입니다."
     />
     <title>NPICK - Number Pick</title>
-    <link rel="manifest" href="manifest.webmanifest?v=13" />
+    <link rel="manifest" href="manifest.webmanifest?v=14" />
     <link rel="icon" href="assets/npick-mark.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
-    <link rel="stylesheet" href="src/styles.css?v=13" />
+    <link rel="stylesheet" href="src/styles.css?v=14" />
   </head>
   <body>
     <div class="app-shell">
@@ -45,11 +45,11 @@
             <div class="weekly-rule-list" aria-label="주간 추천 운영 규칙">
               <div>
                 <span>추천 수</span>
-                <strong>매주 3세트 고정</strong>
+                <strong>매주 1세트 고정</strong>
               </div>
               <div>
                 <span>번호 배치</span>
-                <strong>18개 번호 완전 분산</strong>
+                <strong>6개 번호 단일 세트</strong>
               </div>
               <div>
                 <span>반복 주기</span>
@@ -77,14 +77,14 @@
             <div class="recommend-header">
               <div>
                 <p>추천 결과</p>
-                <h1>매주 3세트, 번호 중복 없이 추천합니다</h1>
+                <h1>매주 1세트만 추천합니다</h1>
               </div>
             </div>
 
             <div id="recommendations" class="recommendations" aria-live="polite"></div>
             <div id="weeklyStatus" class="learning-status" aria-live="polite"></div>
             <p class="notice">
-              지난주 적중 결과는 기록하고 비교하지만 다음 번호의 가중치로 사용하지 않습니다. 로또는 독립 시행이며 어떤 조합도 당첨을 보장하지 않습니다.
+              지난주 적중 결과는 기록하고 비교하지만 다음 번호의 가중치로 사용하지 않습니다. 누적 기록 자체가 다음 추첨 확률을 높이지 않으며 어떤 조합도 당첨을 보장하지 않습니다.
             </p>
           </section>
         </section>
@@ -128,6 +128,6 @@
       </main>
     </div>
 
-    <script type="module" src="src/app.js?v=13"></script>
+    <script type="module" src="src/app.js?v=14"></script>
   </body>
 </html>

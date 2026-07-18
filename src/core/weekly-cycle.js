@@ -1,20 +1,24 @@
 import {
   assertWeeklyRecommendationSets,
+  createLegacyWeeklySeed,
   createWeeklySeed,
+  generateLegacyRecommendationNumberSets,
   generateWeeklyRecommendationSets,
+  LEGACY_RECOMMENDATION_ENGINE_VERSION,
   RECOMMENDATION_ENGINE_VERSION,
   WEEKLY_RECOMMENDATION_COUNT,
-} from "./recommendation-engine.js?v=13";
+} from "./recommendation-engine.js?v=14";
 
 export const WEEKLY_RECORD_LIMIT = 52;
 export const LOTTO_SALES_CUTOFF_KST = "20:00:00+09:00";
 
 export function advanceWeeklyCycle({ records, draws, generatedAt = new Date().toISOString(), dataMeta = null }) {
   const sortedDraws = validateAndSortDraws(draws);
-  assertUniqueTargets(records);
   assertLatestDrawIsCurrent(sortedDraws[0], generatedAt);
+  const normalizedRecords = migrateLegacyPendingRecords(records, sortedDraws, generatedAt);
+  assertUniqueTargets(normalizedRecords);
 
-  const evaluatedRecords = evaluateWeeklyRecommendationRecords(records, sortedDraws);
+  const evaluatedRecords = evaluateWeeklyRecommendationRecords(normalizedRecords, sortedDraws);
   const latestDraw = sortedDraws[0];
   const targetDraw = latestDraw.draw + 1;
   const existingTargetRecord = evaluatedRecords.find((record) => record.targetDraw === targetDraw);
@@ -66,7 +70,7 @@ export function createWeeklyRecommendationRecord({ baseDraw, generatedAt = new D
     },
     settings: {
       count: WEEKLY_RECOMMENDATION_COUNT,
-      portfolio: "disjoint-uniform",
+      portfolio: "single-uniform",
     },
     recommendations,
   };
@@ -131,7 +135,7 @@ export function evaluateWeeklyRecommendationRecord(record, actualDraw) {
     setResults,
     bestHits: bestResult?.hitCount ?? 0,
     bestRank: bestResult?.rank ?? "미당첨",
-    averageHits: Number((totalHits / WEEKLY_RECOMMENDATION_COUNT).toFixed(2)),
+    averageHits: setResults.length ? Number((totalHits / setResults.length).toFixed(2)) : 0,
     totalHits,
     prizeSetCount: setResults.filter((result) => result.hitCount >= 3).length,
   };
@@ -215,6 +219,134 @@ function validatePendingRecord(record, drawByRound) {
   }
 }
 
+function migrateLegacyPendingRecords(records, draws, migratedAt) {
+  if (!Array.isArray(records)) {
+    throw new Error("Weekly recommendation records must be an array.");
+  }
+
+  const drawByRound = new Map(draws.map((draw) => [draw.draw, draw]));
+  return records.map((record) => {
+    if (record?.status !== "pending" || record.engineVersion !== LEGACY_RECOMMENDATION_ENGINE_VERSION) {
+      return record;
+    }
+
+    const baseDraw = drawByRound.get(record.baseDraw);
+    if (record.migration) {
+      validateMigratedLegacyRecord(record, baseDraw);
+      return record;
+    }
+
+    const migrationDate = parseTimestamp(migratedAt, "migratedAt");
+    validateLegacyPendingRecord(record, baseDraw, migrationDate);
+    const firstRecommendation = record.recommendations[0];
+
+    return {
+      ...record,
+      settings: {
+        count: WEEKLY_RECOMMENDATION_COUNT,
+        portfolio: "single-uniform",
+      },
+      recommendations: [
+        {
+          ...firstRecommendation,
+          strategy: "weekly-single-random",
+          tags: (firstRecommendation.tags ?? []).filter((tag) => tag !== "세트 간 중복 0"),
+        },
+      ],
+      migration: {
+        version: "three-to-one-v1",
+        fromCount: 3,
+        keptSetIndex: 0,
+        policy: "keep-original-first-set",
+        migratedAt: migrationDate.toISOString(),
+      },
+    };
+  });
+}
+
+function validateLegacyPendingRecord(record, baseDraw, migrationDate) {
+  if (!baseDraw || record.targetDraw !== record.baseDraw + 1) {
+    throw new Error("Legacy weekly recommendation has an invalid base or target draw.");
+  }
+  if (record.id !== `${record.targetDraw}-${LEGACY_RECOMMENDATION_ENGINE_VERSION}`) {
+    throw new Error("Legacy weekly recommendation id is invalid.");
+  }
+  if (record.settings?.count !== 3 || record.settings?.portfolio !== "disjoint-uniform") {
+    throw new Error("Legacy weekly recommendation settings are invalid.");
+  }
+  if (record.seed !== createLegacyWeeklySeed(baseDraw)) {
+    throw new Error("Legacy weekly recommendation seed does not match its base draw.");
+  }
+  if (record.targetDate !== addDaysToIsoDate(baseDraw.date, 7)) {
+    throw new Error("Legacy weekly recommendation target date does not match its base draw.");
+  }
+
+  const createdAt = parseTimestamp(record.createdAt, "createdAt");
+  const expectedSalesCutoffAt = getSalesCutoffAt(record.targetDate);
+  if (
+    record.salesCutoffAt !== expectedSalesCutoffAt.toISOString() ||
+    createdAt.getTime() >= expectedSalesCutoffAt.getTime() ||
+    migrationDate.getTime() >= expectedSalesCutoffAt.getTime()
+  ) {
+    throw new Error("Legacy weekly recommendation was not created and migrated before its sales cutoff.");
+  }
+  if (!Array.isArray(record.recommendations) || record.recommendations.length !== 3) {
+    throw new Error("Legacy weekly recommendation must contain exactly three sets.");
+  }
+
+  const legacyNumbers = record.recommendations.flatMap((recommendation) => recommendation?.numbers ?? []);
+  if (
+    legacyNumbers.length !== 18 ||
+    new Set(legacyNumbers).size !== 18 ||
+    legacyNumbers.some((number) => !Number.isInteger(number) || number < 1 || number > 45)
+  ) {
+    throw new Error("Legacy weekly recommendation must contain 18 distinct valid numbers.");
+  }
+
+  const expectedKeys = generateLegacyRecommendationNumberSets({ baseDraw })
+    .map((numbers) => numbers.join("-"))
+    .join("|");
+  const actualKeys = record.recommendations.map((recommendation) => recommendation.numbers.join("-")).join("|");
+  if (actualKeys !== expectedKeys) {
+    throw new Error("Legacy weekly recommendations do not match the deterministic engine output.");
+  }
+}
+
+function validateMigratedLegacyRecord(record, baseDraw) {
+  if (!baseDraw || record.targetDraw !== record.baseDraw + 1) {
+    throw new Error("Migrated legacy recommendation has an invalid base or target draw.");
+  }
+  if (record.seed !== createLegacyWeeklySeed(baseDraw)) {
+    throw new Error("Migrated legacy recommendation seed does not match its base draw.");
+  }
+  if (
+    record.migration?.version !== "three-to-one-v1" ||
+    record.migration?.fromCount !== 3 ||
+    record.migration?.keptSetIndex !== 0 ||
+    record.migration?.policy !== "keep-original-first-set"
+  ) {
+    throw new Error("Migrated legacy recommendation metadata is invalid.");
+  }
+  const migratedAt = parseTimestamp(record.migration.migratedAt, "migration.migratedAt");
+  if (
+    migratedAt.getTime() < parseTimestamp(record.createdAt, "createdAt").getTime() ||
+    migratedAt.getTime() >= getSalesCutoffAt(record.targetDate).getTime()
+  ) {
+    throw new Error("Migrated legacy recommendation has an invalid migration time.");
+  }
+  if (record.id !== `${record.targetDraw}-${LEGACY_RECOMMENDATION_ENGINE_VERSION}`) {
+    throw new Error("Migrated legacy recommendation id is invalid.");
+  }
+  if (record.settings?.count !== 1 || record.settings?.portfolio !== "single-uniform") {
+    throw new Error("Migrated legacy recommendation settings are invalid.");
+  }
+  assertWeeklyRecommendationSets(record.recommendations);
+  const [expectedFirstSet] = generateLegacyRecommendationNumberSets({ baseDraw });
+  if (record.recommendations[0].numbers.join("-") !== expectedFirstSet.join("-")) {
+    throw new Error("Migrated legacy recommendation does not preserve the original first set.");
+  }
+}
+
 function validateRecordForEvaluation(record, actualDraw, drawByRound) {
   validateRecordShape(record, drawByRound);
   if (record.targetDraw !== actualDraw.draw) {
@@ -236,11 +368,8 @@ function validateRecordShape(record, drawByRound) {
   if (!baseDraw) {
     throw new Error(`Base draw ${record.baseDraw} is missing from winning data.`);
   }
-  if (record.engineVersion !== RECOMMENDATION_ENGINE_VERSION) {
-    throw new Error(`Unsupported recommendation engine version: ${record.engineVersion ?? "missing"}.`);
-  }
-  if (record.seed !== createWeeklySeed(baseDraw)) {
-    throw new Error("Weekly recommendation seed does not match its base draw.");
+  if (record.baseDate !== baseDraw.date) {
+    throw new Error("Weekly recommendation base date does not match its base draw.");
   }
   if (record.targetDate !== addDaysToIsoDate(baseDraw.date, 7)) {
     throw new Error("Weekly recommendation target date does not match its base draw.");
@@ -254,6 +383,23 @@ function validateRecordShape(record, drawByRound) {
     throw new Error("The recommendation was created after the target draw sales cutoff.");
   }
   assertWeeklyRecommendationSets(record.recommendations);
+
+  if (record.engineVersion === LEGACY_RECOMMENDATION_ENGINE_VERSION && record.migration) {
+    validateMigratedLegacyRecord(record, baseDraw);
+    return;
+  }
+  if (record.engineVersion !== RECOMMENDATION_ENGINE_VERSION) {
+    throw new Error(`Unsupported recommendation engine version: ${record.engineVersion ?? "missing"}.`);
+  }
+  if (record.seed !== createWeeklySeed(baseDraw)) {
+    throw new Error("Weekly recommendation seed does not match its base draw.");
+  }
+  if (record.id !== `${record.targetDraw}-${RECOMMENDATION_ENGINE_VERSION}`) {
+    throw new Error("Weekly recommendation id does not match its target and engine version.");
+  }
+  if (record.settings?.count !== WEEKLY_RECOMMENDATION_COUNT || record.settings?.portfolio !== "single-uniform") {
+    throw new Error("Weekly recommendation settings are invalid.");
+  }
 
   const expected = generateWeeklyRecommendationSets({ baseDraw });
   const actualKeys = record.recommendations.map((item) => item.numbers.join("-")).join("|");

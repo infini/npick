@@ -14,11 +14,12 @@ const baseDraw = {
   bonus: 43,
 };
 
-test("weekly engine always creates exactly three disjoint sets", () => {
+test("weekly engine always creates exactly one valid six-number set", () => {
   const recommendations = generateWeeklyRecommendationSets({ baseDraw });
 
   assert.equal(recommendations.length, WEEKLY_RECOMMENDATION_COUNT);
-  assert.equal(new Set(recommendations.flatMap((item) => item.numbers)).size, 18);
+  assert.equal(recommendations[0].numbers.length, 6);
+  assert.equal(new Set(recommendations[0].numbers).size, 6);
   assert.equal(assertWeeklyRecommendationSets(recommendations), true);
 });
 
@@ -30,11 +31,11 @@ test("weekly engine is deterministic and auditable from its base draw", () => {
   assert.equal(createWeeklySeed(baseDraw), createWeeklySeed(structuredClone(baseDraw)));
 });
 
-test("weekly validation rejects a fourth set and cross-set duplicate numbers", () => {
+test("weekly validation rejects a second set and duplicate numbers inside the set", () => {
   const recommendations = generateWeeklyRecommendationSets({ baseDraw });
-  assert.throws(() => assertWeeklyRecommendationSets([...recommendations, recommendations[0]]), /exactly 3 sets/);
+  assert.throws(() => assertWeeklyRecommendationSets([...recommendations, recommendations[0]]), /exactly 1 sets/);
 
   const duplicated = structuredClone(recommendations);
-  duplicated[1].numbers[0] = duplicated[0].numbers[0];
-  assert.throws(() => assertWeeklyRecommendationSets(duplicated), /must not share numbers/);
+  duplicated[0].numbers[1] = duplicated[0].numbers[0];
+  assert.throws(() => assertWeeklyRecommendationSets(duplicated), /contains invalid numbers/);
 });

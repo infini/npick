@@ -1,4 +1,4 @@
-import { renderBall } from "./lotto-balls.js?v=13";
+import { renderBall } from "./lotto-balls.js?v=14";
 
 const DEFAULT_HISTORY_LIMIT = 5;
 const SEARCH_HISTORY_LIMIT = 24;
@@ -7,10 +7,10 @@ const DEFAULT_SUMMARY_ROW_SIZE = 3;
 export function renderRecommendations(container, recommendations, { targetDraw = null } = {}) {
   container.innerHTML = recommendations
     .map(
-      (item, index) => `
+      (item) => `
         <article class="recommendation">
           <div class="recommendation-header">
-            <span>세트 ${index + 1}</span>
+            <span>추천 번호</span>
             <span>${targetDraw ? `${targetDraw}회 추첨 대기` : strategyLabel(item.strategy)}</span>
           </div>
           <div class="ball-row" aria-label="추천 번호 ${item.numbers.join(", ")}">
@@ -43,8 +43,8 @@ export function renderWeeklyCycleStatus(
     ? `
       <article class="learning-card">
         <span>이번 주 추천 확정</span>
-        <strong>${currentRecord.targetDraw}회 · 정확히 3세트</strong>
-        <p>${currentRecord.targetDate} 추첨용으로 생성됐으며 세트끼리 번호가 겹치지 않습니다. 결과 발표 전에는 다시 생성하지 않습니다.</p>
+        <strong>${currentRecord.targetDraw}회 · 정확히 1세트</strong>
+        <p>${currentRecord.targetDate} 추첨용 6개 번호입니다. 결과 발표 전에는 바꾸거나 다시 생성하지 않습니다.</p>
       </article>
     `
     : `
@@ -58,8 +58,8 @@ export function renderWeeklyCycleStatus(
   const evaluatedHtml = result
     ? `
       <article class="learning-card weekly-evaluation-card">
-        <span>지난주 3세트 평가</span>
-        <strong>${result.draw}회 · 최고 ${result.bestHits}개 · 평균 ${result.averageHits}개</strong>
+        <span>지난주 1세트 평가</span>
+        <strong>${result.draw}회 · ${result.bestHits}개 적중 · ${result.bestRank}</strong>
         <div class="winning-row" aria-label="${result.draw}회 당첨번호">
           ${result.winningNumbers.map(renderBall).join("")}
           <span class="bonus-plus">+</span>
@@ -72,16 +72,16 @@ export function renderWeeklyCycleStatus(
     `
     : `
       <article class="learning-card">
-        <span>지난주 3세트 평가</span>
+        <span>지난주 1세트 평가</span>
         <strong>아직 평가된 주간 추천이 없습니다</strong>
-        <p>이번 주 3세트의 당첨번호가 갱신되면 각 세트별 적중 번호와 등수를 표시합니다.</p>
+        <p>이번 주 1세트의 당첨번호가 갱신되면 적중 번호와 등수를 표시합니다.</p>
       </article>
     `;
   const summaryHtml = `
     <article class="learning-card">
       <span>누적 주간 분석</span>
-      <strong>${summary.evaluatedWeeks}주 · ${summary.evaluatedSets}세트 평가</strong>
-      <p>세트당 평균 ${summary.averageHitsPerSet}개 · 3개 이상 ${summary.prizeSetCount}세트 · 당첨 주차 ${summary.prizeWeekCount}주 · 최고 ${summary.bestHits}개</p>
+      <strong>${summary.evaluatedWeeks}주 평가</strong>
+      <p>주당 평균 ${summary.averageHitsPerSet}개 · 3개 이상 적중 ${summary.prizeWeekCount}주 · 최고 ${summary.bestHits}개</p>
       <p class="data-version">당첨 데이터 ${dataMeta?.latestDraw ?? "-"}회 · 주간 파일 ${weeklyMeta?.latestBaseDraw ?? "-"}회 기준</p>
     </article>
   `;
@@ -168,7 +168,7 @@ function chunk(items, size) {
 
 function strategyLabel(strategy) {
   const labels = {
-    "weekly-disjoint-random": "주간 분산 랜덤",
+    "weekly-single-random": "주간 단일 랜덤",
   };
   return labels[strategy] || strategy;
 }
@@ -178,7 +178,7 @@ function renderWeeklySetResult(result) {
   const bonus = result.bonusHit ? " · 보너스 번호 포함" : "";
   return `
     <div class="weekly-result-row">
-      <strong>세트 ${result.index} · ${result.hitCount}개 적중 · ${result.rank}</strong>
+      <strong>추천 번호 · ${result.hitCount}개 적중 · ${result.rank}</strong>
       <p>적중 번호 ${matched}${bonus}</p>
     </div>
   `;

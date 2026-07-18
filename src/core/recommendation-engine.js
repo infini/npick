@@ -1,8 +1,9 @@
-import { createNumberRange, LOTTO_PICK_COUNT, sum } from "./number-utils.js?v=13";
-import { createRng } from "./random.js?v=13";
+import { createNumberRange, LOTTO_PICK_COUNT, sum } from "./number-utils.js?v=14";
+import { createRng } from "./random.js?v=14";
 
-export const WEEKLY_RECOMMENDATION_COUNT = 3;
-export const RECOMMENDATION_ENGINE_VERSION = "weekly-disjoint-random-v1";
+export const WEEKLY_RECOMMENDATION_COUNT = 1;
+export const LEGACY_RECOMMENDATION_ENGINE_VERSION = "weekly-disjoint-random-v1";
+export const RECOMMENDATION_ENGINE_VERSION = "weekly-single-random-v2";
 
 export function createWeeklySeed(baseDraw) {
   assertBaseDraw(baseDraw);
@@ -14,6 +15,28 @@ export function createWeeklySeed(baseDraw) {
     [...baseDraw.numbers].sort((a, b) => a - b).join("-"),
     baseDraw.bonus,
   ].join(":");
+}
+
+export function createLegacyWeeklySeed(baseDraw) {
+  assertBaseDraw(baseDraw);
+
+  return [
+    LEGACY_RECOMMENDATION_ENGINE_VERSION,
+    baseDraw.draw,
+    baseDraw.date,
+    [...baseDraw.numbers].sort((a, b) => a - b).join("-"),
+    baseDraw.bonus,
+  ].join(":");
+}
+
+export function generateLegacyRecommendationNumberSets({ baseDraw }) {
+  const rng = createRng(createLegacyWeeklySeed(baseDraw));
+  const shuffled = shuffle(createNumberRange(), rng);
+
+  return Array.from({ length: 3 }, (_, index) => {
+    const start = index * LOTTO_PICK_COUNT;
+    return shuffled.slice(start, start + LOTTO_PICK_COUNT).sort((a, b) => a - b);
+  });
 }
 
 export function generateWeeklyRecommendationSets({ baseDraw }) {
@@ -36,7 +59,6 @@ export function assertWeeklyRecommendationSets(recommendations) {
     throw new Error(`Weekly recommendations must contain exactly ${WEEKLY_RECOMMENDATION_COUNT} sets.`);
   }
 
-  const portfolioNumbers = [];
   recommendations.forEach((recommendation, index) => {
     const numbers = recommendation?.numbers;
     if (!Array.isArray(numbers) || numbers.length !== LOTTO_PICK_COUNT) {
@@ -47,13 +69,7 @@ export function assertWeeklyRecommendationSets(recommendations) {
     if (unique.size !== LOTTO_PICK_COUNT || numbers.some((number) => !Number.isInteger(number) || number < 1 || number > 45)) {
       throw new Error(`Recommendation set ${index + 1} contains invalid numbers.`);
     }
-
-    portfolioNumbers.push(...numbers);
   });
-
-  if (new Set(portfolioNumbers).size !== WEEKLY_RECOMMENDATION_COUNT * LOTTO_PICK_COUNT) {
-    throw new Error("Weekly recommendation sets must not share numbers.");
-  }
 
   return true;
 }
@@ -73,12 +89,11 @@ function describeCandidate(numbers) {
 
   return {
     numbers,
-    strategy: "weekly-disjoint-random",
+    strategy: "weekly-single-random",
     tags: [
       `합계 ${sum(numbers)}`,
       `홀짝 ${oddCount}:${LOTTO_PICK_COUNT - oddCount}`,
       `저고 ${lowCount}:${LOTTO_PICK_COUNT - lowCount}`,
-      "세트 간 중복 0",
     ],
   };
 }
