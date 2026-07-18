@@ -1,156 +1,102 @@
-import { createRng, weightedPick } from "./random.js";
-import {
-  bucketCounts,
-  countMatches,
-  createNumberRange,
-  LOTTO_MAX_NUMBER,
-  LOTTO_PICK_COUNT,
-  longestConsecutiveRun,
-  normalize,
-  sum,
-} from "./number-utils.js";
+import { createNumberRange, LOTTO_PICK_COUNT, sum } from "./number-utils.js?v=13";
+import { createRng } from "./random.js?v=13";
 
-const RECENT_DRAWS_TO_DAMPEN = 5;
-const MAX_ATTEMPTS_PER_SET = 900;
+export const WEEKLY_RECOMMENDATION_COUNT = 3;
+export const RECOMMENDATION_ENGINE_VERSION = "weekly-disjoint-random-v1";
 
-export function generateRecommendationSets({ history, stats, count, strategy, options, seed, salt = Date.now(), feedbackProfile = null }) {
-  const rng = createRng(`${seed}:${salt}:${strategy}:${history.length}`);
-  const recommendations = [];
-  const used = new Set();
+export function createWeeklySeed(baseDraw) {
+  assertBaseDraw(baseDraw);
 
-  let attempts = 0;
-  while (recommendations.length < count && attempts < count * MAX_ATTEMPTS_PER_SET) {
-    attempts += 1;
-    const activeStrategy = strategy === "mixed" ? pickMixedStrategy(recommendations.length) : strategy;
-    const numbers = buildCandidate(stats, history, activeStrategy, options, rng, feedbackProfile);
-    const key = numbers.join("-");
+  return [
+    RECOMMENDATION_ENGINE_VERSION,
+    baseDraw.draw,
+    baseDraw.date,
+    [...baseDraw.numbers].sort((a, b) => a - b).join("-"),
+    baseDraw.bonus,
+  ].join(":");
+}
 
-    if (!used.has(key) && validateCandidate(numbers, stats, options)) {
-      used.add(key);
-      recommendations.push(describeCandidate(numbers, stats, activeStrategy));
-    }
-  }
+export function generateWeeklyRecommendationSets({ baseDraw }) {
+  const seed = createWeeklySeed(baseDraw);
+  const rng = createRng(seed);
+  const shuffled = shuffle(createNumberRange(), rng);
 
-  while (recommendations.length < count) {
-    const numbers = fallbackCandidate(rng);
-    const key = numbers.join("-");
+  const recommendations = Array.from({ length: WEEKLY_RECOMMENDATION_COUNT }, (_, index) => {
+    const start = index * LOTTO_PICK_COUNT;
+    const numbers = shuffled.slice(start, start + LOTTO_PICK_COUNT).sort((a, b) => a - b);
+    return describeCandidate(numbers);
+  });
 
-    if (!used.has(key)) {
-      used.add(key);
-      recommendations.push(describeCandidate(numbers, stats, "fallback"));
-    }
-  }
-
+  assertWeeklyRecommendationSets(recommendations);
   return recommendations;
 }
 
-function buildCandidate(stats, history, strategy, options, rng, feedbackProfile) {
-  const selected = [];
-  const recentNumbers = new Set(history.slice(0, RECENT_DRAWS_TO_DAMPEN).flatMap((draw) => draw.numbers));
-
-  while (selected.length < LOTTO_PICK_COUNT) {
-    const candidates = stats.numberStats
-      .filter((item) => !selected.includes(item.number))
-      .map((item) => ({
-        number: item.number,
-        weight: getWeight(item, stats, strategy, recentNumbers, options, rng, feedbackProfile),
-      }));
-
-    selected.push(weightedPick(candidates, rng).number);
+export function assertWeeklyRecommendationSets(recommendations) {
+  if (!Array.isArray(recommendations) || recommendations.length !== WEEKLY_RECOMMENDATION_COUNT) {
+    throw new Error(`Weekly recommendations must contain exactly ${WEEKLY_RECOMMENDATION_COUNT} sets.`);
   }
 
-  return selected.sort((a, b) => a - b);
+  const portfolioNumbers = [];
+  recommendations.forEach((recommendation, index) => {
+    const numbers = recommendation?.numbers;
+    if (!Array.isArray(numbers) || numbers.length !== LOTTO_PICK_COUNT) {
+      throw new Error(`Recommendation set ${index + 1} must contain exactly ${LOTTO_PICK_COUNT} numbers.`);
+    }
+
+    const unique = new Set(numbers);
+    if (unique.size !== LOTTO_PICK_COUNT || numbers.some((number) => !Number.isInteger(number) || number < 1 || number > 45)) {
+      throw new Error(`Recommendation set ${index + 1} contains invalid numbers.`);
+    }
+
+    portfolioNumbers.push(...numbers);
+  });
+
+  if (new Set(portfolioNumbers).size !== WEEKLY_RECOMMENDATION_COUNT * LOTTO_PICK_COUNT) {
+    throw new Error("Weekly recommendation sets must not share numbers.");
+  }
+
+  return true;
 }
 
-function getWeight(item, stats, strategy, recentNumbers, options, rng, feedbackProfile) {
-  const frequencyScore = normalize(item.count, stats.minCount, stats.maxCount);
-  const coldScore = 1 - frequencyScore;
-  const overdueScore = normalize(item.gap, 0, stats.maxGap);
-  const balancedScore = 1 - Math.abs(0.5 - frequencyScore) * 1.55;
-  let weight;
-
-  if (strategy === "hot") {
-    weight = 0.65 * frequencyScore + 0.2 * overdueScore + 0.15 * rng();
-  } else if (strategy === "cold") {
-    weight = 0.48 * coldScore + 0.42 * overdueScore + 0.1 * rng();
-  } else {
-    weight = 0.42 * Math.max(0.08, balancedScore) + 0.28 * frequencyScore + 0.2 * overdueScore + 0.1 * rng();
+function shuffle(values, rng) {
+  const result = [...values];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(rng() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
   }
-
-  if (options.avoidRecent && recentNumbers.has(item.number)) {
-    weight *= 0.42;
-  }
-
-  weight *= getFeedbackMultiplier(feedbackProfile, item.number);
-
-  return Math.max(0.001, weight);
+  return result;
 }
 
-function getFeedbackMultiplier(feedbackProfile, number) {
-  return feedbackProfile?.numberMultipliers?.[number] || 1;
-}
-
-function validateCandidate(numbers, stats, options) {
-  if (numbers.length !== LOTTO_PICK_COUNT || new Set(numbers).size !== LOTTO_PICK_COUNT) {
-    return false;
-  }
-
-  if (options.excludePast && stats.historicalKeys.has(numbers.join("-"))) {
-    return false;
-  }
-
-  const total = sum(numbers);
-  if (total < stats.sumLow || total > stats.sumHigh) {
-    return false;
-  }
-
-  if (longestConsecutiveRun(numbers) > 3) {
-    return false;
-  }
-
-  if (!options.strictBalance) {
-    return true;
-  }
-
-  const oddCount = numbers.filter((number) => number % 2 === 1).length;
-  const lowCount = numbers.filter((number) => number <= 22).length;
-  const decadeMax = Math.max(...bucketCounts(numbers));
-
-  return oddCount >= 2 && oddCount <= 4 && lowCount >= 2 && lowCount <= 4 && decadeMax <= 3;
-}
-
-function describeCandidate(numbers, stats, strategy) {
-  const hotSet = new Set(stats.hotNumbers.slice(0, 12).map((item) => item.number));
-  const coldSet = new Set(stats.coldNumbers.slice(0, 12).map((item) => item.number));
-  const overdueSet = new Set(stats.overdueNumbers.slice(0, 12).map((item) => item.number));
+function describeCandidate(numbers) {
   const oddCount = numbers.filter((number) => number % 2 === 1).length;
   const lowCount = numbers.filter((number) => number <= 22).length;
 
   return {
     numbers,
-    strategy,
+    strategy: "weekly-disjoint-random",
     tags: [
       `합계 ${sum(numbers)}`,
       `홀짝 ${oddCount}:${LOTTO_PICK_COUNT - oddCount}`,
       `저고 ${lowCount}:${LOTTO_PICK_COUNT - lowCount}`,
-      `핫 ${countMatches(numbers, hotSet)}`,
-      `미출현 ${countMatches(numbers, overdueSet)}`,
-      `콜드 ${countMatches(numbers, coldSet)}`,
+      "세트 간 중복 0",
     ],
   };
 }
 
-function fallbackCandidate(rng) {
-  const picked = new Set();
-  const range = createNumberRange();
-
-  while (picked.size < LOTTO_PICK_COUNT) {
-    picked.add(range[Math.floor(rng() * LOTTO_MAX_NUMBER)]);
+function assertBaseDraw(baseDraw) {
+  const numbers = baseDraw?.numbers;
+  if (
+    !Number.isInteger(baseDraw?.draw) ||
+    typeof baseDraw?.date !== "string" ||
+    !Array.isArray(numbers) ||
+    numbers.length !== LOTTO_PICK_COUNT ||
+    new Set(numbers).size !== LOTTO_PICK_COUNT ||
+    numbers.some((number) => !Number.isInteger(number) || number < 1 || number > 45) ||
+    !Number.isInteger(baseDraw?.bonus) ||
+    baseDraw.bonus < 1 ||
+    baseDraw.bonus > 45 ||
+    numbers.includes(baseDraw.bonus)
+  ) {
+    throw new Error("A valid base draw is required to generate weekly recommendations.");
   }
-
-  return [...picked].sort((a, b) => a - b);
-}
-
-function pickMixedStrategy(index) {
-  return ["balanced", "hot", "cold"][index % 3];
 }

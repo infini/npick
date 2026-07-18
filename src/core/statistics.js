@@ -1,4 +1,4 @@
-import { createNumberRange, quantile, sum } from "./number-utils.js";
+import { createNumberRange, quantile, sum } from "./number-utils.js?v=13";
 
 export function computeStats(history) {
   const counts = new Map();

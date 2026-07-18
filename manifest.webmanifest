@@ -1,9 +1,9 @@
 {
   "name": "NPICK - Number Pick",
   "short_name": "NPICK",
-  "description": "역대 로또 6/45 1등 당첨번호 기반 번호 추천 앱",
+  "description": "매주 중복 없는 3세트를 추천하고 다음 회차 결과를 평가하는 로또 6/45 앱",
   "id": "./index.html",
-  "start_url": "./index.html?v=10",
+  "start_url": "./index.html?v=13",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "browser"],

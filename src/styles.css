@@ -213,7 +213,7 @@ button:disabled {
 }
 
 .panel-heading strong {
-  max-width: 120px;
+  max-width: 190px;
   overflow: hidden;
   color: var(--muted);
   font-size: 12px;
@@ -237,6 +237,52 @@ button:disabled {
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
+}
+
+.control-help,
+.data-status-box p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.weekly-rule-list {
+  display: grid;
+  gap: 8px;
+}
+
+.weekly-rule-list div,
+.data-status-box {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.weekly-rule-list span,
+.weekly-rule-list strong,
+.data-status-box span,
+.data-status-box strong {
+  display: block;
+}
+
+.weekly-rule-list span,
+.data-status-box span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.weekly-rule-list strong,
+.data-status-box strong {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.data-status-box p {
+  margin-top: 7px;
 }
 
 select,
@@ -326,7 +372,7 @@ input[type="range"] {
 
 .recommendations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -367,7 +413,7 @@ input[type="range"] {
 
 .learning-status {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: minmax(210px, 0.8fr) minmax(320px, 1.4fr) minmax(210px, 0.8fr);
   gap: 10px;
   margin-top: 12px;
 }
@@ -402,6 +448,47 @@ input[type="range"] {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.5;
+}
+
+.learning-card .data-version {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.winning-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.winning-row .ball {
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+}
+
+.weekly-result-list {
+  display: grid;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.weekly-result-row {
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: var(--surface-muted);
+}
+
+.weekly-result-row strong {
+  margin: 0;
+  font-size: 13px;
+}
+
+.weekly-result-row p {
+  margin-top: 4px;
+  font-size: 11px;
 }
 
 .ball-row {
@@ -628,6 +715,11 @@ input[type="range"] {
 
   .control-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recommendations,
+  .learning-status {
+    grid-template-columns: 1fr;
   }
 
   .panel-heading,

@@ -12,6 +12,7 @@
     "dev": "python3 -m http.server 4173",
     "update:data": "node scripts/update-lotto-data.mjs",
     "watch:push": "node scripts/watch-and-push.mjs",
-    "check": "find src scripts -type f \\( -name '*.js' -o -name '*.mjs' \\) | xargs -n 1 node --check && node --check service-worker.js && node --check data/lotto-data.js && node scripts/smoke-test.mjs"
+    "test": "node --test test/*.test.mjs",
+    "check": "find src scripts test -type f \\( -name '*.js' -o -name '*.mjs' \\) | xargs -n 1 node --check && node --check service-worker.js && node --check data/lotto-data.js && node --check data/weekly-recommendations.js && npm test && node scripts/smoke-test.mjs"
   }
 }
