@@ -1,12 +1,42 @@
 {
   "meta": {
     "source": "https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do",
-    "generatedAt": "2026-07-18T12:28:57.744Z",
-    "latestDraw": 1233,
-    "latestDate": "2026-07-18",
-    "count": 1233
+    "generatedAt": "2026-08-03T14:21:40.634Z",
+    "latestDraw": 1235,
+    "latestDate": "2026-08-01",
+    "count": 1235
   },
   "draws": [
+    {
+      "draw": 1235,
+      "date": "2026-08-01",
+      "numbers": [
+        6,
+        7,
+        11,
+        15,
+        39,
+        43
+      ],
+      "bonus": 20,
+      "firstPrize": "3,090,961,625원",
+      "firstWinners": 9
+    },
+    {
+      "draw": 1234,
+      "date": "2026-07-25",
+      "numbers": [
+        1,
+        15,
+        19,
+        31,
+        35,
+        43
+      ],
+      "bonus": 27,
+      "firstPrize": "1,595,129,563원",
+      "firstWinners": 18
+    },
     {
       "draw": 1233,
       "date": "2026-07-18",
