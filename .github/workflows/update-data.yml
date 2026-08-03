@@ -1,6 +1,15 @@
 name: Update Lotto Data
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-data.yml"
+      - "package.json"
+      - "scripts/update-lotto-data.mjs"
+      - "src/core/**"
+      - "test/**"
   schedule:
     - cron: "0 18,21 * * 6"
     - cron: "0 0 * * 0"
