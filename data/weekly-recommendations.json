@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generatedAt": "2026-09-05T19:55:00.319Z",
+    "generatedAt": "2026-09-12T20:10:10.725Z",
     "engineVersion": "weekly-single-random-v2",
-    "latestBaseDraw": 1240,
-    "currentTargetDraw": 1241,
-    "latestEvaluatedDraw": 1240,
+    "latestBaseDraw": 1241,
+    "currentTargetDraw": 1242,
+    "latestEvaluatedDraw": 1241,
     "summary": {
-      "evaluatedWeeks": 6,
-      "evaluatedSets": 6,
-      "averageHitsPerSet": 0.67,
+      "evaluatedWeeks": 7,
+      "evaluatedSets": 7,
+      "averageHitsPerSet": 0.71,
       "prizeSetCount": 0,
       "prizeWeekCount": 0,
       "bestHits": 1
@@ -16,8 +16,47 @@
   },
   "records": [
     {
-      "id": "1241-weekly-single-random-v2",
+      "id": "1242-weekly-single-random-v2",
       "status": "pending",
+      "createdAt": "2026-09-12T20:10:10.725Z",
+      "salesCutoffAt": "2026-09-19T11:00:00.000Z",
+      "baseDraw": 1241,
+      "baseDate": "2026-09-12",
+      "targetDraw": 1242,
+      "targetDate": "2026-09-19",
+      "engineVersion": "weekly-single-random-v2",
+      "seed": "weekly-single-random-v2:1241:2026-09-12:7-13-16-23-24-43:9",
+      "source": "scheduled-data-update",
+      "dataVersion": {
+        "latestDraw": 1241,
+        "generatedAt": "2026-09-12T20:10:10.723Z"
+      },
+      "settings": {
+        "count": 1,
+        "portfolio": "single-uniform"
+      },
+      "recommendations": [
+        {
+          "numbers": [
+            1,
+            14,
+            25,
+            33,
+            34,
+            42
+          ],
+          "strategy": "weekly-single-random",
+          "tags": [
+            "합계 149",
+            "홀짝 3:3",
+            "저고 2:4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1241-weekly-single-random-v2",
+      "status": "evaluated",
       "createdAt": "2026-09-05T19:55:00.319Z",
       "salesCutoffAt": "2026-09-12T11:00:00.000Z",
       "baseDraw": 1240,
@@ -52,7 +91,44 @@
             "저고 2:4"
           ]
         }
-      ]
+      ],
+      "result": {
+        "draw": 1241,
+        "date": "2026-09-12",
+        "winningNumbers": [
+          7,
+          13,
+          16,
+          23,
+          24,
+          43
+        ],
+        "bonus": 9,
+        "setResults": [
+          {
+            "index": 1,
+            "numbers": [
+              3,
+              4,
+              23,
+              29,
+              34,
+              41
+            ],
+            "matchedNumbers": [
+              23
+            ],
+            "bonusHit": false,
+            "hitCount": 1,
+            "rank": "미당첨"
+          }
+        ],
+        "bestHits": 1,
+        "bestRank": "미당첨",
+        "averageHits": 1,
+        "totalHits": 1,
+        "prizeSetCount": 0
+      }
     },
     {
       "id": "1240-weekly-single-random-v2",
