@@ -5,54 +5,54 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-any-hit-156",
       "development": {
         "count": 722,
-        "meanHits": 0.817174515235457,
-        "zeroRate": 0.3975069252077562,
+        "meanHits": 0.8033240997229917,
+        "zeroRate": 0.4099722991689751,
         "prizeRate": 0.0332409972299169,
         "histogram": [
-          287,
-          306,
-          105,
-          22,
-          2,
+          296,
+          299,
+          103,
+          21,
+          3,
           0,
           0
         ],
-        "uniformPValue": 0.28502904741538937,
+        "uniformPValue": 0.46231032338956185,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7576923076923077,
-        "zeroRate": 0.4269230769230769,
-        "prizeRate": 0.019230769230769232,
+        "meanHits": 0.6846153846153846,
+        "zeroRate": 0.45384615384615384,
+        "prizeRate": 0.011538461538461539,
         "histogram": [
-          111,
-          106,
-          38,
-          5,
+          118,
+          109,
+          30,
+          3,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.9928893631464939,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.03461538461538462,
+      "confirmationMeanGainVsCurrent": -0.038461538461538464,
       "pairedDescriptive95Interval": [
-        -0.08461538461538462,
-        0.1423076923076923
+        -0.16923076923076924,
+        0.08076923076923077
       ],
-      "confirmationBrierScore": 0.11617849115886963,
+      "confirmationBrierScore": 0.11623619477839311,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.7884615384615384,
-          "zeroRate": 0.34615384615384615,
+          "meanHits": 0.7115384615384616,
+          "zeroRate": 0.40384615384615385,
           "prizeRate": 0.0,
           "histogram": [
-            18,
-            27,
-            7,
+            21,
+            25,
+            6,
             0,
             0,
             0,
@@ -61,14 +61,14 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.9230769230769231,
-          "zeroRate": 0.38461538461538464,
-          "prizeRate": 0.038461538461538464,
+          "meanHits": 0.6153846153846154,
+          "zeroRate": 0.4807692307692308,
+          "prizeRate": 0.0,
           "histogram": [
-            20,
-            18,
-            12,
-            2,
+            25,
+            22,
+            5,
+            0,
             0,
             0,
             0
@@ -91,12 +91,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.5,
-          "zeroRate": 0.6538461538461539,
+          "meanHits": 0.5192307692307693,
+          "zeroRate": 0.6346153846153846,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            34,
-            11,
+            33,
+            12,
             6,
             1,
             0,
@@ -126,53 +126,53 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-any-hit-260",
       "development": {
         "count": 722,
-        "meanHits": 0.8074792243767313,
-        "zeroRate": 0.4196675900277008,
+        "meanHits": 0.8019390581717452,
+        "zeroRate": 0.42382271468144045,
         "prizeRate": 0.036011080332409975,
         "histogram": [
-          303,
-          283,
-          110,
-          24,
-          2,
+          306,
+          282,
+          108,
+          23,
+          3,
           0,
           0
         ],
-        "uniformPValue": 0.4063951714650587,
+        "uniformPValue": 0.4811885470608412,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7769230769230769,
-        "zeroRate": 0.40384615384615385,
+        "meanHits": 0.7538461538461538,
+        "zeroRate": 0.4230769230769231,
         "prizeRate": 0.023076923076923078,
         "histogram": [
-          105,
-          114,
-          35,
+          110,
+          110,
+          34,
           6,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.694531840361523,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.05384615384615385,
+      "confirmationMeanGainVsCurrent": 0.03076923076923077,
       "pairedDescriptive95Interval": [
-        -0.06538461538461539,
-        0.17307692307692307
+        -0.09230769230769231,
+        0.15384615384615385
       ],
-      "confirmationBrierScore": 0.11594834876784497,
+      "confirmationBrierScore": 0.1159757544768412,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.6923076923076923,
-          "zeroRate": 0.4230769230769231,
+          "meanHits": 0.6730769230769231,
+          "zeroRate": 0.4423076923076923,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            22,
-            25,
+            23,
+            24,
             4,
             1,
             0,
@@ -182,12 +182,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.75,
-          "zeroRate": 0.40384615384615385,
+          "meanHits": 0.7115384615384616,
+          "zeroRate": 0.4423076923076923,
           "prizeRate": 0.0,
           "histogram": [
-            21,
             23,
+            21,
             8,
             0,
             0,
@@ -197,12 +197,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.8269230769230769,
-          "zeroRate": 0.36538461538461536,
+          "meanHits": 0.8076923076923077,
+          "zeroRate": 0.38461538461538464,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            19,
-            25,
+            20,
+            24,
             6,
             2,
             0,
@@ -212,13 +212,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.8076923076923077,
-          "zeroRate": 0.4807692307692308,
+          "meanHits": 0.7692307692307693,
+          "zeroRate": 0.5,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            25,
+            26,
             14,
-            11,
+            10,
             2,
             0,
             0,
@@ -247,36 +247,36 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-ensemble-156",
       "development": {
         "count": 722,
-        "meanHits": 0.7825484764542936,
-        "zeroRate": 0.4168975069252078,
+        "meanHits": 0.7797783933518005,
+        "zeroRate": 0.41412742382271467,
         "prizeRate": 0.024930747922437674,
         "histogram": [
+          299,
           301,
-          295,
-          108,
+          104,
           18,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.7320986780876831,
+        "uniformPValue": 0.7626005743608405,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
         "meanHits": 0.7,
-        "zeroRate": 0.4807692307692308,
-        "prizeRate": 0.023076923076923078,
+        "zeroRate": 0.4653846153846154,
+        "prizeRate": 0.015384615384615385,
         "histogram": [
-          125,
-          94,
+          121,
+          100,
           35,
-          6,
+          4,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.9831438798312301,
+        "uniformPValue": 0.98314387983123,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.023076923076923078,
@@ -284,16 +284,16 @@ export const RESEARCH_ANALYSIS = {
         -0.14615384615384616,
         0.1076923076923077
       ],
-      "confirmationBrierScore": 0.11577970033671099,
+      "confirmationBrierScore": 0.11577865464950284,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.75,
-          "zeroRate": 0.46153846153846156,
+          "meanHits": 0.7692307692307693,
+          "zeroRate": 0.4423076923076923,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            24,
-            18,
+            23,
+            19,
             9,
             1,
             0,
@@ -303,14 +303,14 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.75,
-          "zeroRate": 0.4807692307692308,
-          "prizeRate": 0.019230769230769232,
+          "meanHits": 0.7307692307692307,
+          "zeroRate": 0.4423076923076923,
+          "prizeRate": 0.0,
           "histogram": [
-            25,
-            16,
-            10,
-            1,
+            23,
+            20,
+            9,
+            0,
             0,
             0,
             0
@@ -318,14 +318,14 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.7692307692307693,
-          "zeroRate": 0.4230769230769231,
-          "prizeRate": 0.019230769230769232,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.0,
           "histogram": [
-            22,
             21,
-            8,
-            1,
+            21,
+            10,
+            0,
             0,
             0,
             0
@@ -348,13 +348,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.6538461538461539,
+          "meanHits": 0.6346153846153846,
           "zeroRate": 0.4807692307692308,
           "prizeRate": 0.019230769230769232,
           "histogram": [
             25,
-            21,
-            5,
+            22,
+            4,
             1,
             0,
             0,
@@ -368,54 +368,54 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-ensemble-260",
       "development": {
         "count": 722,
-        "meanHits": 0.8019390581717452,
-        "zeroRate": 0.39196675900277006,
-        "prizeRate": 0.02077562326869806,
+        "meanHits": 0.7922437673130194,
+        "zeroRate": 0.4002770083102493,
+        "prizeRate": 0.0221606648199446,
         "histogram": [
-          283,
-          314,
-          110,
+          289,
+          311,
+          106,
           15,
-          0,
+          1,
           0,
           0
         ],
-        "uniformPValue": 0.4811885470608412,
+        "uniformPValue": 0.6123701619440932,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.8038461538461539,
-        "zeroRate": 0.40384615384615385,
-        "prizeRate": 0.03076923076923077,
+        "meanHits": 0.7807692307692308,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.023076923076923078,
         "histogram": [
-          105,
-          109,
-          38,
-          8,
+          110,
+          103,
+          41,
+          6,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.4812705650225133,
+        "uniformPValue": 0.6660622055427207,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.08076923076923077,
+      "confirmationMeanGainVsCurrent": 0.057692307692307696,
       "pairedDescriptive95Interval": [
-        -0.03461538461538462,
-        0.21153846153846154
+        -0.05,
+        0.16923076923076924
       ],
-      "confirmationBrierScore": 0.11576033041144891,
+      "confirmationBrierScore": 0.1157568016954273,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.8461538461538461,
+          "meanHits": 0.8653846153846154,
           "zeroRate": 0.38461538461538464,
           "prizeRate": 0.0,
           "histogram": [
             20,
-            20,
-            12,
+            19,
+            13,
             0,
             0,
             0,
@@ -425,12 +425,12 @@ export const RESEARCH_ANALYSIS = {
         {
           "count": 52,
           "meanHits": 0.7692307692307693,
-          "zeroRate": 0.4230769230769231,
+          "zeroRate": 0.4423076923076923,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            22,
-            21,
-            8,
+            23,
+            19,
+            9,
             1,
             0,
             0,
@@ -439,13 +439,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.6730769230769231,
-          "zeroRate": 0.4423076923076923,
+          "meanHits": 0.7307692307692307,
+          "zeroRate": 0.4230769230769231,
           "prizeRate": 0.0,
           "histogram": [
-            23,
-            23,
-            6,
+            22,
+            22,
+            8,
             0,
             0,
             0,
@@ -454,14 +454,14 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.9807692307692307,
-          "zeroRate": 0.3269230769230769,
-          "prizeRate": 0.09615384615384616,
+          "meanHits": 0.8269230769230769,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.057692307692307696,
           "histogram": [
-            17,
-            24,
+            21,
+            22,
             6,
-            5,
+            3,
             0,
             0,
             0
@@ -469,13 +469,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.75,
-          "zeroRate": 0.4423076923076923,
+          "meanHits": 0.7115384615384616,
+          "zeroRate": 0.46153846153846156,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            23,
+            24,
             21,
-            6,
+            5,
             2,
             0,
             0,
@@ -489,53 +489,53 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-mean-156",
       "development": {
         "count": 722,
-        "meanHits": 0.7562326869806094,
-        "zeroRate": 0.42382271468144045,
-        "prizeRate": 0.0221606648199446,
+        "meanHits": 0.7700831024930748,
+        "zeroRate": 0.41412742382271467,
+        "prizeRate": 0.023545706371191136,
         "histogram": [
-          306,
-          303,
+          299,
+          309,
           97,
           15,
-          1,
+          2,
           0,
           0
         ],
-        "uniformPValue": 0.936994139810322,
+        "uniformPValue": 0.8530656116547435,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7576923076923077,
-        "zeroRate": 0.4423076923076923,
+        "meanHits": 0.7461538461538462,
+        "zeroRate": 0.45,
         "prizeRate": 0.015384615384615385,
         "histogram": [
-          115,
-          98,
-          43,
+          117,
+          97,
+          42,
           3,
           1,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.8748587943750873,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.03461538461538462,
+      "confirmationMeanGainVsCurrent": 0.023076923076923078,
       "pairedDescriptive95Interval": [
-        -0.057692307692307696,
-        0.13076923076923078
+        -0.06923076923076923,
+        0.11538461538461539
       ],
-      "confirmationBrierScore": 0.11588294352920503,
+      "confirmationBrierScore": 0.1159144322571542,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.8653846153846154,
-          "zeroRate": 0.36538461538461536,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.38461538461538464,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            19,
-            22,
+            20,
+            21,
             10,
             1,
             0,
@@ -545,13 +545,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.8653846153846154,
-          "zeroRate": 0.38461538461538464,
+          "meanHits": 0.8269230769230769,
+          "zeroRate": 0.40384615384615385,
           "prizeRate": 0.019230769230769232,
           "histogram": [
+            21,
             20,
-            20,
-            11,
+            10,
             1,
             0,
             0,
@@ -610,54 +610,54 @@ export const RESEARCH_ANALYSIS = {
       "id": "adaptive-mean-260",
       "development": {
         "count": 722,
-        "meanHits": 0.7576177285318559,
-        "zeroRate": 0.42105263157894735,
-        "prizeRate": 0.0221606648199446,
+        "meanHits": 0.760387811634349,
+        "zeroRate": 0.4168975069252078,
+        "prizeRate": 0.023545706371191136,
         "histogram": [
-          304,
-          305,
-          97,
+          301,
+          311,
+          93,
           16,
-          0,
+          1,
           0,
           0
         ],
-        "uniformPValue": 0.9308150256320342,
+        "uniformPValue": 0.9170792373845366,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7576923076923077,
-        "zeroRate": 0.4423076923076923,
+        "meanHits": 0.7346153846153847,
+        "zeroRate": 0.45384615384615384,
         "prizeRate": 0.026923076923076925,
         "histogram": [
-          115,
+          118,
           100,
-          38,
+          35,
           7,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.9179911061651203,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.03461538461538462,
+      "confirmationMeanGainVsCurrent": 0.011538461538461539,
       "pairedDescriptive95Interval": [
-        -0.07692307692307693,
-        0.14615384615384616
+        -0.1,
+        0.12307692307692308
       ],
-      "confirmationBrierScore": 0.11598856904468106,
+      "confirmationBrierScore": 0.11598486731502328,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.7692307692307693,
+          "meanHits": 0.75,
           "zeroRate": 0.38461538461538464,
           "prizeRate": 0.019230769230769232,
           "histogram": [
             20,
-            25,
-            6,
+            26,
+            5,
             1,
             0,
             0,
@@ -666,13 +666,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.7115384615384616,
-          "zeroRate": 0.4423076923076923,
+          "meanHits": 0.6153846153846154,
+          "zeroRate": 0.5,
           "prizeRate": 0.0,
           "histogram": [
-            23,
-            21,
-            8,
+            26,
+            20,
+            6,
             0,
             0,
             0,
@@ -743,7 +743,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.388131464847572,
+        "uniformPValue": 0.38813146484757194,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -760,7 +760,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9698490974080435,
+        "uniformPValue": 0.9698490974080434,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.011538461538461539,
@@ -864,7 +864,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.28502904741538937,
+        "uniformPValue": 0.2850290474153893,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -881,7 +881,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.796278628293004,
+        "uniformPValue": 0.7962786282930038,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.038461538461538464,
@@ -985,7 +985,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.6997686619427889,
+        "uniformPValue": 0.6997686619427887,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1002,7 +1002,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.997295433993809,
+        "uniformPValue": 0.9972954339938089,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.05384615384615385,
@@ -1123,7 +1123,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8386269783786723,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03076923076923077,
@@ -1244,7 +1244,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.4812705650225133,
+        "uniformPValue": 0.48127056502251325,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.08076923076923077,
@@ -1348,7 +1348,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.3349928724344906,
+        "uniformPValue": 0.3349928724344905,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1365,7 +1365,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -1469,7 +1469,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8740135877001198,
+        "uniformPValue": 0.8740135877001196,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1486,7 +1486,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8906952282273625,
+        "uniformPValue": 0.8906952282273624,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.019230769230769232,
@@ -1590,7 +1590,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.1493171736047892,
+        "uniformPValue": 0.14931717360478916,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1607,7 +1607,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.796278628293004,
+        "uniformPValue": 0.7962786282930038,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.038461538461538464,
@@ -1711,7 +1711,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.7320986780876831,
+        "uniformPValue": 0.732098678087683,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1728,7 +1728,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9398547926829208,
+        "uniformPValue": 0.9398547926829206,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.0038461538461538464,
@@ -1832,7 +1832,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.25385726176112183,
+        "uniformPValue": 0.2538572617611218,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -1970,7 +1970,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.6366392290959773,
+        "uniformPValue": 0.636639229095977,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.06153846153846154,
@@ -2074,7 +2074,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.35239508832634264,
+        "uniformPValue": 0.3523950883263426,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2195,7 +2195,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.08562305922061358,
+        "uniformPValue": 0.08562305922061357,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2212,7 +2212,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9398547926829208,
+        "uniformPValue": 0.9398547926829206,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.0038461538461538464,
@@ -2316,7 +2316,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.18455323510182886,
+        "uniformPValue": 0.18455323510182883,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2333,7 +2333,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.929566166812842,
+        "uniformPValue": 0.9295661668128419,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.007692307692307693,
@@ -2437,7 +2437,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.388131464847572,
+        "uniformPValue": 0.38813146484757194,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2454,7 +2454,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.7480522407209862,
+        "uniformPValue": 0.7480522407209861,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.046153846153846156,
@@ -2558,7 +2558,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.1722681400393527,
+        "uniformPValue": 0.17226814003935265,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2575,7 +2575,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.8182104122465133,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03461538461538462,
@@ -2679,7 +2679,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.5001170479494026,
+        "uniformPValue": 0.5001170479494025,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -2696,7 +2696,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.7480522407209862,
+        "uniformPValue": 0.7480522407209861,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.046153846153846156,
@@ -2789,43 +2789,43 @@ export const RESEARCH_ANALYSIS = {
       "development": {
         "count": 722,
         "meanHits": 0.7451523545706371,
-        "zeroRate": 0.42105263157894735,
+        "zeroRate": 0.42382271468144045,
         "prizeRate": 0.01662049861495845,
         "histogram": [
-          304,
-          311,
-          95,
+          306,
+          307,
+          97,
           11,
           1,
           0,
           0
         ],
-        "uniformPValue": 0.9723085763204812,
+        "uniformPValue": 0.972308576320481,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7576923076923077,
-        "zeroRate": 0.4,
+        "meanHits": 0.7538461538461538,
+        "zeroRate": 0.40384615384615385,
         "prizeRate": 0.0038461538461538464,
         "histogram": [
-          104,
-          116,
+          105,
+          115,
           39,
           1,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.03461538461538462,
+      "confirmationMeanGainVsCurrent": 0.03076923076923077,
       "pairedDescriptive95Interval": [
-        -0.08855769230769223,
-        0.1576923076923077
+        -0.09230769230769231,
+        0.15384615384615385
       ],
-      "confirmationBrierScore": 0.1157733158875272,
+      "confirmationBrierScore": 0.11577277791161796,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -2859,12 +2859,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.6538461538461539,
-          "zeroRate": 0.4423076923076923,
+          "meanHits": 0.6346153846153846,
+          "zeroRate": 0.46153846153846156,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            23,
-            25,
+            24,
+            24,
             3,
             1,
             0,
@@ -2909,53 +2909,53 @@ export const RESEARCH_ANALYSIS = {
       "id": "extra-trees-520-25",
       "development": {
         "count": 722,
-        "meanHits": 0.7340720221606648,
-        "zeroRate": 0.4168975069252078,
-        "prizeRate": 0.0110803324099723,
+        "meanHits": 0.7354570637119113,
+        "zeroRate": 0.4155124653739612,
+        "prizeRate": 0.009695290858725761,
         "histogram": [
-          301,
+          300,
           320,
-          93,
-          8,
+          95,
+          7,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.9893639639657118,
+        "uniformPValue": 0.9879218521832531,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
         "meanHits": 0.7576923076923077,
-        "zeroRate": 0.43846153846153846,
+        "zeroRate": 0.4423076923076923,
         "prizeRate": 0.019230769230769232,
         "histogram": [
-          114,
-          100,
-          41,
+          115,
+          98,
+          42,
           5,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.8182104122465133,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03461538461538462,
       "pairedDescriptive95Interval": [
         -0.08846153846153847,
-        0.16153846153846155
+        0.1576923076923077
       ],
-      "confirmationBrierScore": 0.11582833882986665,
+      "confirmationBrierScore": 0.11582645192623528,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.8461538461538461,
-          "zeroRate": 0.40384615384615385,
+          "meanHits": 0.8653846153846154,
+          "zeroRate": 0.38461538461538464,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            21,
-            19,
+            20,
+            20,
             11,
             1,
             0,
@@ -2980,13 +2980,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.5769230769230769,
+          "meanHits": 0.5961538461538461,
           "zeroRate": 0.5,
           "prizeRate": 0.0,
           "histogram": [
             26,
-            22,
-            4,
+            21,
+            5,
             0,
             0,
             0,
@@ -2995,12 +2995,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.6153846153846154,
-          "zeroRate": 0.5192307692307693,
+          "meanHits": 0.5769230769230769,
+          "zeroRate": 0.5576923076923077,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            27,
-            19,
+            29,
+            17,
             5,
             1,
             0,
@@ -3030,44 +3030,44 @@ export const RESEARCH_ANALYSIS = {
       "id": "extra-trees-all-100",
       "development": {
         "count": 722,
-        "meanHits": 0.7548476454293629,
-        "zeroRate": 0.4113573407202216,
-        "prizeRate": 0.02631578947368421,
+        "meanHits": 0.7506925207756233,
+        "zeroRate": 0.41412742382271467,
+        "prizeRate": 0.024930747922437674,
         "histogram": [
-          297,
-          326,
-          80,
-          17,
+          299,
+          324,
+          81,
+          16,
           2,
           0,
           0
         ],
-        "uniformPValue": 0.9427371374743202,
+        "uniformPValue": 0.9575344644123984,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7653846153846153,
-        "zeroRate": 0.4269230769230769,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.4230769230769231,
         "prizeRate": 0.023076923076923078,
         "histogram": [
-          111,
-          106,
+          110,
+          107,
           37,
           5,
           1,
           0,
           0
         ],
-        "uniformPValue": 0.7728718694905777,
+        "uniformPValue": 0.7480522407209861,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.04230769230769231,
+      "confirmationMeanGainVsCurrent": 0.046153846153846156,
       "pairedDescriptive95Interval": [
-        -0.06538461538461539,
+        -0.06153846153846154,
         0.1576923076923077
       ],
-      "confirmationBrierScore": 0.11571954457556125,
+      "confirmationBrierScore": 0.11571928147910088,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -3131,12 +3131,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.7692307692307693,
-          "zeroRate": 0.46153846153846156,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.4423076923076923,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            24,
-            18,
+            23,
+            19,
             8,
             2,
             0,
@@ -3151,44 +3151,44 @@ export const RESEARCH_ANALYSIS = {
       "id": "extra-trees-all-25",
       "development": {
         "count": 722,
-        "meanHits": 0.7645429362880887,
-        "zeroRate": 0.40166204986149584,
-        "prizeRate": 0.015235457063711912,
+        "meanHits": 0.7534626038781164,
+        "zeroRate": 0.40581717451523547,
+        "prizeRate": 0.012465373961218837,
         "histogram": [
-          290,
-          324,
+          293,
+          323,
           97,
-          10,
-          1,
+          9,
+          0,
           0,
           0
         ],
-        "uniformPValue": 0.8927994619624446,
+        "uniformPValue": 0.9480622644947202,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7038461538461539,
-        "zeroRate": 0.46153846153846156,
+        "meanHits": 0.7076923076923077,
+        "zeroRate": 0.4576923076923077,
         "prizeRate": 0.026923076923076925,
         "histogram": [
-          120,
-          106,
+          119,
+          107,
           27,
           5,
           2,
           0,
           0
         ],
-        "uniformPValue": 0.9794116868550995,
+        "uniformPValue": 0.9750084480690899,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": -0.019230769230769232,
+      "confirmationMeanGainVsCurrent": -0.015384615384615385,
       "pairedDescriptive95Interval": [
-        -0.13846153846153847,
-        0.1076923076923077
+        -0.1346153846153846,
+        0.11153846153846154
       ],
-      "confirmationBrierScore": 0.11575449771675997,
+      "confirmationBrierScore": 0.11575183813624,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -3222,12 +3222,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.5,
-          "zeroRate": 0.5961538461538461,
+          "meanHits": 0.5192307692307693,
+          "zeroRate": 0.5769230769230769,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            31,
-            18,
+            30,
+            19,
             1,
             2,
             0,
@@ -3284,7 +3284,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.18455323510182886,
+        "uniformPValue": 0.18455323510182883,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -3301,7 +3301,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8748587943750875,
+        "uniformPValue": 0.8748587943750873,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.023076923076923078,
@@ -3405,7 +3405,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.18455323510182886,
+        "uniformPValue": 0.18455323510182883,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -3422,7 +3422,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8386269783786723,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03076923076923077,
@@ -3526,7 +3526,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.22459754870287083,
+        "uniformPValue": 0.2245975487028708,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -3543,7 +3543,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -3647,7 +3647,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.388131464847572,
+        "uniformPValue": 0.38813146484757194,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -3664,7 +3664,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8386269783786723,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03076923076923077,
@@ -3785,7 +3785,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.7728718694905777,
+        "uniformPValue": 0.7728718694905775,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.04230769230769231,
@@ -3906,7 +3906,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.8182104122465133,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03461538461538462,
@@ -4010,7 +4010,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.25385726176112183,
+        "uniformPValue": 0.2538572617611218,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4027,7 +4027,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.929566166812842,
+        "uniformPValue": 0.9295661668128419,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.007692307692307693,
@@ -4131,7 +4131,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.22459754870287083,
+        "uniformPValue": 0.2245975487028708,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4148,7 +4148,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.796278628293004,
+        "uniformPValue": 0.7962786282930038,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.038461538461538464,
@@ -4373,7 +4373,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8299224321244486,
+        "uniformPValue": 0.8299224321244485,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4494,7 +4494,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.4623103233895619,
+        "uniformPValue": 0.46231032338956185,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4511,7 +4511,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8386269783786723,
+        "uniformPValue": 0.8386269783786721,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.03076923076923077,
@@ -4519,7 +4519,7 @@ export const RESEARCH_ANALYSIS = {
         -0.11923076923076924,
         0.18076923076923077
       ],
-      "confirmationBrierScore": 0.11580853778132696,
+      "confirmationBrierScore": 0.11580854851172562,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -4603,31 +4603,31 @@ export const RESEARCH_ANALYSIS = {
       "id": "logistic-520-0.1",
       "development": {
         "count": 722,
-        "meanHits": 0.8185595567867036,
-        "zeroRate": 0.37119113573407203,
-        "prizeRate": 0.018005540166204988,
+        "meanHits": 0.8199445983379502,
+        "zeroRate": 0.3670360110803324,
+        "prizeRate": 0.01662049861495845,
         "histogram": [
-          268,
-          330,
+          265,
+          334,
           111,
-          13,
+          12,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.26921363645959107,
+        "uniformPValue": 0.2538572617611218,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
         "meanHits": 0.8115384615384615,
-        "zeroRate": 0.4115384615384615,
-        "prizeRate": 0.023076923076923078,
+        "zeroRate": 0.4076923076923077,
+        "prizeRate": 0.019230769230769232,
         "histogram": [
-          107,
-          101,
-          46,
-          6,
+          106,
+          102,
+          47,
+          5,
           0,
           0,
           0
@@ -4640,16 +4640,16 @@ export const RESEARCH_ANALYSIS = {
         -0.05384615384615385,
         0.23076923076923078
       ],
-      "confirmationBrierScore": 0.11595859465789657,
+      "confirmationBrierScore": 0.11595538977098616,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.8846153846153846,
-          "zeroRate": 0.3269230769230769,
+          "meanHits": 0.9038461538461539,
+          "zeroRate": 0.3076923076923077,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            17,
-            25,
+            16,
+            26,
             9,
             1,
             0,
@@ -4659,14 +4659,14 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.7115384615384616,
+          "meanHits": 0.6923076923076923,
           "zeroRate": 0.5,
-          "prizeRate": 0.038461538461538464,
+          "prizeRate": 0.019230769230769232,
           "histogram": [
             26,
             17,
-            7,
-            2,
+            8,
+            1,
             0,
             0,
             0
@@ -4724,53 +4724,53 @@ export const RESEARCH_ANALYSIS = {
       "id": "logistic-520-1.0",
       "development": {
         "count": 722,
-        "meanHits": 0.8185595567867036,
-        "zeroRate": 0.38365650969529086,
+        "meanHits": 0.8268698060941828,
+        "zeroRate": 0.3767313019390582,
         "prizeRate": 0.019390581717451522,
         "histogram": [
-          277,
-          314,
-          117,
-          13,
-          1,
+          272,
+          317,
+          119,
+          14,
+          0,
           0,
           0
         ],
-        "uniformPValue": 0.26921363645959107,
+        "uniformPValue": 0.18455323510182883,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7730769230769231,
-        "zeroRate": 0.4346153846153846,
+        "meanHits": 0.7769230769230769,
+        "zeroRate": 0.4307692307692308,
         "prizeRate": 0.019230769230769232,
         "histogram": [
-          113,
-          98,
+          112,
+          99,
           44,
           5,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.7219037593703166,
+        "uniformPValue": 0.6945318403615229,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.05,
+      "confirmationMeanGainVsCurrent": 0.05384615384615385,
       "pairedDescriptive95Interval": [
-        -0.09615384615384616,
-        0.19615384615384615
+        -0.09230769230769231,
+        0.2
       ],
-      "confirmationBrierScore": 0.1160428841164898,
+      "confirmationBrierScore": 0.11604910442732881,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.8653846153846154,
-          "zeroRate": 0.34615384615384615,
+          "meanHits": 0.8846153846153846,
+          "zeroRate": 0.3269230769230769,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            18,
-            25,
+            17,
+            26,
             7,
             2,
             0,
@@ -4810,12 +4810,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.8269230769230769,
-          "zeroRate": 0.38461538461538464,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.36538461538461536,
           "prizeRate": 0.038461538461538464,
           "histogram": [
-            20,
-            23,
+            19,
+            24,
             7,
             2,
             0,
@@ -4825,12 +4825,12 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.8653846153846154,
-          "zeroRate": 0.40384615384615385,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.4230769230769231,
           "prizeRate": 0.0,
           "histogram": [
-            21,
-            17,
+            22,
+            16,
             14,
             0,
             0,
@@ -4857,7 +4857,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.25385726176112183,
+        "uniformPValue": 0.2538572617611218,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4874,7 +4874,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.796278628293004,
+        "uniformPValue": 0.7962786282930038,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.038461538461538464,
@@ -4882,7 +4882,7 @@ export const RESEARCH_ANALYSIS = {
         -0.09230769230769231,
         0.16923076923076924
       ],
-      "confirmationBrierScore": 0.11587913269346743,
+      "confirmationBrierScore": 0.11587912615983784,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -4966,19 +4966,19 @@ export const RESEARCH_ANALYSIS = {
       "id": "logistic-all-0.1",
       "development": {
         "count": 722,
-        "meanHits": 0.8559556786703602,
-        "zeroRate": 0.36149584487534625,
+        "meanHits": 0.8587257617728532,
+        "zeroRate": 0.3573407202216066,
         "prizeRate": 0.023545706371191136,
         "histogram": [
-          261,
-          321,
-          123,
+          258,
+          325,
+          122,
           17,
           0,
           0,
           0
         ],
-        "uniformPValue": 0.029842278812214282,
+        "uniformPValue": 0.02404926847435781,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -4995,15 +4995,15 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.7480522407209862,
+        "uniformPValue": 0.7480522407209861,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.046153846153846156,
       "pairedDescriptive95Interval": [
-        -0.08076923076923077,
+        -0.07692307692307693,
         0.17307692307692307
       ],
-      "confirmationBrierScore": 0.11591088668583333,
+      "confirmationBrierScore": 0.11591302861876576,
       "confirmationBlocks": [
         {
           "count": 52,
@@ -5087,53 +5087,53 @@ export const RESEARCH_ANALYSIS = {
       "id": "logistic-all-1.0",
       "development": {
         "count": 722,
-        "meanHits": 0.8448753462603878,
-        "zeroRate": 0.3767313019390582,
+        "meanHits": 0.8559556786703602,
+        "zeroRate": 0.3698060941828255,
         "prizeRate": 0.0221606648199446,
         "histogram": [
-          272,
-          307,
-          127,
+          267,
+          309,
+          130,
           15,
           1,
           0,
           0
         ],
-        "uniformPValue": 0.06566701669379409,
+        "uniformPValue": 0.029842278812214282,
         "adjustedPValue": 1.0
       },
       "confirmation": {
         "count": 260,
-        "meanHits": 0.7576923076923077,
-        "zeroRate": 0.4153846153846154,
+        "meanHits": 0.7653846153846153,
+        "zeroRate": 0.4115384615384615,
         "prizeRate": 0.026923076923076925,
         "histogram": [
-          108,
+          107,
           115,
-          30,
+          31,
           6,
           1,
           0,
           0
         ],
-        "uniformPValue": 0.8182104122465135,
+        "uniformPValue": 0.7728718694905775,
         "adjustedPValue": 1.0
       },
-      "confirmationMeanGainVsCurrent": 0.03461538461538462,
+      "confirmationMeanGainVsCurrent": 0.04230769230769231,
       "pairedDescriptive95Interval": [
-        -0.08461538461538462,
-        0.1576923076923077
+        -0.08076923076923077,
+        0.16538461538461538
       ],
-      "confirmationBrierScore": 0.11591980759597868,
+      "confirmationBrierScore": 0.11592107368062039,
       "confirmationBlocks": [
         {
           "count": 52,
-          "meanHits": 0.6923076923076923,
-          "zeroRate": 0.4230769230769231,
+          "meanHits": 0.7115384615384616,
+          "zeroRate": 0.40384615384615385,
           "prizeRate": 0.019230769230769232,
           "histogram": [
-            22,
-            25,
+            21,
+            26,
             4,
             1,
             0,
@@ -5143,13 +5143,13 @@ export const RESEARCH_ANALYSIS = {
         },
         {
           "count": 52,
-          "meanHits": 0.75,
+          "meanHits": 0.7692307692307693,
           "zeroRate": 0.40384615384615385,
           "prizeRate": 0.0,
           "histogram": [
             21,
-            23,
-            8,
+            22,
+            9,
             0,
             0,
             0,
@@ -5220,7 +5220,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8927994619624446,
+        "uniformPValue": 0.8927994619624444,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -5237,7 +5237,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.4812705650225133,
+        "uniformPValue": 0.48127056502251325,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.08076923076923077,
@@ -5341,7 +5341,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.6829797512531571,
+        "uniformPValue": 0.682979751253157,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -5358,7 +5358,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.575590425016031,
+        "uniformPValue": 0.5755904250160309,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.06923076923076923,
@@ -5479,7 +5479,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8748587943750875,
+        "uniformPValue": 0.8748587943750873,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.023076923076923078,
@@ -5583,7 +5583,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.6304734725037597,
+        "uniformPValue": 0.6304734725037596,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -5600,7 +5600,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -5704,7 +5704,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.5754831220061157,
+        "uniformPValue": 0.5754831220061156,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -5721,7 +5721,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -5842,7 +5842,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -5946,7 +5946,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.6123701619440933,
+        "uniformPValue": 0.6123701619440932,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -5963,7 +5963,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8575093599591271,
+        "uniformPValue": 0.857509359959127,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": 0.026923076923076925,
@@ -6067,7 +6067,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.901401404374438,
+        "uniformPValue": 0.9014014043744379,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -6084,7 +6084,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9638450392153888,
+        "uniformPValue": 0.9638450392153887,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.007692307692307693,
@@ -6188,7 +6188,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8927994619624446,
+        "uniformPValue": 0.8927994619624444,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -6205,7 +6205,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9750084480690902,
+        "uniformPValue": 0.9750084480690899,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.015384615384615385,
@@ -6309,7 +6309,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.8836733299999248,
+        "uniformPValue": 0.8836733299999247,
         "adjustedPValue": 1.0
       },
       "confirmation": {
@@ -6326,7 +6326,7 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "uniformPValue": 0.9698490974080435,
+        "uniformPValue": 0.9698490974080434,
         "adjustedPValue": 1.0
       },
       "confirmationMeanGainVsCurrent": -0.011538461538461539,
