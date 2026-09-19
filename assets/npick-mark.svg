@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="NPICK">
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="#0b0d12"/>
+  <rect x="32.5" y="32.5" width="447" height="447" rx="103.5" fill="none" stroke="#ffffff" stroke-opacity="0.14"/>
+  <path
+    fill="#ffffff"
+    d="M118 354V158h42l108 126V158h68c48 0 80 30 80 75s-32 76-80 76h-28v45h-42L158 228v126h-40Zm190-88h26c22 0 36-13 36-33s-14-32-36-32h-26v65Z"
+  />
+</svg>
