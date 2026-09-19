@@ -1,25 +1,28 @@
-const CACHE_NAME = "npick-v14";
+const CACHE_NAME = "npick-v15";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./index.html?v=14",
-  "./manifest.webmanifest?v=14",
+  "./index.html?v=15",
+  "./manifest.webmanifest?v=15",
   "./assets/npick-mark.svg",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
-  "./data/lotto-data.js?v=14",
-  "./data/weekly-recommendations.js?v=14",
-  "./src/app.js?v=14",
-  "./src/styles.css?v=14",
-  "./src/core/number-utils.js?v=14",
-  "./src/core/random.js?v=14",
-  "./src/core/recommendation-engine.js?v=14",
-  "./src/core/statistics.js?v=14",
-  "./src/core/weekly-cycle.js?v=14",
-  "./src/pwa/install-prompt.js?v=14",
-  "./src/pwa/service-worker-registration.js?v=14",
-  "./src/ui/lotto-balls.js?v=14",
-  "./src/ui/renderers.js?v=14",
+  "./data/lotto-data.js?v=15",
+  "./data/weekly-recommendations.js?v=15",
+  "./data/recommendation-analysis.js?v=15",
+  "./src/app.js?v=15",
+  "./src/styles.css?v=15",
+  "./src/core/number-utils.js?v=15",
+  "./src/core/random.js?v=15",
+  "./src/core/recommendation-engine.js?v=15",
+  "./src/core/recommendation-performance.js?v=15",
+  "./src/core/statistics.js?v=15",
+  "./src/core/weekly-cycle.js?v=15",
+  "./src/pwa/install-prompt.js?v=15",
+  "./src/pwa/service-worker-registration.js?v=15",
+  "./src/ui/lotto-balls.js?v=15",
+  "./src/ui/renderers.js?v=15",
+  "./src/ui/performance.js?v=15",
 ];
 
 self.addEventListener("install", (event) => {
@@ -46,9 +49,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   const isWeeklyData =
     url.pathname.endsWith("/data/lotto-data.js") ||
-    url.pathname.endsWith("/data/weekly-recommendations.js");
+    url.pathname.endsWith("/data/weekly-recommendations.js") ||
+    url.pathname.endsWith("/data/recommendation-analysis.js");
 
-  event.respondWith(isWeeklyData ? networkFirst(request) : staleWhileRevalidate(request));
+  const needsFreshResponse = isWeeklyData || request.mode === "navigate";
+  event.respondWith(needsFreshResponse ? networkFirst(request) : staleWhileRevalidate(request));
 });
 
 async function networkFirst(request) {
@@ -60,13 +65,19 @@ async function networkFirst(request) {
       return response;
     }
 
-    const cached = await caches.match(request);
+    const cached = await getCachedResponse(request);
     return cached || response;
   } catch {
-    const cached = await caches.match(request);
+    const cached = await getCachedResponse(request);
     if (cached) return cached;
     throw new Error(`No network or cached response for ${request.url}`);
   }
+}
+
+async function getCachedResponse(request) {
+  const cached = await caches.match(request);
+  if (cached || request.mode !== "navigate") return cached;
+  return caches.match("./index.html");
 }
 
 async function staleWhileRevalidate(request) {

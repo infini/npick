@@ -10,31 +10,22 @@ permissions:
   contents: write
 
 concurrency:
-  group: gh-pages
-  cancel-in-progress: true
+  group: npick-release
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Validate before publishing
+        run: npm run check
       - name: Publish static files
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/npick-pages
-          rsync -a \
-            --exclude '.git' \
-            --exclude '.github' \
-            --exclude 'screenshots' \
-            ./ /tmp/npick-pages/
-          cd /tmp/npick-pages
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b gh-pages
-          git add -A
-          git commit -m "deploy: publish NPICK"
-          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push --force origin gh-pages
+        run: bash scripts/publish-pages.sh

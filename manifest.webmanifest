@@ -3,7 +3,7 @@
   "short_name": "NPICK",
   "description": "매주 1세트만 추천하고 다음 회차 결과를 평가하는 로또 6/45 앱",
   "id": "./index.html",
-  "start_url": "./index.html?v=14",
+  "start_url": "./index.html?v=15",
   "scope": "./",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "browser"],

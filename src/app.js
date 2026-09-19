@@ -1,9 +1,11 @@
-import { LOTTO_DATA_META, LOTTO_WINNING_NUMBERS } from "../data/lotto-data.js?v=14";
+import { LOTTO_DATA_META, LOTTO_WINNING_NUMBERS } from "../data/lotto-data.js?v=15";
 import {
   WEEKLY_RECOMMENDATION_RECORDS,
   WEEKLY_RECOMMENDATIONS_META,
-} from "../data/weekly-recommendations.js?v=14";
-import { computeStats } from "./core/statistics.js?v=14";
+} from "../data/weekly-recommendations.js?v=15";
+import { computeStats } from "./core/statistics.js?v=15";
+import { RECOMMENDATION_ANALYSIS } from "../data/recommendation-analysis.js?v=15";
+import { renderPerformance } from "./ui/performance.js?v=15";
 import {
   addDaysToIsoDate,
   evaluateWeeklyRecommendationRecords,
@@ -12,9 +14,9 @@ import {
   getSalesCutoffAt,
   pruneWeeklyRecommendationRecords,
   summarizeWeeklyResults,
-} from "./core/weekly-cycle.js?v=14";
-import { initInstallPrompt } from "./pwa/install-prompt.js?v=14";
-import { registerServiceWorker } from "./pwa/service-worker-registration.js?v=14";
+} from "./core/weekly-cycle.js?v=15";
+import { initInstallPrompt } from "./pwa/install-prompt.js?v=15";
+import { registerServiceWorker } from "./pwa/service-worker-registration.js?v=15";
 import {
   renderFrequencyChart,
   renderHistory,
@@ -23,7 +25,7 @@ import {
   renderRecommendationPlaceholder,
   renderRecommendations,
   renderWeeklyCycleStatus,
-} from "./ui/renderers.js?v=14";
+} from "./ui/renderers.js?v=15";
 
 const draws = Array.isArray(LOTTO_WINNING_NUMBERS) ? [...LOTTO_WINNING_NUMBERS] : [];
 const DEFAULT_HISTORY_WINDOW = 260;
@@ -38,6 +40,7 @@ const state = {
 const elements = {
   recommendations: document.querySelector("#recommendations"),
   weeklyStatus: document.querySelector("#weeklyStatus"),
+  performance: document.querySelector("#recommendationPerformance"),
   installButton: document.querySelector("#installButton"),
   windowRange: document.querySelector("#windowRange"),
   windowLabel: document.querySelector("#windowLabel"),
@@ -132,6 +135,11 @@ function renderRecommendationState() {
     cycleStatus,
     dataMeta: LOTTO_DATA_META,
     weeklyMeta: WEEKLY_RECOMMENDATIONS_META,
+  });
+  renderPerformance(elements.performance, {
+    records: state.records,
+    report: RECOMMENDATION_ANALYSIS,
+    latestDraw: latest.draw,
   });
 }
 

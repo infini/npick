@@ -7,7 +7,7 @@ import {
   LEGACY_RECOMMENDATION_ENGINE_VERSION,
   RECOMMENDATION_ENGINE_VERSION,
   WEEKLY_RECOMMENDATION_COUNT,
-} from "./recommendation-engine.js?v=14";
+} from "./recommendation-engine.js?v=15";
 
 export const WEEKLY_RECORD_LIMIT = 52;
 export const LOTTO_SALES_CUTOFF_KST = "20:00:00+09:00";
