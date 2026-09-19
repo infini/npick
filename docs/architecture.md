@@ -10,10 +10,15 @@ NPICK은 정적 PWA이며 기능별 책임을 분리한다. 새 코드를 추가
 - `src/ui/`: HTML 렌더링과 화면 표시 규칙을 둔다. 추천 점수 계산을 금지한다.
 - `src/ui/performance.js`: 추천 성적과 과거 전략 비교를 표시한다. 실제 기록과 과거 재현 결과를 분리하고 오래된 보고서는 표시하지 않는다.
 - `src/pwa/`: 설치 프롬프트, 서비스 워커 등록 등 앱 설치 관련 브라우저 기능을 둔다.
-- `data/`: 생성된 당첨번호와 주간 추천/평가 데이터만 둔다. 직접 수정하지 않고 `scripts/update-lotto-data.mjs`로 갱신한다.
+- `data/`: 생성된 당첨번호, 주간 추천/평가, 분석 보고서와 사전 실험 원장을 둔다. 직접 수정하지 않고 각 생성 스크립트로 갱신한다.
 - `scripts/`: 개발, 데이터 갱신, 자동 push, 스모크 테스트처럼 앱 런타임 밖의 작업을 둔다.
 - `scripts/analysis/`: 고정 후보 전략과 시계열 순차 검증을 담당한다. 브라우저 번들에서 참조하지 않고 추천 엔진을 바꾸지 않는다.
 - `scripts/analyze-recommendations.mjs`: 생성 데이터 읽기와 분석 보고서 쓰기만 담당한다. 보고서 JS와 JSON을 함께 생성한다.
+- `scripts/research/features.py`: 당첨 데이터 검증과 과거 자료 전용 입력 특성 생성.
+- `scripts/research/models.py`: 고정 통계/학습 모델과 이전 실적만 보는 적응형 선택.
+- `scripts/research/evaluation.py`: 과거 지표, 정확한 귀무분포, 보정 p값, 구간 추정과 분포 진단.
+- `scripts/research/prospective.py`: 추첨 전 고정 원장 검증·누적 평가·e-process. 추천 엔진이나 파일 IO에 의존하지 않는다.
+- `scripts/research/run.py`: 위 모듈을 연결하고 연구 생성물을 저장하는 CLI. Python 의존성은 연구/CI에만 사용한다.
 - `scripts/publish-pages.sh`: 배포 브랜치를 복제해 일반 커밋과 push를 수행한다. force-push를 사용하지 않는다.
 - `.github/workflows/`: GitHub Pages 배포와 주간 당첨번호 데이터 갱신 자동화를 둔다.
 - `docs/`: 핵심 로직과 구조 결정 사항을 문서화한다.
@@ -29,6 +34,8 @@ NPICK은 정적 PWA이며 기능별 책임을 분리한다. 새 코드를 추가
 - PWA 설치, 캐시, 오프라인 동작은 `src/pwa/` 또는 `service-worker.js`에서만 다룬다.
 - 생성 파일인 `data/lotto-data.*`와 `data/weekly-recommendations.*`는 수동 편집하지 않는다.
 - `data/recommendation-analysis.*`도 생성 파일이다. 당첨 데이터가 바뀌면 분석을 다시 실행하고 `npm run check`로 산출물 재현성을 확인한다.
+- `data/research-analysis.*`와 `data/research-shadow-records.json`은 `npm run research`로 갱신한다. 원장은 재생성을 위해 삭제하지 않는다. 현재 앱은 이 파일을 불러오지 않으며 주간 추천 배포와 연구 계산을 분리한다.
+- 연구 코드는 `npm run research:test`, 생성 파일은 `npm run check`로 검증한다. 연구 보고서가 한 주 늦어도 기본 데이터 갱신은 가능하되, 보고서 내부의 프로토콜·번호·해시 불일치는 허용하지 않는다.
 - 과거 비교 성적을 실제 추천 성적으로 합치거나 최고 기록만 골라 보고하지 않는다. 알고리즘 채택은 과거 점수로 자동화하지 않는다.
 
 ## UI 표시 규칙

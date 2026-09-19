@@ -9,6 +9,7 @@ trap 'rm -rf "$pages_dir"' EXIT
 git clone --quiet --single-branch --branch gh-pages \
   "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$pages_dir"
 rsync -a --delete --exclude '.git' --exclude '.github' --exclude 'screenshots' \
+  --exclude '__pycache__' --exclude '*.pyc' --exclude '.venv-research' \
   "$source_dir/" "$pages_dir/"
 git -C "$pages_dir" config user.name "github-actions[bot]"
 git -C "$pages_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"

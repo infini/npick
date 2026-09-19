@@ -5,3 +5,6 @@ build/
 coverage/
 screenshots/
 npm-debug.log*
+__pycache__/
+*.pyc
+.venv-research/
