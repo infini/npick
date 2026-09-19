@@ -55,6 +55,12 @@ npm run check
 
 2026-09-20 분석에서는 적중률을 높인다는 근거를 찾지 못해 기존 추천 엔진과 확정 번호를 유지했습니다. 분석 방법, 수치, 한계는 [docs/recommendation-analysis.md](docs/recommendation-analysis.md)에 기록했습니다. 비교 결과가 좋더라도 자동으로 실사용 추천 엔진을 교체하지 않습니다.
 
+추가로 통계·머신러닝·적응형 후보 52개를 982회에 걸쳐 검증했습니다. 후반 260회 사후 최고 평균은 0.827개였지만 무작위 기준 0.8개를 유의하게 넘지 못했고, 선행 구간에서 선택한 모델도 후반에는 0.769개로 하락했습니다. 자세한 결과와 재현 방법은 [docs/expanded-research.md](docs/expanded-research.md)에 기록했습니다.
+
+1243회부터는 실사용 추천과 별도로 후보별 번호를 추첨 전에 고정하고, 매주 실제 결과를 누적 평가합니다. `data/research-shadow-records.json`에 생성 시각·번호·해시를 보관하며 이미 기록한 번호를 바꾸거나 놓친 회차를 사후 생성하지 않습니다. 후보 52개의 실험 번호는 구매용 추천이 아닙니다. 앱에 표시되는 추천은 계속 1세트입니다.
+
+확장 연구는 Python 3.12와 `scripts/research/requirements.txt`의 고정 패키지가 필요합니다. `npm run research:test`로 연구 코드를 검사하고 `npm run research`로 분석합니다. `npm run update:all`은 당첨/추천 데이터와 연구를 함께 갱신합니다. GitHub Actions에서는 정상 주간 데이터 검증·배포를 먼저 마친 뒤 연구를 실행하므로 연구 계산 실패가 기존 추천 갱신을 막지 않습니다. 연구 결과는 저장소와 정적 배포 파일에 공개하며, 앱의 접이식 과거 비교 화면은 기존 8개 규칙 보고서를 유지합니다.
+
 GitHub Pages 배포는 검증을 통과한 후 `scripts/publish-pages.sh`로 수행합니다. 두 워크플로는 같은 배포 대기열을 사용하고 `gh-pages`에 일반 커밋을 추가하므로 배포 이력을 덮어쓰지 않습니다.
 
 핵심 추천 로직은 [docs/core-logic.md](docs/core-logic.md)에 정리합니다. 추천 알고리즘을 바꿀 때는 이 문서도 함께 갱신합니다.
