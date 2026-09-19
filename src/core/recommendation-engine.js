@@ -1,5 +1,5 @@
-import { createNumberRange, LOTTO_PICK_COUNT, sum } from "./number-utils.js?v=14";
-import { createRng } from "./random.js?v=14";
+import { createNumberRange, LOTTO_PICK_COUNT, sum } from "./number-utils.js?v=15";
+import { createRng } from "./random.js?v=15";
 
 export const WEEKLY_RECOMMENDATION_COUNT = 1;
 export const LEGACY_RECOMMENDATION_ENGINE_VERSION = "weekly-disjoint-random-v1";

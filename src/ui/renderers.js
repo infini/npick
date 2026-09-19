@@ -1,4 +1,4 @@
-import { renderBall } from "./lotto-balls.js?v=14";
+import { renderBall } from "./lotto-balls.js?v=15";
 
 const DEFAULT_HISTORY_LIMIT = 5;
 const SEARCH_HISTORY_LIMIT = 24;
