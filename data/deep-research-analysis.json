@@ -1,0 +1,6667 @@
+{
+  "models": [
+    {
+      "id": "bonus-transition-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7931034482758621,
+        "zeroRate": 0.4077079107505071,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          402,
+          405,
+          160,
+          19,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8,
+        "zeroRate": 0.3923076923076923,
+        "prizeRate": 0.011538461538461539,
+        "histogram": [
+          102,
+          111,
+          44,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.5128191669788327,
+          "zero": 0.41904540765451825,
+          "prize": 0.9482132830316692
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7788461538461539,
+        "zeroRate": 0.38461538461538464,
+        "prizeRate": 0.0,
+        "histogram": [
+          40,
+          47,
+          17,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7988980716253443,
+        "zeroRate": 0.39807162534435264,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          289,
+          309,
+          113,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.08076923076923077,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.046153846153846156,
+        0.20384615384615384
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.4346153846153846,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            113,
+            96,
+            47,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            106,
+            109,
+            39,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8192307692307692,
+          "zeroRate": 0.38076923076923075,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            99,
+            116,
+            38,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7864077669902912,
+          "zeroRate": 0.4077669902912621,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            84,
+            84,
+            36,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "bonus-transition-all",
+      "all": {
+        "count": 986,
+        "meanHits": 0.808316430020284,
+        "zeroRate": 0.3995943204868154,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          394,
+          410,
+          160,
+          21,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8615384615384616,
+        "zeroRate": 0.36153846153846153,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          94,
+          116,
+          42,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.1107125800584223,
+          "zero": 0.11061971699380431,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8653846153846154,
+        "zeroRate": 0.36538461538461536,
+        "prizeRate": 0.038461538461538464,
+        "histogram": [
+          38,
+          46,
+          16,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8195592286501377,
+        "zeroRate": 0.39118457300275483,
+        "prizeRate": 0.024793388429752067,
+        "histogram": [
+          284,
+          308,
+          116,
+          17,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.1423076923076923,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.015384615384615385,
+        0.2847115384615371
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.4230769230769231,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            110,
+            102,
+            44,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8307692307692308,
+          "zeroRate": 0.36538461538461536,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            95,
+            120,
+            40,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8038461538461539,
+          "zeroRate": 0.4230769230769231,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            110,
+            97,
+            47,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8252427184466019,
+          "zeroRate": 0.38349514563106796,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            79,
+            91,
+            29,
+            7,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-104",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8123732251521298,
+        "zeroRate": 0.3975659229208925,
+        "prizeRate": 0.028397565922920892,
+        "histogram": [
+          392,
+          417,
+          149,
+          26,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8269230769230769,
+        "zeroRate": 0.38846153846153847,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          101,
+          112,
+          39,
+          7,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.3016489767106311,
+          "zero": 0.37026388629971985,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.9134615384615384,
+        "zeroRate": 0.3269230769230769,
+        "prizeRate": 0.04807692307692308,
+        "histogram": [
+          34,
+          50,
+          15,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.800275482093664,
+        "zeroRate": 0.41460055096418735,
+        "prizeRate": 0.03305785123966942,
+        "histogram": [
+          301,
+          295,
+          106,
+          22,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.1076923076923077,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.011538461538461539,
+        0.23076923076923078
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.35,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            91,
+            122,
+            43,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7269230769230769,
+          "zeroRate": 0.4461538461538462,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            116,
+            106,
+            32,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            105,
+            97,
+            47,
+            11,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8155339805825242,
+          "zeroRate": 0.3883495145631068,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            80,
+            92,
+            27,
+            6,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-26",
+      "all": {
+        "count": 986,
+        "meanHits": 0.768762677484787,
+        "zeroRate": 0.42697768762677485,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          421,
+          394,
+          149,
+          22,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7461538461538462,
+        "zeroRate": 0.45,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          117,
+          98,
+          39,
+          6,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8748587943750875,
+          "zero": 0.9538481736409167,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8653846153846154,
+        "zeroRate": 0.41346153846153844,
+        "prizeRate": 0.038461538461538464,
+        "histogram": [
+          43,
+          36,
+          21,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7713498622589532,
+        "zeroRate": 0.4201101928374656,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          305,
+          297,
+          109,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.026923076923076925,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.10384615384615385,
+        0.1576923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7615384615384615,
+          "zeroRate": 0.4461538461538462,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            116,
+            97,
+            40,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7692307692307693,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            106,
+            112,
+            38,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8076923076923077,
+          "zeroRate": 0.39615384615384613,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            103,
+            109,
+            43,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7281553398058253,
+          "zeroRate": 0.46601941747572817,
+          "prizeRate": 0.02912621359223301,
+          "histogram": [
+            96,
+            76,
+            28,
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8154158215010142,
+        "zeroRate": 0.38336713995943206,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          378,
+          432,
+          157,
+          18,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.4307692307692308,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          112,
+          104,
+          36,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.7480522407209862,
+          "zero": 0.8546945500513661,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7980769230769231,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          42,
+          44,
+          15,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7933884297520661,
+        "zeroRate": 0.39944903581267216,
+        "prizeRate": 0.01790633608815427,
+        "histogram": [
+          290,
+          309,
+          114,
+          13,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.05,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.06153846153846154,
+        0.16923076923076924
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8769230769230769,
+          "zeroRate": 0.3384615384615385,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            88,
+            123,
+            43,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8384615384615385,
+          "zeroRate": 0.35384615384615387,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            92,
+            122,
+            42,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7615384615384615,
+          "zeroRate": 0.4230769230769231,
+          "prizeRate": 0.0038461538461538464,
+          "histogram": [
+            110,
+            103,
+            46,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.42718446601941745,
+          "prizeRate": 0.038834951456310676,
+          "histogram": [
+            88,
+            84,
+            26,
+            8,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-52",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7809330628803245,
+        "zeroRate": 0.422920892494929,
+        "prizeRate": 0.029411764705882353,
+        "histogram": [
+          417,
+          400,
+          140,
+          26,
+          3,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7423076923076923,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          110,
+          115,
+          29,
+          4,
+          2,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8906952282273625,
+          "zero": 0.789729537619398,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8557692307692307,
+        "zeroRate": 0.36538461538461536,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          38,
+          46,
+          18,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7892561983471075,
+        "zeroRate": 0.4228650137741047,
+        "prizeRate": 0.03305785123966942,
+        "histogram": [
+          307,
+          292,
+          103,
+          21,
+          3,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.023076923076923078,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.12692307692307692,
+        0.16923076923076924
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7576923076923077,
+          "zeroRate": 0.4230769230769231,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            110,
+            108,
+            37,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8153846153846154,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            105,
+            106,
+            41,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7846153846153846,
+          "zeroRate": 0.43846153846153846,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            114,
+            100,
+            35,
+            10,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7621359223300971,
+          "zeroRate": 0.42718446601941745,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            88,
+            86,
+            27,
+            3,
+            2,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-520",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8306288032454361,
+        "zeroRate": 0.39655172413793105,
+        "prizeRate": 0.02738336713995943,
+        "histogram": [
+          391,
+          399,
+          169,
+          26,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8307692307692308,
+        "zeroRate": 0.41923076923076924,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          109,
+          95,
+          48,
+          7,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.2748758576814479,
+          "zero": 0.7516448339062753,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8269230769230769,
+        "zeroRate": 0.47115384615384615,
+        "prizeRate": 0.057692307692307696,
+        "histogram": [
+          49,
+          30,
+          19,
+          6,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8264462809917356,
+        "zeroRate": 0.40082644628099173,
+        "prizeRate": 0.03168044077134986,
+        "histogram": [
+          291,
+          294,
+          118,
+          22,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.11153846153846154,
+      "pairedDescriptive95IntervalVsV2": [
+        0.019230769230769232,
+        0.2076923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8423076923076923,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            100,
+            105,
+            51,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.85,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.038461538461538464,
+          "histogram": [
+            98,
+            113,
+            39,
+            10,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            107,
+            104,
+            43,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8300970873786407,
+          "zeroRate": 0.4174757281553398,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            86,
+            77,
+            36,
+            6,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cold-all",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7971602434077079,
+        "zeroRate": 0.4066937119675456,
+        "prizeRate": 0.016227180527383367,
+        "histogram": [
+          401,
+          400,
+          169,
+          16,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7884615384615384,
+        "zeroRate": 0.4153846153846154,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          108,
+          107,
+          37,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6064237526556175,
+          "zero": 0.710126867436946,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7980769230769231,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          42,
+          44,
+          15,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.78099173553719,
+        "zeroRate": 0.41460055096418735,
+        "prizeRate": 0.01652892561983471,
+        "histogram": [
+          301,
+          295,
+          118,
+          12,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06923076923076923,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.038461538461538464,
+        0.18461538461538463
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8423076923076923,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            100,
+            105,
+            51,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7576923076923077,
+          "zeroRate": 0.4269230769230769,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            111,
+            104,
+            42,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.41923076923076924,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            109,
+            103,
+            45,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8155339805825242,
+          "zeroRate": 0.3932038834951456,
+          "prizeRate": 0.02912621359223301,
+          "histogram": [
+            81,
+            88,
+            31,
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-104",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8316430020283976,
+        "zeroRate": 0.3813387423935091,
+        "prizeRate": 0.03144016227180527,
+        "histogram": [
+          376,
+          432,
+          147,
+          30,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8115384615384615,
+        "zeroRate": 0.39615384615384613,
+        "prizeRate": 0.026923076923076925,
+        "histogram": [
+          103,
+          111,
+          39,
+          6,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.4188271421554049,
+          "zero": 0.46904948844022365,
+          "prize": 0.42565902689172386
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8173076923076923,
+        "zeroRate": 0.38461538461538464,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          40,
+          46,
+          15,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8168044077134986,
+        "zeroRate": 0.384297520661157,
+        "prizeRate": 0.03305785123966942,
+        "histogram": [
+          279,
+          326,
+          97,
+          23,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.09230769230769231,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.05,
+        0.23461538461538461
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8730769230769231,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            106,
+            50,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7846153846153846,
+          "zeroRate": 0.3923076923076923,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            102,
+            118,
+            34,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8153846153846154,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            98,
+            123,
+            28,
+            11,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8592233009708737,
+          "zeroRate": 0.38349514563106796,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            79,
+            85,
+            35,
+            6,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-26",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7991886409736308,
+        "zeroRate": 0.3975659229208925,
+        "prizeRate": 0.02129817444219067,
+        "histogram": [
+          392,
+          422,
+          151,
+          20,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7846153846153846,
+        "zeroRate": 0.3923076923076923,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          102,
+          117,
+          36,
+          5,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6366392290959773,
+          "zero": 0.41904540765451825,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7211538461538461,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          44,
+          48,
+          9,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.78099173553719,
+        "zeroRate": 0.4090909090909091,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          297,
+          306,
+          108,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.07307692307692308,
+        0.20384615384615384
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.85,
+          "zeroRate": 0.36538461538461536,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            95,
+            116,
+            43,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7653846153846153,
+          "zeroRate": 0.4153846153846154,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            108,
+            109,
+            39,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7807692307692308,
+          "zeroRate": 0.4307692307692308,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            112,
+            100,
+            41,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8009708737864077,
+          "zeroRate": 0.3737864077669903,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            77,
+            97,
+            28,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8093306288032455,
+        "zeroRate": 0.3924949290060852,
+        "prizeRate": 0.018255578093306288,
+        "histogram": [
+          387,
+          418,
+          163,
+          18,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7076923076923077,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.011538461538461539,
+        "histogram": [
+          115,
+          109,
+          33,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9750084480690902,
+          "zero": 0.924070977720429,
+          "prize": 0.9482132830316692
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.6538461538461539,
+        "zeroRate": 0.47115384615384615,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          49,
+          43,
+          11,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7988980716253443,
+        "zeroRate": 0.39807162534435264,
+        "prizeRate": 0.01652892561983471,
+        "histogram": [
+          289,
+          306,
+          119,
+          12,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": -0.011538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.15,
+        0.11538461538461539
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8384615384615385,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            98,
+            112,
+            44,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8846153846153846,
+          "zeroRate": 0.34615384615384615,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            90,
+            116,
+            48,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8307692307692308,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            101,
+            106,
+            49,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.6504854368932039,
+          "zeroRate": 0.47572815533980584,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            98,
+            84,
+            22,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-52",
+      "all": {
+        "count": 986,
+        "meanHits": 0.755578093306288,
+        "zeroRate": 0.40466531440162273,
+        "prizeRate": 0.008113590263691683,
+        "histogram": [
+          399,
+          437,
+          142,
+          8,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7076923076923077,
+        "zeroRate": 0.4346153846153846,
+        "prizeRate": 0.011538461538461539,
+        "histogram": [
+          113,
+          113,
+          31,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9750084480690902,
+          "zero": 0.8814530100384931,
+          "prize": 0.9482132830316692
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7115384615384616,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          44,
+          48,
+          10,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7548209366391184,
+        "zeroRate": 0.40633608815426997,
+        "prizeRate": 0.005509641873278237,
+        "histogram": [
+          295,
+          318,
+          109,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": -0.011538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.11538461538461539,
+        0.09230769230769231
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7576923076923077,
+          "zeroRate": 0.4,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            104,
+            119,
+            33,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7730769230769231,
+          "zeroRate": 0.3923076923076923,
+          "prizeRate": 0.0,
+          "histogram": [
+            102,
+            115,
+            43,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7538461538461538,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.007692307692307693,
+          "histogram": [
+            107,
+            112,
+            39,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7330097087378641,
+          "zeroRate": 0.4174757281553398,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            86,
+            91,
+            27,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-520",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7849898580121704,
+        "zeroRate": 0.4148073022312373,
+        "prizeRate": 0.02636916835699797,
+        "histogram": [
+          409,
+          409,
+          142,
+          24,
+          1,
+          1,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7807692307692308,
+        "zeroRate": 0.4153846153846154,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          108,
+          109,
+          35,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6660622055427207,
+          "zero": 0.710126867436946,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.6923076923076923,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          46,
+          46,
+          10,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7754820936639119,
+        "zeroRate": 0.42424242424242425,
+        "prizeRate": 0.030303030303030304,
+        "histogram": [
+          308,
+          298,
+          98,
+          20,
+          1,
+          1,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06153846153846154,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.08846153846153847,
+        0.2230769230769231
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8115384615384615,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            101,
+            111,
+            44,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8384615384615385,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            100,
+            115,
+            34,
+            10,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7038461538461539,
+          "zeroRate": 0.4807692307692308,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            125,
+            92,
+            39,
+            3,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7864077669902912,
+          "zeroRate": 0.4029126213592233,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            83,
+            91,
+            25,
+            7,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "coverage-all",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8052738336713996,
+        "zeroRate": 0.385395537525355,
+        "prizeRate": 0.017241379310344827,
+        "histogram": [
+          380,
+          435,
+          154,
+          17,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.823076923076923,
+        "zeroRate": 0.3730769230769231,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          97,
+          117,
+          41,
+          5,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.329567993938207,
+          "zero": 0.20047209168778188,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8461538461538461,
+        "zeroRate": 0.34615384615384615,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          36,
+          50,
+          16,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.803030303030303,
+        "zeroRate": 0.384297520661157,
+        "prizeRate": 0.01790633608815427,
+        "histogram": [
+          279,
+          324,
+          110,
+          13,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.10384615384615385,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.023076923076923078,
+        0.23846153846153847
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8115384615384615,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            101,
+            111,
+            44,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8576923076923076,
+          "zeroRate": 0.34615384615384615,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            90,
+            121,
+            45,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7230769230769231,
+          "zeroRate": 0.4307692307692308,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            112,
+            112,
+            32,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8349514563106796,
+          "zeroRate": 0.3737864077669903,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            77,
+            91,
+            33,
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "current",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7860040567951319,
+        "zeroRate": 0.40162271805273836,
+        "prizeRate": 0.02332657200811359,
+        "histogram": [
+          396,
+          428,
+          139,
+          23,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7192307692307692,
+        "zeroRate": 0.4153846153846154,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          108,
+          123,
+          23,
+          6,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9569054459764181,
+          "zero": 0.710126867436946,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7019230769230769,
+        "zeroRate": 0.4326923076923077,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          45,
+          46,
+          12,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7672176308539945,
+        "zeroRate": 0.4090909090909091,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          297,
+          316,
+          98,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.0,
+      "pairedDescriptive95IntervalVsV2": [
+        0.0,
+        0.0
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8384615384615385,
+          "zeroRate": 0.38076923076923075,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            99,
+            112,
+            41,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8692307692307693,
+          "zeroRate": 0.36153846153846153,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            94,
+            112,
+            48,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7153846153846154,
+          "zeroRate": 0.45,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            117,
+            105,
+            33,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7038834951456311,
+          "zeroRate": 0.4174757281553398,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            86,
+            99,
+            17,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cycle-104",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7677484787018256,
+        "zeroRate": 0.4300202839756592,
+        "prizeRate": 0.02129817444219067,
+        "histogram": [
+          424,
+          390,
+          151,
+          19,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7346153846153847,
+        "zeroRate": 0.46923076923076923,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          122,
+          89,
+          45,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9179911061651205,
+          "zero": 0.9894997931391242,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7403846153846154,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.0,
+        "histogram": [
+          46,
+          39,
+          19,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.756198347107438,
+        "zeroRate": 0.4380165289256198,
+        "prizeRate": 0.01790633608815427,
+        "histogram": [
+          318,
+          280,
+          115,
+          13,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.015384615384615385,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.11923076923076924,
+        0.15
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            106,
+            110,
+            36,
+            6,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7923076923076923,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            105,
+            110,
+            39,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7423076923076923,
+          "zeroRate": 0.45384615384615384,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            118,
+            94,
+            45,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7281553398058253,
+          "zeroRate": 0.46116504854368934,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            95,
+            76,
+            31,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cycle-13",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8062880324543611,
+        "zeroRate": 0.38640973630831643,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          381,
+          440,
+          143,
+          19,
+          3,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8346153846153846,
+        "zeroRate": 0.3923076923076923,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          102,
+          107,
+          45,
+          4,
+          2,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.24935770665860385,
+          "zero": 0.41904540765451825,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7884615384615384,
+        "zeroRate": 0.3942307692307692,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          41,
+          47,
+          13,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8154269972451791,
+        "zeroRate": 0.3774104683195592,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          274,
+          330,
+          106,
+          14,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.11538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.019230769230769232,
+        0.25384615384615383
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7807692307692308,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            107,
+            110,
+            37,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8192307692307692,
+          "zeroRate": 0.36538461538461536,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            95,
+            123,
+            36,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7730769230769231,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            101,
+            123,
+            31,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8640776699029126,
+          "zeroRate": 0.3786407766990291,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            78,
+            84,
+            39,
+            4,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cycle-26",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7971602434077079,
+        "zeroRate": 0.3995943204868154,
+        "prizeRate": 0.02028397565922921,
+        "histogram": [
+          394,
+          418,
+          154,
+          20,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8576923076923076,
+        "zeroRate": 0.36923076923076925,
+        "prizeRate": 0.03461538461538462,
+        "histogram": [
+          96,
+          114,
+          41,
+          9,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.12611084115990662,
+          "zero": 0.16663902787395482,
+          "prize": 0.1713385536558321
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.9807692307692307,
+        "zeroRate": 0.2980769230769231,
+        "prizeRate": 0.04807692307692308,
+        "histogram": [
+          31,
+          49,
+          19,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.800275482093664,
+        "zeroRate": 0.40082644628099173,
+        "prizeRate": 0.01928374655647383,
+        "histogram": [
+          291,
+          303,
+          118,
+          14,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.13846153846153847,
+      "pairedDescriptive95IntervalVsV2": [
+        0.0,
+        0.28076923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.39615384615384613,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            103,
+            115,
+            36,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7730769230769231,
+          "zeroRate": 0.4346153846153846,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            113,
+            96,
+            48,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            100,
+            118,
+            39,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8495145631067961,
+          "zeroRate": 0.3786407766990291,
+          "prizeRate": 0.038834951456310676,
+          "histogram": [
+            78,
+            89,
+            31,
+            8,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "cycle-52",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7981744421906694,
+        "zeroRate": 0.4026369168356998,
+        "prizeRate": 0.034482758620689655,
+        "histogram": [
+          397,
+          425,
+          130,
+          34,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.4,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          104,
+          117,
+          34,
+          5,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.7480522407209862,
+          "zero": 0.5194926160971354,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          42,
+          46,
+          14,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.790633608815427,
+        "zeroRate": 0.4118457300275482,
+        "prizeRate": 0.0371900826446281,
+        "histogram": [
+          299,
+          307,
+          93,
+          27,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.05,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.09615384615384616,
+        0.2076923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8192307692307692,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            98,
+            118,
+            37,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8,
+          "zeroRate": 0.4307692307692308,
+          "prizeRate": 0.046153846153846156,
+          "histogram": [
+            112,
+            100,
+            36,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8076923076923077,
+          "zeroRate": 0.3923076923076923,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            102,
+            117,
+            30,
+            11,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7572815533980582,
+          "zeroRate": 0.41262135922330095,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            85,
+            90,
+            27,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "expert-mixture-0.03",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7981744421906694,
+        "zeroRate": 0.4026369168356998,
+        "prizeRate": 0.02332657200811359,
+        "histogram": [
+          397,
+          415,
+          151,
+          22,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7576923076923077,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          110,
+          109,
+          36,
+          4,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8182104122465135,
+          "zero": 0.789729537619398,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          42,
+          46,
+          15,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7754820936639119,
+        "zeroRate": 0.4132231404958678,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          300,
+          306,
+          104,
+          15,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.038461538461538464,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.09615384615384616,
+        0.18076923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8346153846153846,
+          "zeroRate": 0.39615384615384613,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            103,
+            106,
+            42,
+            9,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7153846153846154,
+          "zeroRate": 0.4307692307692308,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            112,
+            113,
+            32,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.41262135922330095,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            85,
+            87,
+            30,
+            3,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "expert-mixture-0.1",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7971602434077079,
+        "zeroRate": 0.39858012170385393,
+        "prizeRate": 0.02332657200811359,
+        "histogram": [
+          393,
+          424,
+          146,
+          22,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7153846153846154,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          115,
+          109,
+          31,
+          5,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9638450392153888,
+          "zero": 0.924070977720429,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7788461538461539,
+        "zeroRate": 0.4326923076923077,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          45,
+          40,
+          16,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7741046831955923,
+        "zeroRate": 0.40771349862258954,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          296,
+          315,
+          99,
+          15,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": -0.0038461538461538464,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.1346153846153846,
+        0.13846153846153847
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8153846153846154,
+          "zeroRate": 0.3923076923076923,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            102,
+            112,
+            39,
+            6,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7807692307692308,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            100,
+            121,
+            35,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7135922330097088,
+          "zeroRate": 0.4563106796116505,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            94,
+            82,
+            25,
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-104",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8062880324543611,
+        "zeroRate": 0.3843813387423935,
+        "prizeRate": 0.02129817444219067,
+        "histogram": [
+          379,
+          440,
+          146,
+          21,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7846153846153846,
+        "zeroRate": 0.38461538461538464,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          100,
+          120,
+          36,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6366392290959773,
+          "zero": 0.32343345660312234,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.41346153846153844,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          43,
+          45,
+          14,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7865013774104683,
+        "zeroRate": 0.3884297520661157,
+        "prizeRate": 0.01928374655647383,
+        "histogram": [
+          282,
+          331,
+          99,
+          14,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.05384615384615385,
+        0.19615384615384615
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8038461538461539,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            100,
+            118,
+            35,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.75,
+          "zeroRate": 0.4,
+          "prizeRate": 0.011538461538461539,
+          "histogram": [
+            104,
+            120,
+            33,
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8106796116504854,
+          "zeroRate": 0.3786407766990291,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            78,
+            93,
+            31,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-26",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7991886409736308,
+        "zeroRate": 0.39655172413793105,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          391,
+          421,
+          155,
+          19,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8115384615384615,
+        "zeroRate": 0.38461538461538464,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          100,
+          113,
+          43,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.4188271421554049,
+          "zero": 0.32343345660312234,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7115384615384616,
+        "zeroRate": 0.41346153846153844,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          43,
+          49,
+          11,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7741046831955923,
+        "zeroRate": 0.4090909090909091,
+        "prizeRate": 0.01790633608815427,
+        "histogram": [
+          297,
+          309,
+          107,
+          13,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.09230769230769231,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.06538461538461539,
+        0.25769230769230766
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8692307692307693,
+          "zeroRate": 0.36153846153846153,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            94,
+            112,
+            48,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7615384615384615,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            107,
+            113,
+            35,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7538461538461538,
+          "zeroRate": 0.4346153846153846,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            113,
+            102,
+            41,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8155339805825242,
+          "zeroRate": 0.3737864077669903,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            77,
+            94,
+            31,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7931034482758621,
+        "zeroRate": 0.40060851926977686,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          395,
+          424,
+          145,
+          20,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7230769230769231,
+        "zeroRate": 0.41923076923076924,
+        "prizeRate": 0.007692307692307693,
+        "histogram": [
+          109,
+          116,
+          33,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9489388184205754,
+          "zero": 0.7516448339062753,
+          "prize": 0.986122036930434
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.3942307692307692,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          41,
+          49,
+          12,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7630853994490359,
+        "zeroRate": 0.41460055096418735,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          301,
+          313,
+          97,
+          13,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.0038461538461538464,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.13076923076923078,
+        0.1423076923076923
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8769230769230769,
+          "zeroRate": 0.36153846153846153,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            94,
+            111,
+            48,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8115384615384615,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            105,
+            110,
+            36,
+            7,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7730769230769231,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            105,
+            113,
+            38,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.6893203883495146,
+          "zeroRate": 0.441747572815534,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            91,
+            90,
+            23,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-52",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8103448275862069,
+        "zeroRate": 0.3772819472616633,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          372,
+          448,
+          147,
+          19,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7538461538461538,
+        "zeroRate": 0.4115384615384615,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          107,
+          114,
+          35,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8386269783786723,
+          "zero": 0.6655726583607995,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.6826923076923077,
+        "zeroRate": 0.46153846153846156,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          48,
+          44,
+          9,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7878787878787878,
+        "zeroRate": 0.3884297520661157,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          282,
+          331,
+          98,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.03461538461538462,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.09230769230769231,
+        0.16923076923076924
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8730769230769231,
+          "zeroRate": 0.34615384615384615,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            90,
+            117,
+            49,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.823076923076923,
+          "zeroRate": 0.3576923076923077,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            93,
+            126,
+            35,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7615384615384615,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            106,
+            116,
+            32,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.4029126213592233,
+          "prizeRate": 0.014563106796116505,
+          "histogram": [
+            83,
+            89,
+            31,
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-520",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7981744421906694,
+        "zeroRate": 0.39655172413793105,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          391,
+          427,
+          146,
+          20,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8,
+        "zeroRate": 0.39615384615384613,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          103,
+          112,
+          39,
+          6,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.5128191669788327,
+          "zero": 0.46904948844022365,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.038461538461538464,
+        "histogram": [
+          42,
+          48,
+          10,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.78099173553719,
+        "zeroRate": 0.4035812672176309,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          293,
+          316,
+          101,
+          15,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.08076923076923077,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.05009615384615382,
+        0.2230769230769231
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            98,
+            111,
+            45,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            106,
+            113,
+            32,
+            8,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.75,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.007692307692307693,
+          "histogram": [
+            107,
+            113,
+            38,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8106796116504854,
+          "zeroRate": 0.3883495145631068,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            80,
+            90,
+            31,
+            5,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "hot-all",
+      "all": {
+        "count": 986,
+        "meanHits": 0.783975659229209,
+        "zeroRate": 0.41886409736308317,
+        "prizeRate": 0.028397565922920892,
+        "histogram": [
+          413,
+          403,
+          142,
+          26,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.8115384615384615,
+        "zeroRate": 0.4076923076923077,
+        "prizeRate": 0.04230769230769231,
+        "histogram": [
+          106,
+          108,
+          35,
+          11,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.4188271421554049,
+          "zero": 0.6185084435216508,
+          "prize": 0.049156029386169184
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7788461538461539,
+        "zeroRate": 0.41346153846153844,
+        "prizeRate": 0.038461538461538464,
+        "histogram": [
+          43,
+          45,
+          12,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7617079889807162,
+        "zeroRate": 0.43388429752066116,
+        "prizeRate": 0.030303030303030304,
+        "histogram": [
+          315,
+          292,
+          97,
+          21,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.09230769230769231,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.03461538461538462,
+        0.23076923076923078
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.3769230769230769,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            98,
+            111,
+            45,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7846153846153846,
+          "zeroRate": 0.4153846153846154,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            108,
+            108,
+            37,
+            6,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7,
+          "zeroRate": 0.47692307692307695,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            124,
+            97,
+            32,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8106796116504854,
+          "zeroRate": 0.4029126213592233,
+          "prizeRate": 0.038834951456310676,
+          "histogram": [
+            83,
+            87,
+            28,
+            8,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "momentum-13-104",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7981744421906694,
+        "zeroRate": 0.40872210953346855,
+        "prizeRate": 0.02434077079107505,
+        "histogram": [
+          403,
+          405,
+          154,
+          22,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7923076923076923,
+        "zeroRate": 0.4,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          104,
+          112,
+          38,
+          6,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.575590425016031,
+          "zero": 0.5194926160971354,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.75,
+        "zeroRate": 0.46153846153846156,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          48,
+          36,
+          18,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7865013774104683,
+        "zeroRate": 0.41046831955922863,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          298,
+          303,
+          109,
+          14,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.07307692307692308,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.06153846153846154,
+        0.2230769230769231
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8307692307692308,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            105,
+            102,
+            45,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.4269230769230769,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            111,
+            102,
+            40,
+            5,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7884615384615384,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            101,
+            118,
+            36,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7815533980582524,
+          "zeroRate": 0.4174757281553398,
+          "prizeRate": 0.019417475728155338,
+          "histogram": [
+            86,
+            83,
+            33,
+            4,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "momentum-26-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7910750507099391,
+        "zeroRate": 0.40162271805273836,
+        "prizeRate": 0.02434077079107505,
+        "histogram": [
+          396,
+          424,
+          142,
+          24,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7846153846153846,
+        "zeroRate": 0.3923076923076923,
+        "prizeRate": 0.011538461538461539,
+        "histogram": [
+          102,
+          115,
+          40,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6366392290959773,
+          "zero": 0.41904540765451825,
+          "prize": 0.9482132830316692
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7019230769230769,
+        "zeroRate": 0.4326923076923077,
+        "prizeRate": 0.0,
+        "histogram": [
+          45,
+          45,
+          14,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7630853994490359,
+        "zeroRate": 0.41597796143250687,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          302,
+          310,
+          98,
+          16,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.08076923076923077,
+        0.2153846153846154
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8692307692307693,
+          "zeroRate": 0.36153846153846153,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            94,
+            114,
+            44,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.41923076923076924,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            109,
+            109,
+            33,
+            9,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7230769230769231,
+          "zeroRate": 0.4423076923076923,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            115,
+            107,
+            33,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7961165048543689,
+          "zeroRate": 0.3786407766990291,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            78,
+            94,
+            32,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "momentum-52-520",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8245436105476673,
+        "zeroRate": 0.385395537525355,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          380,
+          421,
+          163,
+          22,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7307692307692307,
+        "zeroRate": 0.4346153846153846,
+        "prizeRate": 0.011538461538461539,
+        "histogram": [
+          113,
+          107,
+          37,
+          3,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.929566166812842,
+          "zero": 0.8814530100384931,
+          "prize": 0.9482132830316692
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.6346153846153846,
+        "zeroRate": 0.4807692307692308,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          50,
+          43,
+          10,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.803030303030303,
+        "zeroRate": 0.3953168044077135,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          287,
+          311,
+          112,
+          16,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.011538461538461539,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.11538461538461539,
+        0.1423076923076923
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8846153846153846,
+          "zeroRate": 0.3576923076923077,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            93,
+            110,
+            51,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.36153846153846153,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            94,
+            118,
+            42,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7846153846153846,
+          "zeroRate": 0.4153846153846154,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            108,
+            107,
+            38,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7718446601941747,
+          "zeroRate": 0.41262135922330095,
+          "prizeRate": 0.014563106796116505,
+          "histogram": [
+            85,
+            86,
+            32,
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "nested-any-hit",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8113590263691683,
+        "zeroRate": 0.39148073022312374,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          386,
+          423,
+          155,
+          21,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7576923076923077,
+        "zeroRate": 0.41923076923076924,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          109,
+          111,
+          35,
+          4,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8182104122465135,
+          "zero": 0.7516448339062753,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.4519230769230769,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          47,
+          38,
+          16,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7933884297520661,
+        "zeroRate": 0.39807162534435264,
+        "prizeRate": 0.02066115702479339,
+        "histogram": [
+          289,
+          314,
+          108,
+          14,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.038461538461538464,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.09615384615384616,
+        0.18076923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8192307692307692,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            97,
+            118,
+            40,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7692307692307693,
+          "zeroRate": 0.4115384615384615,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            107,
+            111,
+            37,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7912621359223301,
+          "zeroRate": 0.41262135922330095,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            85,
+            85,
+            31,
+            4,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "nested-mean",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8255578093306288,
+        "zeroRate": 0.39046653144016225,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          385,
+          409,
+          173,
+          17,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.75,
+        "zeroRate": 0.4307692307692308,
+        "prizeRate": 0.026923076923076925,
+        "histogram": [
+          112,
+          109,
+          32,
+          6,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8575093599591271,
+          "zero": 0.8546945500513661,
+          "prize": 0.42565902689172386
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8365384615384616,
+        "zeroRate": 0.41346153846153844,
+        "prizeRate": 0.04807692307692308,
+        "histogram": [
+          43,
+          40,
+          16,
+          5,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8126721763085399,
+        "zeroRate": 0.39669421487603307,
+        "prizeRate": 0.01652892561983471,
+        "histogram": [
+          288,
+          300,
+          126,
+          10,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.03076923076923077,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.08461538461538462,
+        0.1576923076923077
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8730769230769231,
+          "zeroRate": 0.36923076923076925,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            96,
+            106,
+            54,
+            3,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7807692307692308,
+          "zeroRate": 0.39615384615384613,
+          "prizeRate": 0.0038461538461538464,
+          "histogram": [
+            103,
+            112,
+            44,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.4320388349514563,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            89,
+            82,
+            28,
+            6,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "nested-prize",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7728194726166329,
+        "zeroRate": 0.4107505070993915,
+        "prizeRate": 0.02129817444219067,
+        "histogram": [
+          405,
+          423,
+          137,
+          19,
+          2,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.007692307692307693,
+        "histogram": [
+          115,
+          111,
+          32,
+          1,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9831438798312301,
+          "zero": 0.924070977720429,
+          "prize": 0.986122036930434
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7211538461538461,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.0,
+        "histogram": [
+          46,
+          41,
+          17,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7410468319559229,
+        "zeroRate": 0.42424242424242425,
+        "prizeRate": 0.01928374655647383,
+        "histogram": [
+          308,
+          314,
+          90,
+          12,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": -0.019230769230769232,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.13076923076923078,
+        0.09615384615384616
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8615384615384616,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            97,
+            109,
+            47,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            100,
+            120,
+            33,
+            6,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7,
+          "zeroRate": 0.4461538461538462,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            116,
+            111,
+            28,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7184466019417476,
+          "zeroRate": 0.44660194174757284,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            92,
+            83,
+            29,
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "number-hazard-260",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7606490872210954,
+        "zeroRate": 0.40973630831643004,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          404,
+          434,
+          129,
+          18,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7230769230769231,
+        "zeroRate": 0.4269230769230769,
+        "prizeRate": 0.007692307692307693,
+        "histogram": [
+          111,
+          112,
+          35,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.9489388184205754,
+          "zero": 0.8241208783445222,
+          "prize": 0.986122036930434
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.4326923076923077,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          45,
+          40,
+          18,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7548209366391184,
+        "zeroRate": 0.4118457300275482,
+        "prizeRate": 0.01928374655647383,
+        "histogram": [
+          299,
+          321,
+          92,
+          13,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.0038461538461538464,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.11538461538461539,
+        0.12692307692307692
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            105,
+            113,
+            37,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7538461538461538,
+          "zeroRate": 0.4076923076923077,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            106,
+            119,
+            28,
+            7,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7730769230769231,
+          "zeroRate": 0.40384615384615385,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            105,
+            115,
+            35,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7330097087378641,
+          "zeroRate": 0.42718446601941745,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            88,
+            87,
+            29,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "number-hazard-all",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7413793103448276,
+        "zeroRate": 0.42190669371196754,
+        "prizeRate": 0.02332657200811359,
+        "histogram": [
+          416,
+          432,
+          115,
+          23,
+          0,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7653846153846153,
+        "zeroRate": 0.4230769230769231,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          110,
+          109,
+          33,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.7728718694905777,
+          "zero": 0.789729537619398,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7019230769230769,
+        "zeroRate": 0.4519230769230769,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          47,
+          43,
+          12,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7396694214876033,
+        "zeroRate": 0.4297520661157025,
+        "prizeRate": 0.024793388429752067,
+        "histogram": [
+          312,
+          309,
+          87,
+          18,
+          0,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.046153846153846156,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.057692307692307696,
+        0.15384615384615385
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7461538461538462,
+          "zeroRate": 0.4,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            104,
+            123,
+            28,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7538461538461538,
+          "zeroRate": 0.4346153846153846,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            113,
+            106,
+            33,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.6961538461538461,
+          "zeroRate": 0.4346153846153846,
+          "prizeRate": 0.007692307692307693,
+          "histogram": [
+            113,
+            115,
+            30,
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.4174757281553398,
+          "prizeRate": 0.038834951456310676,
+          "histogram": [
+            86,
+            88,
+            24,
+            8,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-104-0.5",
+      "all": {
+        "count": 986,
+        "meanHits": 0.7941176470588235,
+        "zeroRate": 0.40060851926977686,
+        "prizeRate": 0.017241379310344827,
+        "histogram": [
+          395,
+          417,
+          157,
+          16,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7538461538461538,
+        "zeroRate": 0.4076923076923077,
+        "prizeRate": 0.007692307692307693,
+        "histogram": [
+          106,
+          114,
+          38,
+          2,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.8386269783786723,
+          "zero": 0.6185084435216508,
+          "prize": 0.986122036930434
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7980769230769231,
+        "zeroRate": 0.36538461538461536,
+        "prizeRate": 0.0,
+        "histogram": [
+          38,
+          49,
+          17,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.78099173553719,
+        "zeroRate": 0.40771349862258954,
+        "prizeRate": 0.015151515151515152,
+        "histogram": [
+          296,
+          305,
+          114,
+          10,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.03461538461538462,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.09615384615384616,
+        0.16538461538461538
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8307692307692308,
+          "zeroRate": 0.38076923076923075,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            99,
+            112,
+            43,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.7538461538461538,
+          "zeroRate": 0.4423076923076923,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            115,
+            98,
+            43,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8038461538461539,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            101,
+            115,
+            39,
+            4,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7864077669902912,
+          "zeroRate": 0.3883495145631068,
+          "prizeRate": 0.009708737864077669,
+          "histogram": [
+            80,
+            92,
+            32,
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-104-1.0",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8022312373225152,
+        "zeroRate": 0.3894523326572008,
+        "prizeRate": 0.030425963488843813,
+        "histogram": [
+          384,
+          444,
+          128,
+          29,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7884615384615384,
+        "zeroRate": 0.4,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          104,
+          113,
+          38,
+          4,
+          1,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6064237526556175,
+          "zero": 0.5194926160971354,
+          "prize": 0.7437426546356827
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.8365384615384616,
+        "zeroRate": 0.36538461538461536,
+        "prizeRate": 0.009615384615384616,
+        "histogram": [
+          38,
+          46,
+          19,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8057851239669421,
+        "zeroRate": 0.38980716253443526,
+        "prizeRate": 0.03443526170798898,
+        "histogram": [
+          283,
+          327,
+          91,
+          24,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06923076923076923,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.08076923076923077,
+        0.21153846153846154
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.7923076923076923,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            101,
+            117,
+            37,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8076923076923077,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.04230769230769231,
+          "histogram": [
+            101,
+            119,
+            29,
+            11,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7807692307692308,
+          "zeroRate": 0.4,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            104,
+            118,
+            29,
+            9,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8349514563106796,
+          "zeroRate": 0.3786407766990291,
+          "prizeRate": 0.024271844660194174,
+          "histogram": [
+            78,
+            90,
+            33,
+            4,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-260-0.5",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8225152129817445,
+        "zeroRate": 0.3924949290060852,
+        "prizeRate": 0.019269776876267748,
+        "histogram": [
+          387,
+          407,
+          173,
+          18,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7807692307692308,
+        "zeroRate": 0.39615384615384613,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          103,
+          115,
+          38,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.6660622055427207,
+          "zero": 0.46904948844022365,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7788461538461539,
+        "zeroRate": 0.3942307692307692,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          41,
+          47,
+          14,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7961432506887053,
+        "zeroRate": 0.40771349862258954,
+        "prizeRate": 0.01928374655647383,
+        "histogram": [
+          296,
+          297,
+          119,
+          13,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.06153846153846154,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.06153846153846154,
+        0.18461538461538463
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8961538461538462,
+          "zeroRate": 0.35,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            91,
+            110,
+            54,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.4,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            104,
+            99,
+            51,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7769230769230769,
+          "zeroRate": 0.41923076923076924,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            109,
+            105,
+            41,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7572815533980582,
+          "zeroRate": 0.4029126213592233,
+          "prizeRate": 0.014563106796116505,
+          "histogram": [
+            83,
+            93,
+            27,
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-260-1.0",
+      "all": {
+        "count": 986,
+        "meanHits": 0.8184584178498986,
+        "zeroRate": 0.3924949290060852,
+        "prizeRate": 0.029411764705882353,
+        "histogram": [
+          387,
+          421,
+          149,
+          28,
+          1,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7692307692307693,
+        "zeroRate": 0.4115384615384615,
+        "prizeRate": 0.03076923076923077,
+        "histogram": [
+          107,
+          114,
+          31,
+          8,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.7480522407209862,
+          "zero": 0.6655726583607995,
+          "prize": 0.28214997910923323
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.75,
+        "zeroRate": 0.4423076923076923,
+        "prizeRate": 0.038461538461538464,
+        "histogram": [
+          46,
+          42,
+          12,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.8085399449035813,
+        "zeroRate": 0.3953168044077135,
+        "prizeRate": 0.027548209366391185,
+        "histogram": [
+          287,
+          312,
+          107,
+          19,
+          1,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.05,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.07307692307692308,
+        0.16923076923076924
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.38461538461538464,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            100,
+            109,
+            42,
+            9,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8423076923076923,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.03076923076923077,
+          "histogram": [
+            97,
+            116,
+            39,
+            7,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.8423076923076923,
+          "zeroRate": 0.38076923076923075,
+          "prizeRate": 0.019230769230769232,
+          "histogram": [
+            99,
+            108,
+            48,
+            5,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7233009708737864,
+          "zeroRate": 0.441747572815534,
+          "prizeRate": 0.03398058252427184,
+          "histogram": [
+            91,
+            88,
+            20,
+            7,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-520-0.5",
+      "all": {
+        "count": 986,
+        "meanHits": 0.795131845841785,
+        "zeroRate": 0.40162271805273836,
+        "prizeRate": 0.02332657200811359,
+        "histogram": [
+          396,
+          422,
+          145,
+          21,
+          1,
+          1,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7961538461538461,
+        "zeroRate": 0.39615384615384613,
+        "prizeRate": 0.023076923076923078,
+        "histogram": [
+          103,
+          113,
+          38,
+          6,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.5443246405735123,
+          "zero": 0.46904948844022365,
+          "prize": 0.5876418193503158
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7596153846153846,
+        "zeroRate": 0.3942307692307692,
+        "prizeRate": 0.019230769230769232,
+        "histogram": [
+          41,
+          49,
+          12,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7865013774104683,
+        "zeroRate": 0.4090909090909091,
+        "prizeRate": 0.026170798898071626,
+        "histogram": [
+          297,
+          308,
+          102,
+          18,
+          0,
+          1,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.07692307692307693,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.07692307692307693,
+        0.23076923076923078
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8192307692307692,
+          "zeroRate": 0.38076923076923075,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            99,
+            114,
+            43,
+            3,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8461538461538461,
+          "zeroRate": 0.38846153846153847,
+          "prizeRate": 0.03461538461538462,
+          "histogram": [
+            101,
+            109,
+            41,
+            8,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.7153846153846154,
+          "zeroRate": 0.43846153846153846,
+          "prizeRate": 0.015384615384615385,
+          "histogram": [
+            114,
+            110,
+            32,
+            4,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.8009708737864077,
+          "zeroRate": 0.39805825242718446,
+          "prizeRate": 0.02912621359223301,
+          "histogram": [
+            82,
+            89,
+            29,
+            6,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    },
+    {
+      "id": "pair-520-1.0",
+      "all": {
+        "count": 986,
+        "meanHits": 0.783975659229209,
+        "zeroRate": 0.40466531440162273,
+        "prizeRate": 0.02231237322515213,
+        "histogram": [
+          399,
+          426,
+          139,
+          19,
+          3,
+          0,
+          0
+        ]
+      },
+      "recent260": {
+        "count": 260,
+        "meanHits": 0.7769230769230769,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.015384615384615385,
+        "histogram": [
+          105,
+          112,
+          39,
+          4,
+          0,
+          0,
+          0
+        ],
+        "rawPValues": {
+          "mean": 0.694531840361523,
+          "zero": 0.5695729886724301,
+          "prize": 0.8686133532227565
+        },
+        "adjustedPValues": {
+          "mean": 1.0,
+          "zero": 1.0,
+          "prize": 1.0
+        }
+      },
+      "recent104": {
+        "count": 104,
+        "meanHits": 0.7211538461538461,
+        "zeroRate": 0.40384615384615385,
+        "prizeRate": 0.028846153846153848,
+        "histogram": [
+          42,
+          52,
+          7,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectionPeriod": {
+        "count": 726,
+        "meanHits": 0.7727272727272727,
+        "zeroRate": 0.41597796143250687,
+        "prizeRate": 0.02203856749311295,
+        "histogram": [
+          302,
+          305,
+          103,
+          14,
+          2,
+          0,
+          0
+        ]
+      },
+      "meanGainVsV2": 0.057692307692307696,
+      "pairedDescriptive95IntervalVsV2": [
+        -0.08855769230769228,
+        0.20384615384615384
+      ],
+      "blocks": [
+        {
+          "fromDraw": 261,
+          "toDraw": 520,
+          "count": 260,
+          "meanHits": 0.8153846153846154,
+          "zeroRate": 0.3730769230769231,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            97,
+            121,
+            36,
+            5,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 521,
+          "toDraw": 780,
+          "count": 260,
+          "meanHits": 0.8692307692307693,
+          "zeroRate": 0.36923076923076925,
+          "prizeRate": 0.026923076923076925,
+          "histogram": [
+            96,
+            111,
+            46,
+            5,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 781,
+          "toDraw": 1040,
+          "count": 260,
+          "meanHits": 0.6730769230769231,
+          "zeroRate": 0.46923076923076923,
+          "prizeRate": 0.023076923076923078,
+          "histogram": [
+            122,
+            107,
+            25,
+            6,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "fromDraw": 1041,
+          "toDraw": 1246,
+          "count": 206,
+          "meanHits": 0.7766990291262136,
+          "zeroRate": 0.4077669902912621,
+          "prizeRate": 0.014563106796116505,
+          "histogram": [
+            84,
+            87,
+            32,
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "historicalObjectivesReached": [],
+      "passesHistoricalScreen": false
+    }
+  ],
+  "historicalComparisonFactor": 300,
+  "periods": {
+    "all": [
+      261,
+      1246
+    ],
+    "recent260": [
+      987,
+      1246
+    ],
+    "selectionPeriod": [
+      521,
+      1246
+    ]
+  },
+  "historicalOnlyNotUnseenHoldout": true,
+  "historicalScreenPasses": [],
+  "tieAudit": {
+    "window": 104,
+    "count": 986,
+    "ambiguousCutoffDraws": 605,
+    "ascendingTieMean": 0.8062880324543611,
+    "uniformTieExpectedMean": 0.8052581377378537,
+    "tieRealization95Range": [
+      0.7910750507099391,
+      0.8204868154158215
+    ],
+    "interpretation": "Tie-rule sensitivity on already observed outcomes, not a predictive significance test."
+  },
+  "diagnostics": {
+    "simulations": 2000,
+    "tests": [
+      {
+        "id": "local-frequency-window-scan",
+        "statistic": 4.9230769230769225,
+        "monteCarloPValue": 0.5387306346826587,
+        "adjustedPValue": 1.0
+      },
+      {
+        "id": "number-frequency-change-points",
+        "statistic": 3.0778428401222606,
+        "monteCarloPValue": 0.7186406796601699,
+        "adjustedPValue": 1.0
+      },
+      {
+        "id": "cycle-phase-number-bias",
+        "statistic": 5.4349297638940595,
+        "monteCarloPValue": 0.1294352823588206,
+        "adjustedPValue": 0.9060469765117442
+      },
+      {
+        "id": "previous-bonus-to-next-main",
+        "statistic": 4.36423632545872,
+        "monteCarloPValue": 0.21489255372313842,
+        "adjustedPValue": 1.0
+      },
+      {
+        "id": "odd-even-shape",
+        "statistic": 7.311836459292297,
+        "monteCarloPValue": 0.2913543228385807,
+        "adjustedPValue": 1.0
+      },
+      {
+        "id": "sum-level-and-serial-correlation",
+        "statistic": 2.687720759707222,
+        "monteCarloPValue": 0.09195402298850575,
+        "adjustedPValue": 0.6436781609195402
+      },
+      {
+        "id": "successive-draw-overlap",
+        "statistic": 3.74939740595837,
+        "monteCarloPValue": 0.30334832583708143,
+        "adjustedPValue": 1.0
+      }
+    ],
+    "interpretation": "Each simulation repeats each entire scan; seven new test families are Bonferroni-adjusted. Historical exploratory diagnostics, not proof of fairness."
+  },
+  "negativeControls": {
+    "simulations": 100,
+    "drawsPerHistory": 1246,
+    "historiesWithAnyNominalPBelow005": 97,
+    "historiesWithAnyAdjustedPBelow005": 2,
+    "historiesPassingFullScreen": 2,
+    "medianBestMean": 0.8961538461538462,
+    "bestMean95Range": [
+      0.8595192307692308,
+      0.9617307692307692
+    ],
+    "observedBestMean": 0.8615384615384616,
+    "exploratoryMaxMeanMonteCarloPValue": 0.9702970297029703,
+    "interpretation": "Finite simulation of this fixed search under fair draws; not proof that an observed historical winner is genuine."
+  },
+  "detectionPower": {
+    "comparisonFactor": 300,
+    "alpha": 0.05,
+    "assumption": "Hypothetical IID exponential tilt of fair hit counts; mean-only test, not all practical gates.",
+    "rows": [
+      {
+        "weeks": 104,
+        "alternativeMean": 0.9,
+        "criticalTotalHits": 114,
+        "power": 0.009569648740227204
+      },
+      {
+        "weeks": 104,
+        "alternativeMean": 1.0,
+        "criticalTotalHits": 114,
+        "power": 0.13620063743688443
+      },
+      {
+        "weeks": 104,
+        "alternativeMean": 1.2,
+        "criticalTotalHits": 114,
+        "power": 0.8922891485935465
+      },
+      {
+        "weeks": 260,
+        "alternativeMean": 0.9,
+        "criticalTotalHits": 255,
+        "power": 0.061043307428505424
+      },
+      {
+        "weeks": 260,
+        "alternativeMean": 1.0,
+        "criticalTotalHits": 255,
+        "power": 0.6545265825308535
+      },
+      {
+        "weeks": 260,
+        "alternativeMean": 1.2,
+        "criticalTotalHits": 255,
+        "power": 0.9999742262894741
+      },
+      {
+        "weeks": 520,
+        "alternativeMean": 0.9,
+        "criticalTotalHits": 482,
+        "power": 0.23384809129277068
+      },
+      {
+        "weeks": 520,
+        "alternativeMean": 1.0,
+        "criticalTotalHits": 482,
+        "power": 0.9775077103475772
+      },
+      {
+        "weeks": 520,
+        "alternativeMean": 1.2,
+        "criticalTotalHits": 482,
+        "power": 0.9999999999995337
+      },
+      {
+        "weeks": 986,
+        "alternativeMean": 0.9,
+        "criticalTotalHits": 879,
+        "power": 0.6344513012226318
+      },
+      {
+        "weeks": 986,
+        "alternativeMean": 1.0,
+        "criticalTotalHits": 879,
+        "power": 0.9999782209015522
+      },
+      {
+        "weeks": 986,
+        "alternativeMean": 1.2,
+        "criticalTotalHits": 879,
+        "power": 1.0
+      }
+    ]
+  },
+  "protocol": {
+    "version": "pattern-research-v1",
+    "registeredOn": "2026-10-23",
+    "historicalDataAlreadyInspectedThrough": 1246,
+    "firstEvaluationDraw": 261,
+    "firstSelectionDraw": 521,
+    "selectionWindow": 260,
+    "selectionBlock": 52,
+    "frequencyWindows": [
+      26,
+      52,
+      104,
+      260,
+      520,
+      0
+    ],
+    "pairWindows": [
+      104,
+      260,
+      520
+    ],
+    "pairPenalties": [
+      0.5,
+      1.0
+    ],
+    "momentumWindows": [
+      [
+        13,
+        104
+      ],
+      [
+        26,
+        260
+      ],
+      [
+        52,
+        520
+      ]
+    ],
+    "conditionalWindows": [
+      260,
+      0
+    ],
+    "conditionalPrior": 52,
+    "cyclePeriods": [
+      13,
+      26,
+      52,
+      104
+    ],
+    "cycleRadius": 1,
+    "expertLearningRates": [
+      0.03,
+      0.1
+    ],
+    "diagnosticSimulations": 2000,
+    "negativeControlSimulations": 100,
+    "negativeControlLength": "match-winning-history",
+    "bootstrapSamples": 5000,
+    "randomSeed": 20261023,
+    "previouslyTestedAlternatives": 60,
+    "historicalFamilyAlpha": 0.05,
+    "firstProspectiveDraw": 1248,
+    "familyAlpha": 0.01,
+    "minimumProspectiveWeeks": 104,
+    "minimumMeanGain": 0.1,
+    "minimumZeroRateReduction": 0.05,
+    "minimumPrizeRateGain": 0.01,
+    "eValueTilts": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "autoPromote": false
+  },
+  "protocolHash": "ad9ef4a1738ee4ae1b76206372cceab5d7676ca30a7b547df8c76db90c25880a",
+  "codeHash": "f78c3a5291d5d26bf15ef7c0b1846bffc023b4306061ad282f61a3c217dca896",
+  "latestDraw": 1246,
+  "historyDigest": "ec4ae8368195b0c8731c36e0148230acc71fa30e897962ded6a1a046cf2db2d6",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "productionEngineChanged": false,
+  "modelCount": 41,
+  "adaptiveChoices": {
+    "nested-mean": [
+      {
+        "fromDraw": 521,
+        "toDraw": 572,
+        "model": "pair-260-0.5"
+      },
+      {
+        "fromDraw": 573,
+        "toDraw": 624,
+        "model": "pair-260-0.5"
+      },
+      {
+        "fromDraw": 625,
+        "toDraw": 676,
+        "model": "pair-260-0.5"
+      },
+      {
+        "fromDraw": 677,
+        "toDraw": 728,
+        "model": "coverage-all"
+      },
+      {
+        "fromDraw": 729,
+        "toDraw": 780,
+        "model": "coverage-260"
+      },
+      {
+        "fromDraw": 781,
+        "toDraw": 832,
+        "model": "coverage-260"
+      },
+      {
+        "fromDraw": 833,
+        "toDraw": 884,
+        "model": "coverage-260"
+      },
+      {
+        "fromDraw": 885,
+        "toDraw": 936,
+        "model": "momentum-52-520"
+      },
+      {
+        "fromDraw": 937,
+        "toDraw": 988,
+        "model": "momentum-52-520"
+      },
+      {
+        "fromDraw": 989,
+        "toDraw": 1040,
+        "model": "coverage-104"
+      },
+      {
+        "fromDraw": 1041,
+        "toDraw": 1092,
+        "model": "cold-104"
+      },
+      {
+        "fromDraw": 1093,
+        "toDraw": 1144,
+        "model": "cold-104"
+      },
+      {
+        "fromDraw": 1145,
+        "toDraw": 1196,
+        "model": "cold-104"
+      },
+      {
+        "fromDraw": 1197,
+        "toDraw": 1247,
+        "model": "bonus-transition-all"
+      }
+    ],
+    "nested-any-hit": [
+      {
+        "fromDraw": 521,
+        "toDraw": 572,
+        "model": "cold-260"
+      },
+      {
+        "fromDraw": 573,
+        "toDraw": 624,
+        "model": "hot-52"
+      },
+      {
+        "fromDraw": 625,
+        "toDraw": 676,
+        "model": "cold-260"
+      },
+      {
+        "fromDraw": 677,
+        "toDraw": 728,
+        "model": "coverage-all"
+      },
+      {
+        "fromDraw": 729,
+        "toDraw": 780,
+        "model": "cold-260"
+      },
+      {
+        "fromDraw": 781,
+        "toDraw": 832,
+        "model": "coverage-260"
+      },
+      {
+        "fromDraw": 833,
+        "toDraw": 884,
+        "model": "coverage-260"
+      },
+      {
+        "fromDraw": 885,
+        "toDraw": 936,
+        "model": "cycle-13"
+      },
+      {
+        "fromDraw": 937,
+        "toDraw": 988,
+        "model": "coverage-104"
+      },
+      {
+        "fromDraw": 989,
+        "toDraw": 1040,
+        "model": "coverage-104"
+      },
+      {
+        "fromDraw": 1041,
+        "toDraw": 1092,
+        "model": "coverage-104"
+      },
+      {
+        "fromDraw": 1093,
+        "toDraw": 1144,
+        "model": "cold-520"
+      },
+      {
+        "fromDraw": 1145,
+        "toDraw": 1196,
+        "model": "momentum-13-104"
+      },
+      {
+        "fromDraw": 1197,
+        "toDraw": 1247,
+        "model": "bonus-transition-all"
+      }
+    ],
+    "nested-prize": [
+      {
+        "fromDraw": 521,
+        "toDraw": 572,
+        "model": "pair-260-1.0"
+      },
+      {
+        "fromDraw": 573,
+        "toDraw": 624,
+        "model": "cycle-52"
+      },
+      {
+        "fromDraw": 625,
+        "toDraw": 676,
+        "model": "coverage-520"
+      },
+      {
+        "fromDraw": 677,
+        "toDraw": 728,
+        "model": "pair-520-0.5"
+      },
+      {
+        "fromDraw": 729,
+        "toDraw": 780,
+        "model": "pair-104-1.0"
+      },
+      {
+        "fromDraw": 781,
+        "toDraw": 832,
+        "model": "cycle-52"
+      },
+      {
+        "fromDraw": 833,
+        "toDraw": 884,
+        "model": "cold-520"
+      },
+      {
+        "fromDraw": 885,
+        "toDraw": 936,
+        "model": "pair-104-1.0"
+      },
+      {
+        "fromDraw": 937,
+        "toDraw": 988,
+        "model": "cycle-52"
+      },
+      {
+        "fromDraw": 989,
+        "toDraw": 1040,
+        "model": "coverage-104"
+      },
+      {
+        "fromDraw": 1041,
+        "toDraw": 1092,
+        "model": "cold-104"
+      },
+      {
+        "fromDraw": 1093,
+        "toDraw": 1144,
+        "model": "cold-104"
+      },
+      {
+        "fromDraw": 1145,
+        "toDraw": 1196,
+        "model": "cycle-52"
+      },
+      {
+        "fromDraw": 1197,
+        "toDraw": 1247,
+        "model": "coverage-104"
+      }
+    ]
+  },
+  "prospective": {
+    "firstTargetDraw": null,
+    "pendingTargetDraw": null,
+    "evaluatedWeeks": 0,
+    "hypothesesPerChallenger": 3,
+    "evidenceThreshold": null,
+    "models": []
+  },
+  "commonPatterns": {
+    "totalCombinations": 8145060,
+    "sum100To180": 0.8180382956049433,
+    "oddCount2To4": 0.8131972017394593,
+    "atLeastOneConsecutivePair": 0.5287474862063631,
+    "probabilityOfAnySpecificSixNumbers": 1.2277380399898834e-07,
+    "interpretation": "Pattern classes contain many combinations; individual combinations remain equiprobable under fairness."
+  },
+  "sourceFields": [
+    "bonus",
+    "date",
+    "draw",
+    "firstPrize",
+    "firstWinners",
+    "numbers"
+  ],
+  "dataQuality": {
+    "drawCount": 1246,
+    "firstDraw": 1,
+    "lastDraw": 1246,
+    "ascendingNumberRows": 1246,
+    "repeatedMainCombinations": 0,
+    "completeWeeklyHistory": true
+  },
+  "missingPhysicalInputs": [
+    "draw-order",
+    "machine-id",
+    "ball-set-id",
+    "ball-measurements",
+    "pre-cutoff-environment"
+  ]
+}

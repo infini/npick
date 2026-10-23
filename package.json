@@ -14,7 +14,10 @@
     "analyze": "node scripts/analyze-recommendations.mjs",
     "research": "python3 scripts/research/run.py",
     "research:test": "python3 -W error::RuntimeWarning -m unittest discover -s scripts/research -p 'test_*.py'",
-    "update:all": "npm run update:data && npm run research",
+    "research:patterns": "python3 -W error::RuntimeWarning scripts/deep-research/run.py",
+    "research:patterns:test": "python3 -W error::RuntimeWarning -m unittest discover -s scripts/deep-research -p 'test_*.py'",
+    "research:sources": "node scripts/deep-research/source-audit.mjs",
+    "update:all": "npm run update:data && npm run research && npm run research:patterns",
     "watch:push": "node scripts/watch-and-push.mjs",
     "test": "node --test test/*.test.mjs",
     "check": "find src scripts test -type f \\( -name '*.js' -o -name '*.mjs' \\) | xargs -n 1 node --check && node --check service-worker.js && node --check data/lotto-data.js && node --check data/weekly-recommendations.js && node --check data/recommendation-analysis.js && npm test && node scripts/smoke-test.mjs"

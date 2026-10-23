@@ -24,6 +24,11 @@ NPICK은 정적 PWA이며 기능별 책임을 분리한다. 새 코드를 추가
 - `scripts/research/evaluation.py`: 과거 지표, 정확한 귀무분포, 보정 p값, 구간 추정과 분포 진단.
 - `scripts/research/prospective.py`: 추첨 전 고정 원장 검증·누적 평가·e-process. 추천 엔진이나 파일 IO에 의존하지 않는다.
 - `scripts/research/run.py`: 위 모듈을 연결하고 연구 생성물을 저장하는 CLI. Python 의존성은 연구/CI에만 사용한다.
+- `scripts/deep-research/pattern_models.py`: 번호순 동률의 고정 패턴 후보와 과거 성적 기반 선택만 담당한다.
+- `scripts/deep-research/pattern_evaluation.py`: 과거 세 지표 평가, 다중 비교 보정, 동률 민감도, 균등 대조군과 검정력을 계산한다.
+- `scripts/deep-research/pattern_diagnostics.py`: 전체 탐색을 포함한 분포 진단의 모의실험 보정만 담당한다.
+- `scripts/deep-research/pattern_prospective.py`: 새 연구의 세 목표별 e-process와 오류 예산을 집계한다. 기존 연구의 판정 규칙은 수정하지 않는다.
+- `scripts/deep-research/run.py`: 기존 데이터 검증·불변 원장 검증을 재사용하고 새 보고서·별도 원장만 기록한다. `source-audit.mjs`는 공식 자료 표본 대조만 담당한다.
 - `scripts/publish-pages.sh`: 배포 브랜치를 복제해 일반 커밋과 push를 수행한다. force-push를 사용하지 않는다.
 - `.github/workflows/`: GitHub Pages 배포와 주간 당첨번호 데이터 갱신 자동화를 둔다.
 - `docs/`: 핵심 로직과 구조 결정 사항을 문서화한다.
@@ -43,6 +48,7 @@ NPICK은 정적 PWA이며 기능별 책임을 분리한다. 새 코드를 추가
 - 연구 코드는 `npm run research:test`, 생성 파일은 `npm run check`로 검증한다. 연구 보고서가 한 주 늦어도 기본 데이터 갱신은 가능하되, 보고서 내부의 프로토콜·번호·해시 불일치는 허용하지 않는다.
 - 과거 비교 성적을 실제 추천 성적으로 합치거나 최고 기록만 골라 보고하지 않는다. 알고리즘 채택은 과거 점수로 자동화하지 않는다.
 - 연구의 `current` ID와 기본 분석 보고서의 `referenceStrategy`는 기존 v2를 뜻한다. 새 엔진 적용으로 기존 연구 프로토콜·seed·원장의 의미를 바꾸지 않는다.
+- 새 패턴 연구는 `data/deep-research-analysis.json`, `data/deep-research-shadow-records.json`을 사용한다. `npm run research:patterns:test`와 `npm run check`로 검증하며 기존 원장에 합치지 않는다. 새 연구의 `hot-104`만 운영 v3와 같은 동률 규칙이다. 후보와 판정 기준은 별도 프로토콜에 고정하고 추가 연구마다 오류 예산을 초기화하지 않는다.
 
 ## UI 표시 규칙
 
