@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-10-23T12:48:24.877Z",
+  "source": "https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do",
+  "latestDraw": 1246,
+  "samples": [
+    {
+      "draw": 1,
+      "status": "matched",
+      "official": {
+        "draw": 1,
+        "date": "2002-12-07",
+        "numbers": [
+          10,
+          23,
+          29,
+          33,
+          37,
+          40
+        ],
+        "bonus": 16
+      }
+    },
+    {
+      "draw": 260,
+      "status": "matched",
+      "official": {
+        "draw": 260,
+        "date": "2007-11-24",
+        "numbers": [
+          7,
+          12,
+          15,
+          24,
+          37,
+          40
+        ],
+        "bonus": 43
+      }
+    },
+    {
+      "draw": 520,
+      "status": "matched",
+      "official": {
+        "draw": 520,
+        "date": "2012-11-17",
+        "numbers": [
+          4,
+          22,
+          27,
+          28,
+          38,
+          40
+        ],
+        "bonus": 1
+      }
+    },
+    {
+      "draw": 780,
+      "status": "matched",
+      "official": {
+        "draw": 780,
+        "date": "2017-11-11",
+        "numbers": [
+          15,
+          17,
+          19,
+          21,
+          27,
+          45
+        ],
+        "bonus": 16
+      }
+    },
+    {
+      "draw": 1040,
+      "status": "matched",
+      "official": {
+        "draw": 1040,
+        "date": "2022-11-05",
+        "numbers": [
+          8,
+          16,
+          26,
+          29,
+          31,
+          36
+        ],
+        "bonus": 11
+      }
+    },
+    {
+      "draw": 1246,
+      "status": "matched",
+      "official": {
+        "draw": 1246,
+        "date": "2026-10-17",
+        "numbers": [
+          16,
+          22,
+          23,
+          24,
+          27,
+          28
+        ],
+        "bonus": 6
+      }
+    }
+  ],
+  "limitation": "Six predetermined historical samples, not a full external audit of all draws."
+}
