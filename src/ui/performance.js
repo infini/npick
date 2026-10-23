@@ -1,5 +1,6 @@
-import { RANDOM_BASELINE, summarizeLivePerformance } from "../core/recommendation-performance.js?v=15";
-import { RECOMMENDATION_ENGINE_VERSION } from "../core/recommendation-engine.js?v=15";
+import { RANDOM_BASELINE, summarizeLivePerformance } from "../core/recommendation-performance.js?v=16";
+import { RECOMMENDATION_ENGINE_VERSION } from "../core/recommendation-engine.js?v=16";
+import { renderStrategyComparison } from "./strategy-comparison.js?v=16";
 
 const percent = (value) => value === null ? "-" : `${(value * 100).toFixed(1)}%`;
 const mean = (value) => value === null ? "-" : `${value.toFixed(3)}개`;
@@ -20,7 +21,7 @@ export function renderPerformance(container, { records, report, latestDraw }) {
 
   container.innerHTML = `
     <div class="section-title">
-      <h2>추천 성적</h2><span>추첨 전 확정한 ${live.count}회 기준</span>
+      <h2>추천 성적</h2><span>최근 52회 이내 · ${live.count}회 평가</span>
     </div>
     <table class="performance-table">
       <caption class="visually-hidden">실제 추천과 무작위 이론값 비교</caption>
@@ -31,10 +32,11 @@ export function renderPerformance(container, { records, report, latestDraw }) {
       </tbody>
     </table>
     <p class="performance-note">${liveNote}</p>
-    <div class="performance-verdict"><strong>${conclusion}</strong><span>현재 추천 방식 유지</span></div>
+    <div class="performance-verdict"><strong>${conclusion}</strong><span>과거 검증 결과</span></div>
+    ${renderStrategyComparison(records)}
     ${holdout ? `
       <details class="strategy-comparison">
-        <summary>전략별 과거 검증 · ${holdout.fromDraw}~${holdout.toDraw}회</summary>
+        <summary>기존 전략 과거 검증 · ${holdout.fromDraw}~${holdout.toDraw}회</summary>
         <p class="performance-note">각 회차 직전까지의 데이터로 1세트씩 재현한 결과입니다. 실제 추천 실적과는 별개이며, 미래 적중률을 보장하지 않습니다.</p>
         <table class="performance-table">
           <caption class="visually-hidden">최근 ${holdout.count}회 전략별 검증</caption>

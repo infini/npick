@@ -7,7 +7,12 @@ import {
   LEGACY_RECOMMENDATION_ENGINE_VERSION,
   RECOMMENDATION_ENGINE_VERSION,
   WEEKLY_RECOMMENDATION_COUNT,
-} from "./recommendation-engine.js?v=15";
+} from "./recommendation-engine.js?v=16";
+import {
+  assertHot104Record, createHot104Seed, generateHot104Recommendations,
+  getHot104Window, HOT104_ENGINE_VERSION, HOT104_FIRST_TARGET, HOT104_WINDOW,
+} from "./hot104-engine.js?v=16";
+import { assertRandomComparison, createRandomComparison } from "./recommendation-comparison.js?v=16";
 
 export const WEEKLY_RECORD_LIMIT = 52;
 export const LOTTO_SALES_CUTOFF_KST = "20:00:00+09:00";
@@ -32,6 +37,7 @@ export function advanceWeeklyCycle({ records, draws, generatedAt = new Date().to
 
   const nextRecord = createWeeklyRecommendationRecord({
     baseDraw: latestDraw,
+    draws: sortedDraws,
     generatedAt,
     dataMeta,
   });
@@ -39,7 +45,7 @@ export function advanceWeeklyCycle({ records, draws, generatedAt = new Date().to
   return pruneWeeklyRecommendationRecords([nextRecord, ...evaluatedRecords]);
 }
 
-export function createWeeklyRecommendationRecord({ baseDraw, generatedAt = new Date().toISOString(), dataMeta = null }) {
+export function createWeeklyRecommendationRecord({ baseDraw, draws, generatedAt = new Date().toISOString(), dataMeta = null }) {
   const targetDraw = baseDraw.draw + 1;
   const targetDate = addDaysToIsoDate(baseDraw.date, 7);
   const salesCutoffAt = getSalesCutoffAt(targetDate).toISOString();
@@ -51,9 +57,12 @@ export function createWeeklyRecommendationRecord({ baseDraw, generatedAt = new D
     );
   }
 
-  const recommendations = generateWeeklyRecommendationSets({ baseDraw });
+  const useHot104 = targetDraw >= HOT104_FIRST_TARGET;
+  const engineVersion = useHot104 ? HOT104_ENGINE_VERSION : RECOMMENDATION_ENGINE_VERSION;
+  const recommendations = useHot104
+    ? generateHot104Recommendations({ baseDraw, draws }) : generateWeeklyRecommendationSets({ baseDraw });
   return {
-    id: `${targetDraw}-${RECOMMENDATION_ENGINE_VERSION}`,
+    id: `${targetDraw}-${engineVersion}`,
     status: "pending",
     createdAt: generatedDate.toISOString(),
     salesCutoffAt,
@@ -61,18 +70,27 @@ export function createWeeklyRecommendationRecord({ baseDraw, generatedAt = new D
     baseDate: baseDraw.date,
     targetDraw,
     targetDate,
-    engineVersion: RECOMMENDATION_ENGINE_VERSION,
-    seed: createWeeklySeed(baseDraw),
+    engineVersion,
+    seed: useHot104 ? createHot104Seed(baseDraw) : createWeeklySeed(baseDraw),
     source: "scheduled-data-update",
     dataVersion: {
       latestDraw: dataMeta?.latestDraw ?? baseDraw.draw,
       generatedAt: dataMeta?.generatedAt ?? null,
     },
-    settings: {
+    settings: useHot104 ? {
+      count: WEEKLY_RECOMMENDATION_COUNT,
+      portfolio: "single-hot-104",
+      window: HOT104_WINDOW,
+      tieBreak: "number-asc",
+    } : {
       count: WEEKLY_RECOMMENDATION_COUNT,
       portfolio: "single-uniform",
     },
     recommendations,
+    ...(useHot104 ? {
+      analysisWindow: getHot104Window(baseDraw),
+      comparison: createRandomComparison(baseDraw, generatedDate.toISOString()),
+    } : {}),
   };
 }
 
@@ -138,6 +156,9 @@ export function evaluateWeeklyRecommendationRecord(record, actualDraw) {
     averageHits: setResults.length ? Number((totalHits / setResults.length).toFixed(2)) : 0,
     totalHits,
     prizeSetCount: setResults.filter((result) => result.hitCount >= 3).length,
+    ...(record.comparison ? {
+      comparison: evaluateWeeklyRecommendationRecord({ recommendations: record.comparison.recommendations }, actualDraw).setResults[0],
+    } : {}),
   };
 }
 
@@ -384,8 +405,16 @@ function validateRecordShape(record, drawByRound) {
   }
   assertWeeklyRecommendationSets(record.recommendations);
 
+  if (record.engineVersion !== HOT104_ENGINE_VERSION && record.comparison) {
+    throw new Error("Legacy recommendations cannot acquire retrospective comparisons.");
+  }
   if (record.engineVersion === LEGACY_RECOMMENDATION_ENGINE_VERSION && record.migration) {
     validateMigratedLegacyRecord(record, baseDraw);
+    return;
+  }
+  if (record.engineVersion === HOT104_ENGINE_VERSION) {
+    assertHot104Record(record, baseDraw, [...drawByRound.values()]);
+    assertRandomComparison(record, baseDraw);
     return;
   }
   if (record.engineVersion !== RECOMMENDATION_ENGINE_VERSION) {

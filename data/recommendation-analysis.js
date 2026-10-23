@@ -43,7 +43,7 @@ export const RECOMMENDATION_ANALYSIS = {
   "candidates": [
     {
       "id": "current",
-      "label": "현재 추천",
+      "label": "기존 무작위",
       "development": {
         "fromDraw": 261,
         "toDraw": 986,
@@ -486,6 +486,6 @@ export const RECOMMENDATION_ANALYSIS = {
   "decision": {
     "status": "no-validated-improvement",
     "qualifiedIds": [],
-    "activeStrategy": "current"
+    "referenceStrategy": "current"
   }
 };

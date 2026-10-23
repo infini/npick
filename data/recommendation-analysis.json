@@ -42,7 +42,7 @@
   "candidates": [
     {
       "id": "current",
-      "label": "현재 추천",
+      "label": "기존 무작위",
       "development": {
         "fromDraw": 261,
         "toDraw": 986,
@@ -485,6 +485,6 @@
   "decision": {
     "status": "no-validated-improvement",
     "qualifiedIds": [],
-    "activeStrategy": "current"
+    "referenceStrategy": "current"
   }
 }

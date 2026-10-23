@@ -12,7 +12,7 @@ export function registerServiceWorker() {
   });
 
   window.addEventListener("load", () => {
-    const workerUrl = new URL("../../service-worker.js?v=15", import.meta.url);
+    const workerUrl = new URL("../../service-worker.js?v=16", import.meta.url);
     const scope = new URL("../../", import.meta.url);
     navigator.serviceWorker.register(workerUrl, { scope, updateViaCache: "none" }).catch(() => {});
   });

@@ -58,7 +58,7 @@ export function analyzeRecommendations({ draws, records }) {
     decision: {
       status: qualifiedIds.length ? "prospective-validation-required" : "no-validated-improvement",
       qualifiedIds,
-      activeStrategy: "current",
+      referenceStrategy: "current",
     },
   };
 }

@@ -78,5 +78,5 @@ test("checked-in analysis is reproducible and separates historical tests from li
   assert.equal(holdout.count, 260);
   assert.equal(holdout.toDraw, report.latestDraw);
   assert.equal(report.live.count, WEEKLY_RECOMMENDATION_RECORDS.filter((record) => record.status === "evaluated").length);
-  assert.equal(report.decision.activeStrategy, "current");
+  assert.equal(report.decision.referenceStrategy, "current");
 });

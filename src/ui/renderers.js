@@ -1,4 +1,4 @@
-import { renderBall } from "./lotto-balls.js?v=15";
+import { renderBall } from "./lotto-balls.js?v=16";
 
 const DEFAULT_HISTORY_LIMIT = 5;
 const SEARCH_HISTORY_LIMIT = 24;
@@ -10,7 +10,7 @@ export function renderRecommendations(container, recommendations, { targetDraw =
       (item) => `
         <article class="recommendation">
           <div class="recommendation-header">
-            <span>추천 번호</span>
+            <span>${strategyLabel(item.strategy)}</span>
             <span>${targetDraw ? `${targetDraw}회 추첨 대기` : strategyLabel(item.strategy)}</span>
           </div>
           <div class="ball-row" aria-label="추천 번호 ${item.numbers.join(", ")}">
@@ -169,6 +169,7 @@ function chunk(items, size) {
 function strategyLabel(strategy) {
   const labels = {
     "weekly-single-random": "주간 단일 랜덤",
+    "weekly-hot-104": "104회 최다 출현",
   };
   return labels[strategy] || strategy;
 }
