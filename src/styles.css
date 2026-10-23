@@ -558,6 +558,17 @@ input[type="range"] {
   border-bottom: 1px solid var(--border);
 }
 
+.strategy-live-comparison {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border, #d8dbe2);
+}
+
+.strategy-live-comparison h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
 .performance-table {
   width: 100%;
   border-collapse: collapse;

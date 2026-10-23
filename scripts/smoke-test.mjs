@@ -6,12 +6,12 @@ const target = draws[0];
 const base = draws[1];
 const pendingRecords = advanceWeeklyCycle({
   records: [],
-  draws: [base],
+  draws: draws.slice(1),
   generatedAt: `${addDaysToIsoDate(base.date, 1)}T00:00:00.000Z`,
 });
 const advancedRecords = advanceWeeklyCycle({
   records: pendingRecords,
-  draws: [target, base],
+  draws,
   generatedAt: `${addDaysToIsoDate(target.date, 1)}T00:00:00.000Z`,
 });
 const evaluated = getLatestEvaluatedWeeklyRecord(advancedRecords);

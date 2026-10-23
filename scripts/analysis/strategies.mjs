@@ -5,7 +5,7 @@ const numbers = Array.from({ length: 45 }, (_, index) => index + 1);
 
 // Fixed candidates and tie-break seeds: never search seeds against known results.
 export const STRATEGIES = Object.freeze([
-  { id: "current", label: "현재 추천", kind: "current" },
+  { id: "current", label: "기존 무작위", kind: "current" },
   { id: "hot-52", label: "최근 52회 최다 출현", kind: "hot", window: 52 },
   { id: "hot-260", label: "최근 260회 최다 출현", kind: "hot", window: 260 },
   { id: "hot-all", label: "전체 최다 출현", kind: "hot", window: Infinity },

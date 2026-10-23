@@ -29,5 +29,5 @@ test("an installed app with an old versioned launch URL works offline after upgr
 
 test("missing analysis data never falls back to HTML", async () => {
   const worker = offlineWorker();
-  await assert.rejects(worker.fetch("/npick/data/recommendation-analysis.js?v=15", "cors"), /No network or cached/);
+  await assert.rejects(worker.fetch("/npick/data/recommendation-analysis.js?v=16", "cors"), /No network or cached/);
 });

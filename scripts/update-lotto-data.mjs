@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { RECOMMENDATION_ENGINE_VERSION } from "../src/core/recommendation-engine.js";
+import { HOT104_ENGINE_VERSION, HOT104_FIRST_TARGET } from "../src/core/hot104-engine.js";
 import {
   advanceWeeklyCycle,
   getCurrentWeeklyRecord,
@@ -60,7 +61,9 @@ async function main() {
   const latestEvaluatedRecord = getLatestEvaluatedWeeklyRecord(weeklyRecords);
   const weeklyMeta = {
     generatedAt: weeklyGeneratedAt,
-    engineVersion: RECOMMENDATION_ENGINE_VERSION,
+    engineVersion: currentWeeklyRecord?.engineVersion ?? RECOMMENDATION_ENGINE_VERSION,
+    nextEngineVersion: HOT104_ENGINE_VERSION,
+    hot104FirstTarget: HOT104_FIRST_TARGET,
     latestBaseDraw: draws[0].draw,
     currentTargetDraw: currentWeeklyRecord?.targetDraw ?? null,
     latestEvaluatedDraw: latestEvaluatedRecord?.targetDraw ?? null,

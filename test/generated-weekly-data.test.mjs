@@ -9,6 +9,7 @@ import {
 import {
   RECOMMENDATION_ENGINE_VERSION,
 } from "../src/core/recommendation-engine.js";
+import { HOT104_ENGINE_VERSION, HOT104_FIRST_TARGET } from "../src/core/hot104-engine.js";
 import {
   addDaysToIsoDate,
   advanceWeeklyCycle,
@@ -30,7 +31,9 @@ test("checked-in weekly artifact is aligned and contains one valid current set",
 
   assert.equal(LOTTO_DATA_META.latestDraw, latestDraw.draw);
   assert.equal(LOTTO_DATA_META.count, draws.length);
-  assert.equal(WEEKLY_RECOMMENDATIONS_META.engineVersion, RECOMMENDATION_ENGINE_VERSION);
+  assert.equal(WEEKLY_RECOMMENDATIONS_META.engineVersion, current.engineVersion);
+  assert.equal(WEEKLY_RECOMMENDATIONS_META.nextEngineVersion, HOT104_ENGINE_VERSION);
+  assert.equal(WEEKLY_RECOMMENDATIONS_META.hot104FirstTarget, HOT104_FIRST_TARGET);
   assert.equal(WEEKLY_RECOMMENDATIONS_META.latestBaseDraw, latestDraw.draw);
   assert.equal(WEEKLY_RECOMMENDATIONS_META.currentTargetDraw, latestDraw.draw + 1);
   assert.equal(WEEKLY_RECOMMENDATIONS_META.latestEvaluatedDraw, latestEvaluated?.targetDraw ?? null);
@@ -55,7 +58,7 @@ test("checked-in weekly artifact is aligned and contains one valid current set",
   );
   assert.equal(current.targetDraw, latestDraw.draw + 1);
   assert.equal(current.settings.count, 1);
-  assert.equal(current.settings.portfolio, "single-uniform");
+  assert.equal(current.settings.portfolio, current.engineVersion === HOT104_ENGINE_VERSION ? "single-hot-104" : "single-uniform");
   assert.equal(current.recommendations.length, 1);
   const numbers = current.recommendations[0].numbers;
   assert.equal(numbers.length, 6);
@@ -85,7 +88,7 @@ test("checked-in current record rolls forward without a fixed draw or engine ass
 
   assert.ok(next);
   assert.equal(next.targetDraw, syntheticResult.draw + 1);
-  assert.equal(next.engineVersion, RECOMMENDATION_ENGINE_VERSION);
+  assert.equal(next.engineVersion, next.targetDraw >= HOT104_FIRST_TARGET ? HOT104_ENGINE_VERSION : RECOMMENDATION_ENGINE_VERSION);
   assert.equal(next.recommendations.length, 1);
   assert.equal(evaluated.targetDraw, syntheticResult.draw);
   assert.equal(evaluated.status, "evaluated");

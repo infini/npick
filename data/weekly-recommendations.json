@@ -2,6 +2,8 @@
   "meta": {
     "generatedAt": "2026-10-17T20:05:31.137Z",
     "engineVersion": "weekly-single-random-v2",
+    "nextEngineVersion": "weekly-hot104-v3",
+    "hot104FirstTarget": 1248,
     "latestBaseDraw": 1246,
     "currentTargetDraw": 1247,
     "latestEvaluatedDraw": 1246,
