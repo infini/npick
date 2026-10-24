@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generatedAt": "2026-10-17T20:05:31.137Z",
-    "engineVersion": "weekly-single-random-v2",
+    "generatedAt": "2026-10-24T20:11:53.963Z",
+    "engineVersion": "weekly-hot104-v3",
     "nextEngineVersion": "weekly-hot104-v3",
     "hot104FirstTarget": 1248,
-    "latestBaseDraw": 1246,
-    "currentTargetDraw": 1247,
-    "latestEvaluatedDraw": 1246,
+    "latestBaseDraw": 1247,
+    "currentTargetDraw": 1248,
+    "latestEvaluatedDraw": 1247,
     "summary": {
-      "evaluatedWeeks": 12,
-      "evaluatedSets": 12,
-      "averageHitsPerSet": 0.5,
+      "evaluatedWeeks": 13,
+      "evaluatedSets": 13,
+      "averageHitsPerSet": 0.46,
       "prizeSetCount": 0,
       "prizeWeekCount": 0,
       "bestHits": 1
@@ -18,8 +18,78 @@
   },
   "records": [
     {
-      "id": "1247-weekly-single-random-v2",
+      "id": "1248-weekly-hot104-v3",
       "status": "pending",
+      "createdAt": "2026-10-24T20:11:53.963Z",
+      "salesCutoffAt": "2026-10-31T11:00:00.000Z",
+      "baseDraw": 1247,
+      "baseDate": "2026-10-24",
+      "targetDraw": 1248,
+      "targetDate": "2026-10-31",
+      "engineVersion": "weekly-hot104-v3",
+      "seed": "weekly-hot104-v3:1247:104:number-asc",
+      "source": "scheduled-data-update",
+      "dataVersion": {
+        "latestDraw": 1247,
+        "generatedAt": "2026-10-24T20:11:53.960Z"
+      },
+      "settings": {
+        "count": 1,
+        "portfolio": "single-hot-104",
+        "window": 104,
+        "tieBreak": "number-asc"
+      },
+      "recommendations": [
+        {
+          "numbers": [
+            3,
+            13,
+            15,
+            16,
+            27,
+            38
+          ],
+          "strategy": "weekly-hot-104",
+          "tags": [
+            "최근 104회 최다 출현",
+            "합계 112",
+            "홀짝 4:2",
+            "저고 4:2"
+          ]
+        }
+      ],
+      "analysisWindow": {
+        "fromDraw": 1144,
+        "toDraw": 1247,
+        "count": 104
+      },
+      "comparison": {
+        "engineVersion": "weekly-single-random-v2",
+        "createdAt": "2026-10-24T20:11:53.963Z",
+        "seed": "weekly-single-random-v2:1247:2026-10-24:8-14-21-22-42-45:24",
+        "recommendations": [
+          {
+            "numbers": [
+              13,
+              16,
+              26,
+              30,
+              34,
+              37
+            ],
+            "strategy": "weekly-single-random",
+            "tags": [
+              "합계 156",
+              "홀짝 2:4",
+              "저고 2:4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "1247-weekly-single-random-v2",
+      "status": "evaluated",
       "createdAt": "2026-10-17T20:05:31.137Z",
       "salesCutoffAt": "2026-10-24T11:00:00.000Z",
       "baseDraw": 1246,
@@ -54,7 +124,42 @@
             "저고 1:5"
           ]
         }
-      ]
+      ],
+      "result": {
+        "draw": 1247,
+        "date": "2026-10-24",
+        "winningNumbers": [
+          8,
+          14,
+          21,
+          22,
+          42,
+          45
+        ],
+        "bonus": 24,
+        "setResults": [
+          {
+            "index": 1,
+            "numbers": [
+              20,
+              25,
+              36,
+              38,
+              40,
+              44
+            ],
+            "matchedNumbers": [],
+            "bonusHit": false,
+            "hitCount": 0,
+            "rank": "미당첨"
+          }
+        ],
+        "bestHits": 0,
+        "bestRank": "미당첨",
+        "averageHits": 0,
+        "totalHits": 0,
+        "prizeSetCount": 0
+      }
     },
     {
       "id": "1246-weekly-single-random-v2",
