@@ -1,12 +1,27 @@
 {
   "meta": {
     "source": "https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do",
-    "generatedAt": "2026-10-17T20:05:31.134Z",
-    "latestDraw": 1246,
-    "latestDate": "2026-10-17",
-    "count": 1246
+    "generatedAt": "2026-10-24T20:11:53.960Z",
+    "latestDraw": 1247,
+    "latestDate": "2026-10-24",
+    "count": 1247
   },
   "draws": [
+    {
+      "draw": 1247,
+      "date": "2026-10-24",
+      "numbers": [
+        8,
+        14,
+        21,
+        22,
+        42,
+        45
+      ],
+      "bonus": 24,
+      "firstPrize": "3,637,439,250원",
+      "firstWinners": 8
+    },
     {
       "draw": 1246,
       "date": "2026-10-17",
