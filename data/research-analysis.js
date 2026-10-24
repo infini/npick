@@ -6440,26 +6440,26 @@ export const RESEARCH_ANALYSIS = {
     "tests": [
       {
         "id": "overall-frequency",
-        "statistic": 33.48468946783553,
-        "monteCarloPValue": 0.8960519740129935,
+        "statistic": 33.232989945099,
+        "monteCarloPValue": 0.9055472263868066,
         "adjustedPValue": 1.0
       },
       {
         "id": "largest-number-bias",
-        "statistic": 2.427927654481181,
-        "monteCarloPValue": 0.5107446276861569,
+        "statistic": 2.4380612924935274,
+        "monteCarloPValue": 0.4947526236881559,
         "adjustedPValue": 1.0
       },
       {
         "id": "largest-pair-bias",
-        "statistic": 3.506831038675657,
-        "monteCarloPValue": 0.6286856571714143,
+        "statistic": 3.501912200043467,
+        "monteCarloPValue": 0.631184407796102,
         "adjustedPValue": 1.0
       },
       {
         "id": "largest-lag-1-to-12-correlation",
-        "statistic": 0.10072076550266809,
-        "monteCarloPValue": 0.25737131434282856,
+        "statistic": 0.099832371018808,
+        "monteCarloPValue": 0.296351824087956,
         "adjustedPValue": 1.0
       }
     ]
@@ -6547,8 +6547,8 @@ export const RESEARCH_ANALYSIS = {
   },
   "protocolHash": "0c53c3e041624bc9d0b94422493565d45b0502d22e70c1c437e9f3a7ab6525bb",
   "codeHash": "ed12da48fa6363c7de2b3ef7a20b3fd596058847bab11db93661cfb881972abd",
-  "latestDraw": 1246,
-  "historyDigest": "ec4ae8368195b0c8731c36e0148230acc71fa30e897962ded6a1a046cf2db2d6",
+  "latestDraw": 1247,
+  "historyDigest": "8835694d0d4e597a3ffb36ebef1b0f1eefc884e7b16129ab69bea538efd267a7",
   "versions": {
     "numpy": "2.5.3",
     "scipy": "1.18.1",
@@ -6556,18 +6556,18 @@ export const RESEARCH_ANALYSIS = {
   },
   "prospective": {
     "firstTargetDraw": 1243,
-    "pendingTargetDraw": 1247,
-    "evaluatedWeeks": 4,
+    "pendingTargetDraw": 1248,
+    "evaluatedWeeks": 5,
     "evidenceThreshold": 1040.0,
     "models": [
       {
         "id": "adaptive-any-hit-156",
-        "count": 4,
-        "meanHits": 1.75,
-        "zeroRate": 0.0,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 1.4,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
         "histogram": [
-          0,
+          1,
           2,
           1,
           1,
@@ -6575,18 +6575,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 1.0540136987410318,
-        "eValue": 2.8691439176467854,
+        "logEValue": 0.7239593931640165,
+        "eValue": 2.0625836441917564,
         "evidenceReached": false
       },
       {
         "id": "adaptive-any-hit-260",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           1,
           2,
           0,
@@ -6594,18 +6594,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
         "evidenceReached": false
       },
       {
         "id": "adaptive-ensemble-156",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.5,
+        "count": 5,
+        "meanHits": 0.4,
+        "zeroRate": 0.6,
         "prizeRate": 0.0,
         "histogram": [
-          2,
+          3,
           2,
           0,
           0,
@@ -6613,37 +6613,37 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
+        "logEValue": -0.6309743133179144,
+        "eValue": 0.5320731424311727,
         "evidenceReached": false
       },
       {
         "id": "adaptive-ensemble-260",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
         "prizeRate": 0.0,
         "histogram": [
           1,
           2,
-          1,
+          2,
           0,
           0,
           0,
           0
         ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
         "evidenceReached": false
       },
       {
         "id": "adaptive-mean-156",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           3,
           0,
           0,
@@ -6651,683 +6651,37 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "adaptive-mean-260",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.75,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.6,
+        "prizeRate": 0.2,
         "histogram": [
           3,
-          0,
+          1,
           0,
           1,
           0,
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
         "evidenceReached": false
       },
       {
         "id": "boosting-520-15",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.2,
         "prizeRate": 0.0,
         "histogram": [
           1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "boosting-520-7",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "boosting-all-15",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "boosting-all-7",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-104",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-13",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-26",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-260",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-52",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-520",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.75,
-        "prizeRate": 0.25,
-        "histogram": [
-          3,
-          0,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "cold-all",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          1,
-          2,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "current",
-        "count": 4,
-        "meanHits": 0.25,
-        "zeroRate": 0.75,
-        "prizeRate": 0.0,
-        "histogram": [
-          3,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.6521642290981814,
-        "eValue": 0.5209171718207147,
-        "evidenceReached": false
-      },
-      {
-        "id": "decay-104",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          1,
-          2,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "decay-13",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.5,
-        "prizeRate": 0.25,
-        "histogram": [
-          2,
-          1,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "decay-26",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
-        "histogram": [
-          1,
-          2,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "decay-260",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "decay-52",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          1,
-          2,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "extra-trees-520-100",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "extra-trees-520-25",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "extra-trees-all-100",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "extra-trees-all-25",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
-        "histogram": [
-          1,
-          2,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "gap-hazard-104",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.75,
-        "prizeRate": 0.0,
-        "histogram": [
-          3,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "gap-hazard-26",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.75,
-        "prizeRate": 0.0,
-        "histogram": [
-          3,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "gap-hazard-260",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.75,
-        "prizeRate": 0.0,
-        "histogram": [
-          3,
-          0,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-104",
-        "count": 4,
-        "meanHits": 1.75,
-        "zeroRate": 0.0,
-        "prizeRate": 0.25,
-        "histogram": [
-          0,
-          2,
-          1,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 1.0540136987410318,
-        "eValue": 2.8691439176467854,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-13",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.5,
-        "prizeRate": 0.25,
-        "histogram": [
-          2,
-          0,
-          1,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-26",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-260",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          2,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-52",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          2,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-520",
-        "count": 4,
-        "meanHits": 1.5,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
-        "histogram": [
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.703504978889383,
-        "eValue": 2.0208232520148846,
-        "evidenceReached": false
-      },
-      {
-        "id": "hot-all",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
-        "histogram": [
-          1,
-          2,
-          0,
-          1,
-          0,
-          0,
-          0
-        ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
-        "evidenceReached": false
-      },
-      {
-        "id": "logistic-520-0.01",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
-        "prizeRate": 0.0,
-        "histogram": [
-          2,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "logistic-520-0.1",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "logistic-520-1.0",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
-        "prizeRate": 0.0,
-        "histogram": [
-          1,
-          3,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
-        "evidenceReached": false
-      },
-      {
-        "id": "logistic-all-0.01",
-        "count": 4,
-        "meanHits": 1.0,
-        "zeroRate": 0.0,
-        "prizeRate": 0.0,
-        "histogram": [
-          0,
           4,
           0,
           0,
@@ -7335,18 +6689,664 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.08397802584934455,
-        "eValue": 1.0876049943502426,
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "boosting-520-7",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "boosting-all-15",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "boosting-all-7",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-104",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-13",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
+        "histogram": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-26",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-260",
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
+        "prizeRate": 0.0,
+        "histogram": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-52",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-520",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.6,
+        "prizeRate": 0.2,
+        "histogram": [
+          3,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "cold-all",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "current",
+        "count": 5,
+        "meanHits": 0.2,
+        "zeroRate": 0.8,
+        "prizeRate": 0.0,
+        "histogram": [
+          4,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.8338746073157398,
+        "eValue": 0.43436303545628147,
+        "evidenceReached": false
+      },
+      {
+        "id": "decay-104",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "decay-13",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.6,
+        "prizeRate": 0.2,
+        "histogram": [
+          3,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "decay-26",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
+        "histogram": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "decay-260",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "decay-52",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "extra-trees-520-100",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "extra-trees-520-25",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "extra-trees-all-100",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "extra-trees-all-25",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "gap-hazard-104",
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
+        "prizeRate": 0.0,
+        "histogram": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
+        "evidenceReached": false
+      },
+      {
+        "id": "gap-hazard-26",
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
+        "prizeRate": 0.0,
+        "histogram": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
+        "evidenceReached": false
+      },
+      {
+        "id": "gap-hazard-260",
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
+        "prizeRate": 0.0,
+        "histogram": [
+          3,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-104",
+        "count": 5,
+        "meanHits": 1.4,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.7239593931640165,
+        "eValue": 2.0625836441917564,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-13",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.6,
+        "prizeRate": 0.2,
+        "histogram": [
+          3,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-26",
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-260",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-52",
+        "count": 5,
+        "meanHits": 0.4,
+        "zeroRate": 0.6,
+        "prizeRate": 0.0,
+        "histogram": [
+          3,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.6309743133179144,
+        "eValue": 0.5320731424311727,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-520",
+        "count": 5,
+        "meanHits": 1.4,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.7239593931640165,
+        "eValue": 2.0625836441917564,
+        "evidenceReached": false
+      },
+      {
+        "id": "hot-all",
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.2,
+        "prizeRate": 0.2,
+        "histogram": [
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
+        "evidenceReached": false
+      },
+      {
+        "id": "logistic-520-0.01",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.4,
+        "prizeRate": 0.0,
+        "histogram": [
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "logistic-520-0.1",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "logistic-520-1.0",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
+        "evidenceReached": false
+      },
+      {
+        "id": "logistic-all-0.01",
+        "count": 5,
+        "meanHits": 0.8,
+        "zeroRate": 0.2,
+        "prizeRate": 0.0,
+        "histogram": [
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "logEValue": -0.16416984368145027,
+        "eValue": 0.8485978806516941,
         "evidenceReached": false
       },
       {
         "id": "logistic-all-0.1",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           3,
           0,
           0,
@@ -7354,18 +7354,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "logistic-all-1.0",
-        "count": 4,
-        "meanHits": 0.5,
-        "zeroRate": 0.5,
+        "count": 5,
+        "meanHits": 0.4,
+        "zeroRate": 0.6,
         "prizeRate": 0.0,
         "histogram": [
-          2,
+          3,
           2,
           0,
           0,
@@ -7373,18 +7373,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.42995782796804627,
-        "eValue": 0.6505365285921123,
+        "logEValue": -0.6309743133179144,
+        "eValue": 0.5320731424311727,
         "evidenceReached": false
       },
       {
         "id": "neighbors-100",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           1,
           2,
           0,
@@ -7392,18 +7392,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
         "evidenceReached": false
       },
       {
         "id": "neighbors-20",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           3,
           0,
           0,
@@ -7411,18 +7411,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "neighbors-260",
-        "count": 4,
-        "meanHits": 1.25,
-        "zeroRate": 0.25,
+        "count": 5,
+        "meanHits": 1.0,
+        "zeroRate": 0.4,
         "prizeRate": 0.0,
         "histogram": [
-          1,
+          2,
           1,
           2,
           0,
@@ -7430,18 +7430,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.3800245199157797,
-        "eValue": 1.462320444968789,
+        "logEValue": 0.10507497006289546,
+        "eValue": 1.1107938835214806,
         "evidenceReached": false
       },
       {
         "id": "neighbors-50",
-        "count": 4,
-        "meanHits": 1.5,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
         "histogram": [
-          1,
+          2,
           1,
           1,
           1,
@@ -7449,18 +7449,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.703504978889383,
-        "eValue": 2.0208232520148846,
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
         "evidenceReached": false
       },
       {
         "id": "transition-260-104",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
         "prizeRate": 0.0,
         "histogram": [
-          2,
+          3,
           1,
           1,
           0,
@@ -7468,18 +7468,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "transition-260-26",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
         "prizeRate": 0.0,
         "histogram": [
-          2,
+          3,
           1,
           1,
           0,
@@ -7487,18 +7487,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "transition-260-260",
-        "count": 4,
-        "meanHits": 0.75,
-        "zeroRate": 0.5,
+        "count": 5,
+        "meanHits": 0.6,
+        "zeroRate": 0.6,
         "prizeRate": 0.0,
         "histogram": [
-          2,
+          3,
           1,
           1,
           0,
@@ -7506,18 +7506,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": -0.1854148409535732,
-        "eValue": 0.8307595792622275,
+        "logEValue": -0.4086858975752914,
+        "eValue": 0.6645229278075208,
         "evidenceReached": false
       },
       {
         "id": "transition-all-104",
-        "count": 4,
-        "meanHits": 1.5,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
         "histogram": [
-          1,
+          2,
           1,
           1,
           1,
@@ -7525,18 +7525,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.703504978889383,
-        "eValue": 2.0208232520148846,
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
         "evidenceReached": false
       },
       {
         "id": "transition-all-26",
-        "count": 4,
-        "meanHits": 1.5,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
         "histogram": [
-          1,
+          2,
           1,
           1,
           1,
@@ -7544,18 +7544,18 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.703504978889383,
-        "eValue": 2.0208232520148846,
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
         "evidenceReached": false
       },
       {
         "id": "transition-all-260",
-        "count": 4,
-        "meanHits": 1.5,
-        "zeroRate": 0.25,
-        "prizeRate": 0.25,
+        "count": 5,
+        "meanHits": 1.2,
+        "zeroRate": 0.4,
+        "prizeRate": 0.2,
         "histogram": [
-          1,
+          2,
           1,
           1,
           1,
@@ -7563,8 +7563,8 @@ export const RESEARCH_ANALYSIS = {
           0,
           0
         ],
-        "logEValue": 0.703504978889383,
-        "eValue": 2.0208232520148846,
+        "logEValue": 0.4008528616385869,
+        "eValue": 1.4930975604081438,
         "evidenceReached": false
       }
     ]
@@ -7572,17 +7572,17 @@ export const RESEARCH_ANALYSIS = {
   "productionEngineChanged": false,
   "adaptiveNextChoices": {
     "adaptive-mean-156": [
-      "hot-104"
+      "cold-104"
     ],
     "adaptive-any-hit-156": [
       "hot-104"
     ],
     "adaptive-ensemble-156": [
+      "cold-104",
       "hot-104",
       "logistic-520-0.1",
-      "cold-104",
-      "cold-520",
-      "hot-13"
+      "hot-520",
+      "cold-520"
     ],
     "adaptive-mean-260": [
       "cold-520"
@@ -7592,8 +7592,8 @@ export const RESEARCH_ANALYSIS = {
     ],
     "adaptive-ensemble-260": [
       "cold-520",
-      "logistic-520-0.1",
       "cold-104",
+      "logistic-520-0.1",
       "hot-520",
       "hot-all"
     ]
